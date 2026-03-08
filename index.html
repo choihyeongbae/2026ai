@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인공지능 기초 | 포항여자고등학교</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0e1a;--bg2:#111827;--bg3:#1a2235;--surface:#1e293b;--surface2:#243044;--border:#2d3a52;--border2:#374762;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--accent:#38bdf8;--accent2:#818cf8;--accent3:#a78bfa;--green:#34d399;--red:#f87171;--orange:#fb923c;--yellow:#fbbf24;--pink:#f472b6;--radius:16px;--radius-sm:10px;--shadow:0 4px 24px rgba(0,0,0,.3)}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;padding:2rem}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(56,189,248,.08) 0%,transparent 70%),radial-gradient(ellipse 60% 50% at 20% 80%,rgba(129,140,248,.06) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 80% 20%,rgba(167,139,250,.05) 0%,transparent 60%)}
+.hero-badge{display:inline-block;padding:6px 20px;border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text2);letter-spacing:.08em;margin-bottom:2rem;position:relative;backdrop-filter:blur(8px)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5.5rem);font-weight:900;line-height:1.1;position:relative;background:linear-gradient(135deg,#fff 0%,var(--accent) 50%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
+.hero .sub{font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--text2);position:relative;margin-bottom:1.5rem;font-weight:300}
+.hero p{font-size:1rem;color:var(--text3);max-width:600px;margin-bottom:3rem;position:relative}
+.scroll-ind{position:absolute;bottom:2rem;animation:bounce 2s infinite;color:var(--text3);font-size:1.5rem}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+.toc-strip{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 1rem;display:flex;justify-content:center;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.toc-strip a{padding:14px 16px;text-decoration:none;font-size:.8rem;font-weight:500;color:var(--text3);transition:all .2s;white-space:nowrap;border-bottom:2px solid transparent}
+.toc-strip a:hover,.toc-strip a.active{color:var(--accent);border-bottom-color:var(--accent)}
+.container{max-width:960px;margin:0 auto;padding:0 1.5rem}
+.chapter{padding:5rem 0 3rem}
+.chapter-num{font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;margin-bottom:.5rem}
+.chapter-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;margin-bottom:.75rem;line-height:1.3}
+.chapter-desc{color:var(--text2);font-size:1rem;margin-bottom:2.5rem;max-width:700px}
+h3{font-size:1.2rem;font-weight:700;margin:2.5rem 0 1rem;padding-left:14px;border-left:3px solid var(--accent);line-height:1.4}
+h4{font-size:1.05rem;font-weight:600;margin:2rem 0 .75rem;color:var(--text)}
+p{margin-bottom:1rem;color:var(--text2);line-height:1.85}
+p strong{color:var(--text);font-weight:600}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 1.5rem}
+.def-box{background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(129,140,248,.06));border:1px solid rgba(56,189,248,.15);border-radius:var(--radius);padding:1.5rem 1.75rem;margin:1.5rem 0}
+.def-box .tag{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:.5rem}
+.def-box p{color:var(--text);margin-bottom:.5rem}.def-box p:last-child{margin-bottom:0}
+.cb{border-radius:var(--radius);padding:1.5rem 1.75rem;margin:1.5rem 0;border:1px solid var(--border)}
+.cb.blue{background:rgba(56,189,248,.05);border-color:rgba(56,189,248,.15)}
+.cb.purple{background:rgba(167,139,250,.05);border-color:rgba(167,139,250,.15)}
+.cb.green{background:rgba(52,211,153,.05);border-color:rgba(52,211,153,.15)}
+.cb.orange{background:rgba(251,146,60,.05);border-color:rgba(251,146,60,.15)}
+.cb.red{background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15)}
+.cb h5{font-size:.95rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:8px}
+.cb p{color:var(--text2);font-size:.95rem;margin-bottom:.5rem}.cb p:last-child{margin-bottom:0}
+.cmp{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+.cmp th{background:var(--surface2);color:var(--text);font-weight:600;padding:12px 16px;text-align:left;border-bottom:2px solid var(--border)}
+.cmp td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text2)}
+.cmp tr:hover td{background:rgba(56,189,248,.03)}
+.cmp .lc{color:var(--text);font-weight:500;white-space:nowrap}
+.tl{margin:1rem 0 1.5rem}
+.ti{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(45,58,82,.5)}
+.ti:last-child{border-bottom:none}
+.tn{color:var(--accent);font-weight:600;min-width:140px;font-size:.9rem;flex-shrink:0}
+.td{color:var(--text2);font-size:.9rem}
+.steps{margin:1.5rem 0;counter-reset:step}
+.step{display:flex;gap:16px;margin-bottom:1.25rem;counter-increment:step}
+.step::before{content:counter(step);display:flex;align-items:center;justify-content:center;min-width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:2px}
+.step h5{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:4px}
+.step p{font-size:.9rem;color:var(--text2);margin-bottom:0}
+.lg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.lk{display:block;text-decoration:none;padding:1.25rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);transition:all .25s}
+.lk:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.lk .lt{color:var(--text);font-weight:600;font-size:.95rem;margin-bottom:4px}
+.lk .ld{color:var(--text3);font-size:.8rem;line-height:1.6}
+.lk .lu{color:var(--accent);font-size:.72rem;font-family:'JetBrains Mono',monospace;margin-top:8px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lab{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin:2.5rem 0;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.lab::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3))}
+.lab-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
+.lab-t{font-size:1.15rem;font-weight:700;margin-bottom:.4rem}
+.lab-d{color:var(--text2);font-size:.9rem;margin-bottom:1.5rem}
+.cw{position:relative;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;cursor:crosshair}
+.cw canvas{width:100%;height:100%;display:block}
+.ctrls{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem}
+.btn{padding:9px 20px;border-radius:100px;border:1px solid var(--border);background:var(--surface2);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.active{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff}
+.btn.danger{border-color:var(--red);color:var(--red)}.btn.danger:hover{background:var(--red);color:#fff}
+.sg{display:flex;flex-direction:column;gap:4px}
+.sg label{font-size:.78rem;color:var(--text2);font-weight:500}
+.sr{display:flex;align-items:center;gap:10px}
+input[type=range]{-webkit-appearance:none;height:5px;border-radius:3px;background:var(--border);outline:none;flex:1;min-width:80px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 6px rgba(56,189,248,.4)}
+.sv{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--accent);min-width:45px;text-align:right}
+.sr2{display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap}
+.sc{padding:6px 14px;border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:.78rem;border:1px solid var(--border);background:var(--bg2)}
+.sc .sl{color:var(--text3);margin-right:6px}.sc .sv2{color:var(--accent);font-weight:600}
+.sc.warn .sv2{color:var(--orange)}.sc.bad .sv2{color:var(--red)}
+.tip{background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(129,140,248,.06));border:1px solid rgba(56,189,248,.15);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin-top:1.25rem;font-size:.85rem;color:var(--text2);line-height:1.8}
+.tip strong{color:var(--accent)}
+.nnc{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.nncw{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:4/3}
+.nncw canvas{width:100%;height:100%;display:block}
+.nnp{display:flex;flex-direction:column;gap:.75rem}
+.nig{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem}
+.nig h5{font-size:.85rem;font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:6px}
+.no{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem}
+.no h5{font-size:.85rem;font-weight:600;margin-bottom:.75rem}
+.obw{margin-bottom:.6rem}
+.obl{display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:3px}
+.obl .on{color:var(--text2)}.obl .ov{font-family:'JetBrains Mono',monospace;color:var(--accent)}
+.ob{height:7px;background:var(--border);border-radius:4px;overflow:hidden}
+.obf{height:100%;border-radius:4px;transition:width .4s,background .4s}
+footer{text-align:center;padding:3rem 2rem;color:var(--text3);font-size:.82rem;border-top:1px solid var(--border)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:900px){.nnc{grid-template-columns:1fr}}
+@media(max-width:768px){.container{padding:0 1rem}.chapter{padding:3.5rem 0 2rem}.cmp{font-size:.8rem}.toc-strip a{padding:12px 10px;font-size:.72rem}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-badge">포항여자고등학교 · 인공지능 기초</span>
+  <h1>AI Fundamentals</h1>
+  <div class="sub">인공지능 기초 포트폴리오 교재</div>
+  <p>인공지능의 핵심 개념부터 기계학습, 딥러닝, 그리고 AI 윤리까지.<br>이론을 읽고, 중간중간 인터랙티브 실습으로 직접 체험해 보세요.</p>
+  <div class="scroll-ind">↓</div>
+</div>
+
+<nav class="toc-strip" id="toc">
+  <a href="#ch1">1. AI의 이해</a>
+  <a href="#ch2">2. 데이터</a>
+  <a href="#ch3">3. 기계학습</a>
+  <a href="#ch4">4. 딥러닝</a>
+  <a href="#ch5">5. 체험·실습</a>
+  <a href="#ch6">6. AI 윤리</a>
+  <a href="#gl">용어</a>
+</nav>
+
+<!-- CH1 -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="ch1">
+<div class="chapter-num">Chapter 01</div>
+<h2 class="chapter-title">인공지능(AI)의 이해</h2>
+<p class="chapter-desc">인간의 지능과 인공지능의 차이를 이해하고, AI가 어떻게 작동하며 우리 생활에 어떻게 활용되는지 알아봅니다.</p>
+<h3>1.1 인공지능이란 무엇인가?</h3>
+<div class="def-box"><div class="tag">핵심 정의</div><p><strong>인공지능(Artificial Intelligence, AI)</strong>이란 문제 해결, 추론, 예측, 생성 등과 같은 인간의 지능적 특성을 모방하기 위한 <strong>컴퓨터과학의 분야</strong>입니다.</p></div>
+<p>인간은 지능을 활용하여 새로운 대상이나 상황에 맞게 적절한 판단과 의사 결정을 합니다. 이를 위해서는 문제 해결, 추론, 학습, 예측, 인식, 생성 등 다양한 세부적인 지능 능력이 필요합니다. 인공지능은 바로 이러한 인간의 지능적 특성을 컴퓨터가 모방할 수 있도록 연구하는 분야입니다.</p>
+<h3>1.2 인간의 지능과 인공지능의 차이</h3>
+<p>인간은 오감(시각, 청각, 촉각, 미각, 후각)으로 외부의 다양한 자극을 감지하고 인식하는 반면, 인공지능은 센서를 통해 대상을 감지합니다.</p>
+<table class="cmp"><thead><tr><th>구분</th><th>인간의 지능</th><th>인공지능</th></tr></thead><tbody>
+<tr><td class="lc">감지 방식</td><td>오감(시각·청각·촉각·미각·후각)</td><td>센서(카메라, 마이크, 라이다 등)</td></tr>
+<tr><td class="lc">판단 기반</td><td>경험과 직관을 바탕으로 유연한 판단</td><td>학습된 데이터와 알고리즘 기반 패턴 판단</td></tr>
+<tr><td class="lc">강점</td><td>감정, 공감, 창의성 등 복합적 사고</td><td>대량 데이터 빠르게 처리, 반복 작업에 강점</td></tr>
+<tr><td class="lc">에너지</td><td>에너지 소모 적고 범용적 지능 보유</td><td>특정 영역에서 인간 초월 성능 발휘 가능</td></tr>
+</tbody></table>
+<h3>1.3 튜링 테스트</h3>
+<div class="cb blue"><h5>🧪 튜링 테스트(Turing Test)란?</h5><p>1950년 영국의 수학자 <strong>앨런 튜링(Alan Turing)</strong>이 제안한 테스트로, 컴퓨터가 인간과 구별할 수 없을 정도로 대화할 수 있는지를 평가하는 방법입니다.</p><p>사람이 컴퓨터와 대화를 나누면서 상대방이 사람인지 컴퓨터인지 구분하지 못한다면, 해당 컴퓨터는 <strong>'지능이 있다'</strong>고 판단합니다.</p></div>
+<p>튜링 테스트는 인공지능 연구의 출발점이 된 중요한 개념입니다. 오늘날의 ChatGPT, Claude와 같은 대화형 AI가 등장하면서 이 질문은 더욱 현실적인 의미를 갖게 되었습니다.</p>
+<h3>1.4 인공지능의 활용 사례</h3>
+<p>인공지능은 우리 일상의 다양한 분야에서 활용되고 있습니다.</p>
+<table class="cmp"><thead><tr><th>분야</th><th>활용 내용</th></tr></thead><tbody>
+<tr><td class="lc">의료</td><td>X-ray, CT 영상에서 질병을 자동으로 감지하고 진단을 보조</td></tr>
+<tr><td class="lc">자율주행</td><td>카메라·라이다 등 센서 데이터를 분석하여 스스로 주행 판단</td></tr>
+<tr><td class="lc">음성 인식</td><td>시리(Siri), 빅스비(Bixby) 등 음성 비서가 사용자 명령을 이해</td></tr>
+<tr><td class="lc">추천 시스템</td><td>넷플릭스, 유튜브 등이 사용자 취향에 맞는 콘텐츠를 추천</td></tr>
+<tr><td class="lc">생성형 AI</td><td>ChatGPT, Claude 등이 텍스트·이미지·음악 등을 새롭게 생성</td></tr>
+</tbody></table>
+</section></div>
+
+<!-- CH2 -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="ch2">
+<div class="chapter-num">Chapter 02</div>
+<h2 class="chapter-title">데이터의 이해</h2>
+<p class="chapter-desc">인공지능이 학습하고 판단하기 위해서는 데이터가 필수적입니다. 데이터의 유형, 속성, 그리고 전처리 과정에 대해 알아봅니다.</p>
+<h3>2.1 데이터의 유형</h3>
+<h4>정형 데이터와 비정형 데이터</h4>
+<table class="cmp"><thead><tr><th>구분</th><th>정형 데이터 (Structured)</th><th>비정형 데이터 (Unstructured)</th></tr></thead><tbody>
+<tr><td class="lc">형태</td><td>행과 열로 구성된 표 형태</td><td>일정한 형식이 없는 자유로운 형태</td></tr>
+<tr><td class="lc">예시</td><td>엑셀, 데이터베이스, 성적표, 출석부</td><td>이미지, 동영상, 음성, SNS 게시글</td></tr>
+<tr><td class="lc">특징</td><td>검색과 분석이 비교적 용이</td><td>분석을 위해 별도의 처리 기술 필요</td></tr>
+</tbody></table>
+<h3>2.2 데이터의 속성</h3>
+<p>데이터 속성은 숫자로 표현되는 <strong>수치형 데이터</strong>와 여러 범주 중 해당하는 값을 갖는 <strong>범주형 데이터</strong>로 분류됩니다. 수치형 데이터는 다시 연속형과 이산형으로 나뉩니다.</p>
+<table class="cmp"><thead><tr><th>분류</th><th>설명</th><th>예시</th></tr></thead><tbody>
+<tr><td class="lc">수치형 — 연속형</td><td>연속적으로 변하는 값</td><td>키(165.3cm), 체온(36.5°), 시간</td></tr>
+<tr><td class="lc">수치형 — 이산형</td><td>셀 수 있는 정수 값</td><td>학생 수(35명), 점수(85점)</td></tr>
+<tr><td class="lc">범주형</td><td>여러 범주 중 해당 값</td><td>혈액형(A/B/O/AB), 성별, 학년</td></tr>
+</tbody></table>
+<h3>2.3 데이터 전처리</h3>
+<div class="def-box"><div class="tag">핵심 정의</div><p><strong>데이터 전처리</strong>는 데이터 분석에 적합한 상태로 변환하는 과정입니다. 결측치, 이상치 등을 확인하고 처리 방법을 결정하며, 필요한 경우 정규화를 통해 속성값 간 분포를 조정합니다.</p></div>
+<div class="tl">
+<div class="ti"><span class="tn">결측치 (Missing Value)</span><span class="td">데이터에 값이 존재하지 않는 것. 빈 칸이 있는 셀이 이에 해당합니다.</span></div>
+<div class="ti"><span class="tn">이상치 (Outlier)</span><span class="td">잘못 입력되었거나 정상 범위에서 많이 벗어난 데이터를 말합니다.</span></div>
+<div class="ti"><span class="tn">정규화 (Normalization)</span><span class="td">서로 다른 범위의 데이터를 일정한 범위(예: 0~1)로 변환하여 비교 가능하게 만드는 과정입니다.</span></div>
+</div>
+<div class="cb orange"><h5>💡 생각해보기</h5><p>학교 급식 영양 데이터에서 칼로리가 '50,000 kcal'로 기록되어 있다면? 이것은 <strong>이상치</strong>일 가능성이 높습니다. 보통 한 끼 급식은 600~900 kcal 수준이기 때문입니다. 데이터를 그대로 사용하면 잘못된 분석 결과를 얻을 수 있어, 전처리가 꼭 필요합니다.</p></div>
+
+<!-- LAB 1 -->
+<div class="lab" id="lab-reg">
+<span class="lab-badge">▶ INTERACTIVE LAB</span>
+<div class="lab-t">이상치가 선형 회귀에 미치는 영향</div>
+<p class="lab-d">이상치가 실제 분석에 어떤 문제를 일으키는지 직접 확인해 봅시다. 캔버스를 클릭하여 데이터를 추가하고, 이상치가 회귀선을 얼마나 왜곡시키는지 관찰하세요.</p>
+<div class="cw" id="rW" style="aspect-ratio:16/9"><canvas id="rC"></canvas></div>
+<div class="ctrls">
+<button class="btn" onclick="aSD()">✨ 샘플 데이터</button>
+<button class="btn danger" id="oBtn" onclick="tOM()">⚡ 이상치 추가 모드</button>
+<button class="btn" onclick="aRO()">🎯 랜덤 이상치</button>
+<button class="btn" onclick="rmO()">🧹 이상치 제거</button>
+<button class="btn" onclick="clR()">🗑️ 초기화</button>
+</div>
+<div class="sr2">
+<div class="sc"><span class="sl">데이터</span><span class="sv2" id="sN">0</span></div>
+<div class="sc"><span class="sl">이상치</span><span class="sv2" id="sO">0</span></div>
+<div class="sc"><span class="sl">기울기</span><span class="sv2" id="sS">-</span></div>
+<div class="sc" id="sR2c"><span class="sl">R²</span><span class="sv2" id="sR2">-</span></div>
+</div>
+<div class="tip"><strong>💡 실습 방법:</strong> ① "샘플 데이터"로 기본 데이터를 만들고 R² 값 확인 → ② "랜덤 이상치"를 여러 번 눌러 회귀선과 R² 변화 관찰 → ③ "이상치 추가 모드" ON 후 원하는 위치에 직접 이상치 배치 → ④ "이상치 제거" 후 회귀선이 원래로 돌아오는지 비교<br><strong>파란 실선</strong> = 전체 데이터 회귀선 | <strong>초록 점선</strong> = 이상치 제외 회귀선</div>
+</div>
+</section></div>
+
+<!-- CH3 -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="ch3">
+<div class="chapter-num">Chapter 03</div>
+<h2 class="chapter-title">기계학습의 원리</h2>
+<p class="chapter-desc">기계학습(Machine Learning)은 데이터를 기반으로 알고리즘이 패턴을 학습하고, 이를 통해 예측하거나 결정을 내리는 기술입니다.</p>
+<div class="cb purple"><h5>🔍 인공지능 > 기계학습 > 딥러닝</h5><p><strong>인공지능(AI)</strong>: 인간의 지능을 모방하는 컴퓨터과학의 가장 넓은 분야</p><p><strong>기계학습(ML)</strong>: 인공지능의 하위 분야로, 데이터를 기반으로 패턴을 학습하는 기술</p><p><strong>딥러닝(DL)</strong>: 기계학습의 하위 분야로, 인공신경망을 활용하는 기술</p></div>
+<p>기계학습은 <strong>지도학습</strong>, <strong>비지도학습</strong>, <strong>강화학습</strong>으로 나뉘며, 각각의 방식은 학습 데이터와 목표에 따라 다르게 적용됩니다.</p>
+<h3>3.1 지도학습 (Supervised Learning)</h3>
+<p>지도학습은 인공지능에게 <strong>문제와 정답을 모두 제공</strong>하고 학습시키는 방식입니다. 주어진 데이터(입력값)와 그에 대응하는 정답(레이블)을 기반으로 알고리즘이 패턴을 학습합니다. 새로운 데이터가 주어졌을 때 학습된 패턴으로 예측하거나 분류합니다.</p>
+<h4>분류(Classification)와 회귀(Regression)</h4>
+<table class="cmp"><thead><tr><th>구분</th><th>분류 (Classification)</th><th>회귀 (Regression)</th></tr></thead><tbody>
+<tr><td class="lc">정의</td><td>데이터를 특정 클래스(카테고리)로 구분</td><td>연속적인 수치 값을 예측</td></tr>
+<tr><td class="lc">예시</td><td>이메일 → '스팸'/'정상', 이미지 → '고양이'/'개'</td><td>주택 가격, 주식 변동, 내일 기온 예측</td></tr>
+<tr><td class="lc">결과</td><td>범주(카테고리)</td><td>연속적인 숫자</td></tr>
+</tbody></table>
+<div class="cb blue"><h5>📌 핵심 포인트</h5><p>지도학습의 성능은 <strong>훈련 데이터의 품질과 양</strong>에 크게 영향을 받습니다. 정확한 레이블(정답)이 포함된 데이터셋이 반드시 필요합니다.</p></div>
+<h3>3.2 비지도학습 (Unsupervised Learning)</h3>
+<p>비지도학습은 인공지능에게 <strong>정답을 주지 않고</strong>, 데이터만 제공해서 스스로 숨겨진 패턴이나 구조를 찾도록 하는 학습 방식입니다.</p>
+<h4>군집화 (Clustering)</h4>
+<p>비슷한 특성을 가진 데이터를 같은 그룹으로 나누는 작업입니다. 예를 들어, 온라인 쇼핑몰에서 고객의 구매 기록을 분석해 비슷한 구매 습관을 가진 고객끼리 묶고, 맞춤형 추천이나 마케팅 전략을 세울 수 있습니다.</p>
+<h4>차원 축소 (Dimensionality Reduction)</h4>
+<p>복잡하고 많은 특징을 가진 데이터를 더 간단하게 만드는 작업입니다. 수많은 이미지 속에서 중요한 특징만 뽑아내어 시각화하거나, 분석 속도를 빠르게 합니다.</p>
+<h3>3.3 강화학습 (Reinforcement Learning)</h3>
+<p>강화학습은 인공지능이 스스로 시행착오를 통해 <strong>'보상'을 최대화하는 방향</strong>으로 학습하는 방식입니다. 보상(reward)과 불이익(penalty)을 반복 경험하면서 최선의 전략을 찾아갑니다.</p>
+<h4>강화학습의 핵심 구성 요소</h4>
+<div class="tl">
+<div class="ti"><span class="tn">에이전트 (Agent)</span><span class="td">학습을 수행하는 주체 (예: 게임 속 AI 캐릭터)</span></div>
+<div class="ti"><span class="tn">환경 (Environment)</span><span class="td">에이전트가 상호작용하는 공간 (예: 게임, 로봇 활동 공간)</span></div>
+<div class="ti"><span class="tn">상태 (State)</span><span class="td">현재 상황에 대한 정보</span></div>
+<div class="ti"><span class="tn">행동 (Action)</span><span class="td">에이전트가 선택할 수 있는 행동</span></div>
+<div class="ti"><span class="tn">보상 (Reward)</span><span class="td">특정 행동을 했을 때 받는 점수나 피드백</span></div>
+</div>
+<h4>기계학습 3가지 유형 비교</h4>
+<table class="cmp"><thead><tr><th>구분</th><th>지도학습</th><th>비지도학습</th><th>강화학습</th></tr></thead><tbody>
+<tr><td class="lc">정답 제공</td><td>제공 (레이블 있음)</td><td>미제공</td><td>없음 (보상으로 학습)</td></tr>
+<tr><td class="lc">학습 방식</td><td>입력-정답 쌍</td><td>데이터 패턴 분석</td><td>시행착오</td></tr>
+<tr><td class="lc">대표 기법</td><td>분류, 회귀</td><td>군집화, 차원 축소</td><td>보상 최대화</td></tr>
+<tr><td class="lc">활용</td><td>스팸 필터, 이미지 인식</td><td>고객 세분화, 추천</td><td>게임 AI, 자율주행</td></tr>
+</tbody></table>
+</section></div>
+
+<!-- CH4 -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="ch4">
+<div class="chapter-num">Chapter 04</div>
+<h2 class="chapter-title">딥러닝의 원리</h2>
+<p class="chapter-desc">딥러닝은 기계학습의 하위 분야로, 인공신경망을 활용하여 데이터를 처리하고 복잡한 문제를 해결합니다.</p>
+<h3>4.1 딥러닝이란?</h3>
+<p><strong>딥러닝(Deep Learning)</strong>은 인간의 뇌 신경망 구조를 본떠 만든 '인공신경망'을 이용하는 기술입니다. 다층 구조를 가진 신경망을 통해 이미지, 음성, 텍스트 등에서 높은 수준의 특징을 자동으로 추출합니다.</p>
+<p>사람이 사과와 바나나를 구별할 때 빨간색이면 사과, 노란색이면 바나나라고 판단하듯이, 딥러닝도 수많은 사진을 보고 색깔과 모양 같은 특징을 스스로 찾아 구별하는 규칙을 배웁니다.</p>
+<h4>인공신경망의 기본 구조</h4>
+<div class="tl">
+<div class="ti"><span class="tn">입력층 (Input Layer)</span><span class="td">데이터의 특징을 입력받는 층. 예: 과일의 색깔, 크기, 모양</span></div>
+<div class="ti"><span class="tn">은닉층 (Hidden Layer)</span><span class="td">입력 정보를 분석하여 규칙과 패턴을 찾는 과정. 층이 많을수록 복잡한 패턴 학습 가능</span></div>
+<div class="ti"><span class="tn">출력층 (Output Layer)</span><span class="td">최종 판단 결과를 도출. 예: 사과인지 바나나인지 판별</span></div>
+</div>
+<h3>4.2 인공신경망의 학습 과정</h3>
+<p>사과와 바나나를 구별하는 예시를 통해 학습 과정을 살펴봅시다.</p>
+<div class="steps">
+<div class="step"><div><h5>초기 상태</h5><p>무작위 가중치로 시작. 초록색 바나나를 사과로 착각하는 등 잘못된 예측 가능</p></div></div>
+<div class="step"><div><h5>순전파 (Forward Propagation)</h5><p>입력층에 특징을 넣으면, 은닉층을 거쳐 출력층까지 전달. 현재 가중치 기반으로 예측</p></div></div>
+<div class="step"><div><h5>오차 계산</h5><p>예측과 정답을 비교하여 오차 계산. 예: '바나나'인데 '사과'로 예측 → 오차 발생</p></div></div>
+<div class="step"><div><h5>역전파 (Backpropagation)</h5><p>오차를 기반으로 가중치 조정. 연쇄 법칙(chain rule)으로 각 가중치의 영향도 계산</p></div></div>
+<div class="step"><div><h5>가중치 업데이트</h5><p>조정된 값으로 가중치 업데이트. 다음 번에 더 정확한 예측 가능</p></div></div>
+<div class="step"><div><h5>반복 학습</h5><p>위 과정 반복 → 점점 더 정확하게 판별 가능</p></div></div>
+</div>
+
+<!-- LAB 2 -->
+<div class="lab" id="lab-nn">
+<span class="lab-badge">▶ INTERACTIVE LAB</span>
+<div class="lab-t">인공신경망 인터랙티브 시뮬레이터</div>
+<p class="lab-d">입력값(과일 특징)과 가중치(파라미터)를 직접 조절하며, 값이 신경망을 통과해 출력에 어떤 영향을 주는지 실시간으로 관찰해 보세요.</p>
+<div class="nnc">
+<div class="nncw"><canvas id="nC"></canvas></div>
+<div class="nnp">
+<div class="nig"><h5>📥 입력값 (Input Layer)</h5>
+<div class="sg"><label>입력 1 — 색깔</label><div class="sr"><input type="range" min="0" max="100" value="70" id="i1" oninput="uNN()"><span class="sv" id="i1v">0.70</span></div></div>
+<div class="sg" style="margin-top:8px"><label>입력 2 — 크기</label><div class="sr"><input type="range" min="0" max="100" value="30" id="i2" oninput="uNN()"><span class="sv" id="i2v">0.30</span></div></div>
+<div class="sg" style="margin-top:8px"><label>입력 3 — 모양</label><div class="sr"><input type="range" min="0" max="100" value="50" id="i3" oninput="uNN()"><span class="sv" id="i3v">0.50</span></div></div>
+</div>
+<div class="nig"><h5>⚙️ 가중치 (Weights)</h5>
+<div class="sg"><label>W1 (색깔→은닉층)</label><div class="sr"><input type="range" min="-100" max="100" value="60" id="w1" oninput="uNN()"><span class="sv" id="w1v">0.60</span></div></div>
+<div class="sg" style="margin-top:8px"><label>W2 (크기→은닉층)</label><div class="sr"><input type="range" min="-100" max="100" value="-40" id="w2" oninput="uNN()"><span class="sv" id="w2v">-0.40</span></div></div>
+<div class="sg" style="margin-top:8px"><label>W3 (모양→은닉층)</label><div class="sr"><input type="range" min="-100" max="100" value="80" id="w3" oninput="uNN()"><span class="sv" id="w3v">0.80</span></div></div>
+<div style="margin-top:10px"><button class="btn" onclick="rW()">🎲 랜덤</button> <button class="btn" onclick="rsW()">↩️ 초기화</button></div>
+</div>
+<div class="no"><h5>📤 출력 (Output)</h5>
+<div class="obw"><div class="obl"><span class="on">🍎 사과</span><span class="ov" id="oA">50%</span></div><div class="ob"><div class="obf" id="bA" style="width:50%;background:linear-gradient(90deg,var(--red),var(--orange))"></div></div></div>
+<div class="obw"><div class="obl"><span class="on">🍌 바나나</span><span class="ov" id="oB">50%</span></div><div class="ob"><div class="obf" id="bB" style="width:50%;background:linear-gradient(90deg,var(--yellow),var(--green))"></div></div></div>
+</div>
+</div>
+</div>
+<div class="tip"><strong>💡 실습 방법:</strong> 입력값은 과일의 특징, <strong>가중치(W)</strong>는 각 특징이 결과에 미치는 영향력입니다. 양수 가중치 → 사과 확률↑, 음수 가중치 → 바나나 확률↑. 연결선 <strong>굵기</strong>=가중치 크기, <strong>색상</strong>=양수(파랑)/음수(빨강). <strong>이것이 딥러닝의 핵심 원리입니다!</strong></div>
+</div>
+
+<h3>4.3 CNN (Convolutional Neural Network)</h3>
+<div class="def-box"><div class="tag">핵심 정의</div><p><strong>CNN</strong>은 사진(이미지)을 보고 분석하는 데 특화된 딥러닝 알고리즘입니다. 사람이 얼굴을 볼 때 눈→코→입 같은 특징을 차례로 보고 판단하듯이, CNN도 이미지의 부분적인 특징부터 전체를 이해합니다.</p></div>
+<h4>CNN의 핵심 아이디어</h4>
+<p>이미지를 한 번에 통째로 보는 것이 아니라, <strong>작은 필터(창문)</strong>를 사용해서 부분적으로 살펴봅니다. 필터가 이미지 위를 움직이며 중요한 특징을 찾습니다.</p>
+<h4>CNN의 기본 구조</h4>
+<div class="steps">
+<div class="step"><div><h5>입력층</h5><p>이미지를 입력 (예: 고양이 사진)</p></div></div>
+<div class="step"><div><h5>합성곱층 (Convolutional Layer)</h5><p>필터가 이미지를 부분적으로 살펴보며 특징 추출</p></div></div>
+<div class="step"><div><h5>풀링층 (Pooling Layer)</h5><p>중요한 정보만 추려 데이터 크기 축소</p></div></div>
+<div class="step"><div><h5>완전연결층 (Fully Connected Layer)</h5><p>추출된 특징을 종합하여 최종 분류</p></div></div>
+</div>
+<h3>4.4 GAN (Generative Adversarial Network)</h3>
+<div class="def-box"><div class="tag">핵심 정의</div><p><strong>GAN</strong>은 이미지를 생성하는 데 특화된 딥러닝 알고리즘입니다. 두 개의 인공신경망(<strong>생성자</strong>와 <strong>판별자</strong>)이 경쟁하면서 함께 발전합니다.</p></div>
+<div class="tl">
+<div class="ti"><span class="tn">생성자 (Generator)</span><span class="td">랜덤한 숫자에서 이미지를 만들어냄. 점점 더 정교하게 생성</span></div>
+<div class="ti"><span class="tn">판별자 (Discriminator)</span><span class="td">진짜와 가짜를 구별. 점점 더 정확하게 구분</span></div>
+</div>
+<div class="cb green"><h5>🎭 GAN 학습 과정</h5><p>① 생성자가 얼굴 사진 생성 → ② 판별자가 진짜 여부 판단 → ③ 처음에는 어색하지만 판별자가 지적 → ④ 생성자가 더 자연스럽게 수정 → ⑤ 반복 끝에 실제 같은 얼굴 생성 성공</p></div>
+<h3>4.5 Transformer</h3>
+<div class="def-box"><div class="tag">핵심 정의</div><p><strong>Transformer</strong>는 문장처럼 순서가 있는 정보(텍스트)를 처리하는 데 특화된 딥러닝 모델입니다. 번역, 요약, 챗봇, 작문, 음악 생성 등에 활용됩니다.</p></div>
+<h4>핵심 원리: Attention (주의 메커니즘)</h4>
+<p>문장 안에서 어떤 단어가 서로 관련 있는지 스스로 판단해서 집중합니다.</p>
+<div class="cb blue"><h5>💬 예시</h5><p>"길동이는 <strong>비가 오는 날</strong>이면 항상 <strong>우산을 챙긴다</strong>."<br>AI는 '비가 오는 날'이라는 조건과 '우산을 챙긴다'는 행동 사이의 연결을 파악합니다.</p></div>
+<h4>GPT (Generative Pre-trained Transformer)</h4>
+<table class="cmp"><thead><tr><th>약어</th><th>의미</th><th>설명</th></tr></thead><tbody>
+<tr><td class="lc">Generative</td><td>생성형</td><td>글을 직접 만드는 능력. 질문 대답, 이야기 생성, 요약 등</td></tr>
+<tr><td class="lc">Pre-trained</td><td>사전 학습된</td><td>수많은 텍스트를 미리 학습하여 언어 감각과 지식 보유</td></tr>
+<tr><td class="lc">Transformer</td><td>변환기</td><td>단어들의 관계를 이해하고 의미를 파악하는 모델</td></tr>
+</tbody></table>
+<h4>딥러닝 주요 모델 비교</h4>
+<table class="cmp"><thead><tr><th>구분</th><th>CNN</th><th>GAN</th><th>Transformer</th></tr></thead><tbody>
+<tr><td class="lc">기능</td><td>이미지 인식/분석</td><td>이미지 생성</td><td>텍스트 처리/생성</td></tr>
+<tr><td class="lc">핵심</td><td>필터로 특징 추출</td><td>생성자 vs 판별자</td><td>Attention 메커니즘</td></tr>
+<tr><td class="lc">활용</td><td>얼굴 인식, 의료 영상</td><td>딥페이크, 예술</td><td>번역, 챗봇, 요약</td></tr>
+<tr><td class="lc">대표</td><td>구글 포토 검색</td><td>스타일 변환</td><td>GPT, Claude, Gemini</td></tr>
+</tbody></table>
+</section></div>
+
+<!-- CH5 -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="ch5">
+<div class="chapter-num">Chapter 05</div>
+<h2 class="chapter-title">AI 체험 및 실습 안내</h2>
+<p class="chapter-desc">인공지능의 원리를 직접 체험해볼 수 있는 다양한 웹사이트입니다.</p>
+<h3>지도학습 체험</h3>
+<div class="lg"><a href="https://teachablemachine.withgoogle.com" target="_blank" class="lk"><div class="lt">구글 티쳐블머신</div><div class="ld">웹캠으로 이미지를 수집하고 분류 모델을 만드는 지도학습 체험</div><span class="lu">teachablemachine.withgoogle.com</span></a></div>
+<h3>비지도학습 체험</h3>
+<div class="lg">
+<a href="https://experiments.withgoogle.com/ai/drum-machine/view/" target="_blank" class="lk"><div class="lt">드럼머신 AI</div><div class="ld">드럼 사운드를 유사한 소리끼리 군집화</div><span class="lu">experiments.withgoogle.com</span></a>
+<a href="https://projector.tensorflow.org/" target="_blank" class="lk"><div class="lt">텐서플로 프로젝터</div><div class="ld">고차원 데이터를 2D/3D로 시각화하는 차원 축소(PCA) 실습</div><span class="lu">projector.tensorflow.org</span></a>
+<a href="https://research.google.com/semantris/" target="_blank" class="lk"><div class="lt">시맨트리스 (Semantris)</div><div class="ld">단어 간 의미를 이해하는 게임형 AI 체험</div><span class="lu">research.google.com/semantris</span></a>
+</div>
+<h3>강화학습 체험</h3>
+<div class="lg"><a href="https://www.youtube.com/watch?v=gn4nRCC9TwQ" target="_blank" class="lk"><div class="lt">DeepMind — AI에게 걷기 가르치기</div><div class="ld">강화학습으로 가상 캐릭터가 걷기를 학습하는 영상</div><span class="lu">youtube.com</span></a></div>
+<h3>생성형 AI 체험</h3>
+<div class="lg">
+<a href="https://www.whichfaceisreal.com" target="_blank" class="lk"><div class="lt">Which Face Is Real?</div><div class="ld">GAN이 만든 가짜 얼굴과 실제 사진 구별하기</div><span class="lu">whichfaceisreal.com</span></a>
+<a href="https://suno.com" target="_blank" class="lk"><div class="lt">Suno AI Music</div><div class="ld">AI가 음악을 자동으로 작곡·생성</div><span class="lu">suno.com</span></a>
+<a href="https://www.napkin.ai" target="_blank" class="lk"><div class="lt">Napkin AI</div><div class="ld">텍스트를 시각적 다이어그램으로 변환</div><span class="lu">napkin.ai</span></a>
+<a href="https://gamma.app/ko" target="_blank" class="lk"><div class="lt">Gamma</div><div class="ld">AI가 프레젠테이션·문서·웹페이지 자동 생성</div><span class="lu">gamma.app</span></a>
+</div>
+</section></div>
+
+<!-- CH6 -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="ch6">
+<div class="chapter-num">Chapter 06</div>
+<h2 class="chapter-title">인공지능 윤리</h2>
+<p class="chapter-desc">인공지능이 인간과 사회에 미치는 영향을 바르게 조절하고, 책임감 있게 사용하기 위한 원칙과 기준을 알아봅니다.</p>
+<h3>6.1 인공지능 윤리란?</h3>
+<div class="def-box"><div class="tag">한 줄 정의</div><p><strong>인공지능 윤리(AI Ethics)</strong>란, AI가 사람에게 해를 끼치지 않고, 공정하고 책임감 있게 사용되도록 기준을 세우는 것입니다.</p></div>
+<p>AI는 사람처럼 판단하거나 결정을 내릴 수 있지만, 항상 공정하거나 옳은 것은 아닙니다. 사람을 차별하거나, 거짓 정보를 만들어내거나, 누군가에게 피해를 줄 수 있어 <strong>'어떻게 쓰이는가'</strong>가 매우 중요합니다.</p>
+<div class="cb red"><h5>⚠️ 생각해볼 질문들</h5>
+<p><strong>Q.</strong> AI 채용 시스템이 여성보다 남성을 더 뽑는다면? → 학습 데이터의 성별 편향 때문일 수 있음</p>
+<p><strong>Q.</strong> 자율주행차 사고 시 누가 책임? → 제조사, 개발자, 탑승자 중 책임 소재 불명확</p>
+<p><strong>Q.</strong> 딥페이크로 누군가를 조작한다면? → 초상권과 명예를 심각하게 침해</p>
+</div>
+<h3>6.2 데이터 편향성 (Bias in Data)</h3>
+<div class="def-box"><div class="tag">핵심 정의</div><p><strong>데이터 편향성</strong>이란, AI가 학습하는 데이터가 특정 정보에만 집중되거나 일부만 반영되어 균형 잡히지 않은 상태입니다. AI가 골고루 배운 게 아니라 치우친 정보만 배운 것입니다.</p></div>
+<p>인공지능은 받은 데이터를 그대로 믿고 학습합니다. 데이터에 문제가 있어도 스스로 알아내거나 고치지 못해 잘못된 판단이나 차별적 결과가 나올 수 있습니다.</p>
+<h4>편향성 발생 원인</h4>
+<div class="steps">
+<div class="step"><div><h5>데이터 양 부족/불균형</h5><p>예: 질병 진단 데이터를 남성 위주로 수집 → 여성 환자에게 부정확한 진단</p></div></div>
+<div class="step"><div><h5>데이터 품질 저하</h5><p>오래되거나 부정확한 정보 → AI가 오류까지 학습</p></div></div>
+<div class="step"><div><h5>사람의 선입견 반영</h5><p>수집·정리 과정에서 특정 관점에 치우침 → AI도 편향된 판단</p></div></div>
+</div>
+<h3>6.3 편향성을 줄이기 위한 노력</h3>
+<table class="cmp"><thead><tr><th>방법</th><th>내용</th></tr></thead><tbody>
+<tr><td class="lc">양질의 데이터</td><td>다양한 성별·나이·지역·배경 포함, 공공 데이터를 신뢰성 있게 가공</td></tr>
+<tr><td class="lc">공정한 알고리즘</td><td>특정 집단에 불리하지 않도록 설계, 차별 요인 사전 점검</td></tr>
+<tr><td class="lc">비판적 수용</td><td>AI 판단이 항상 정답은 아님, 데이터 기반 비판적 사고 필요</td></tr>
+</tbody></table>
+<h3>6.4 설명 가능한 인공지능 (XAI)</h3>
+<p>기존 AI는 어떻게 판단했는지 알 수 없는 <strong>'블랙박스'</strong>처럼 작동합니다. <strong>XAI(Explainable AI)</strong>는 AI 결정을 사람이 이해할 수 있도록 설명하는 기술입니다.</p>
+<div class="cb green"><h5>🔎 XAI 활용</h5>
+<p><strong>의료:</strong> 왜 이 환자를 '고위험'으로 분류했는지 설명</p>
+<p><strong>금융:</strong> 왜 대출 신청을 거절했는지 근거 제시</p>
+<p><strong>제조업:</strong> 왜 이 제품을 '불량'으로 판정했는지 이유 제공</p></div>
+<div class="cb orange" style="margin-top:2rem"><h5>📌 핵심 정리</h5><p>"데이터 편향성은 AI의 가장 중요한 윤리 문제. <strong>좋은 데이터 + 공정한 설계 + 비판적 수용</strong>이 모두 필요합니다."</p></div>
+</section></div>
+
+<!-- GLOSSARY -->
+<div class="divider"></div>
+<div class="container"><section class="chapter" id="gl">
+<div class="chapter-num">Appendix</div>
+<h2 class="chapter-title">핵심 용어 정리</h2>
+<table class="cmp" style="margin-top:1.5rem"><thead><tr><th style="width:180px">용어</th><th>설명</th></tr></thead><tbody>
+<tr><td class="lc">인공지능 (AI)</td><td>인간의 지능적 특성을 모방하기 위한 컴퓨터과학의 분야</td></tr>
+<tr><td class="lc">기계학습 (ML)</td><td>데이터를 기반으로 알고리즘이 패턴을 학습하는 기술</td></tr>
+<tr><td class="lc">딥러닝 (DL)</td><td>인공신경망을 활용하는 기계학습의 하위 분야</td></tr>
+<tr><td class="lc">지도학습</td><td>문제와 정답을 모두 제공하여 학습시키는 방식</td></tr>
+<tr><td class="lc">비지도학습</td><td>정답 없이 데이터만으로 패턴을 찾는 방식</td></tr>
+<tr><td class="lc">강화학습</td><td>보상을 최대화하는 방향으로 시행착오를 통해 학습</td></tr>
+<tr><td class="lc">분류</td><td>데이터를 특정 카테고리로 구분하는 작업</td></tr>
+<tr><td class="lc">회귀</td><td>연속적인 수치 값을 예측하는 작업</td></tr>
+<tr><td class="lc">군집화</td><td>비슷한 데이터를 같은 그룹으로 나누는 작업</td></tr>
+<tr><td class="lc">CNN</td><td>이미지 분석에 특화된 합성곱 신경망</td></tr>
+<tr><td class="lc">GAN</td><td>생성자와 판별자가 경쟁하며 이미지를 생성하는 신경망</td></tr>
+<tr><td class="lc">Transformer</td><td>Attention 메커니즘으로 텍스트를 처리하는 모델</td></tr>
+<tr><td class="lc">GPT</td><td>Generative Pre-trained Transformer, 대표적 생성형 AI</td></tr>
+<tr><td class="lc">정형 데이터</td><td>행과 열로 구성된 표 형태의 데이터</td></tr>
+<tr><td class="lc">비정형 데이터</td><td>이미지, 동영상, 텍스트 등 형식 없는 데이터</td></tr>
+<tr><td class="lc">결측치</td><td>데이터에서 값이 누락된 것</td></tr>
+<tr><td class="lc">이상치</td><td>정상 범위에서 크게 벗어난 데이터</td></tr>
+<tr><td class="lc">정규화</td><td>데이터 범위를 일정하게 조정하는 전처리</td></tr>
+<tr><td class="lc">순전파</td><td>입력→출력으로 데이터가 전달되는 과정</td></tr>
+<tr><td class="lc">역전파</td><td>오차를 기반으로 가중치를 조정하는 과정</td></tr>
+<tr><td class="lc">편향성</td><td>학습 데이터가 특정 방향으로 치우친 상태</td></tr>
+<tr><td class="lc">XAI</td><td>AI 판단을 사람이 이해할 수 있게 설명하는 기술</td></tr>
+<tr><td class="lc">튜링 테스트</td><td>컴퓨터가 인간과 구별 불가능한지 평가하는 테스트</td></tr>
+</tbody></table>
+</section></div>
+
+<div class="divider"></div>
+<footer>포항여자고등학교 · 인공지능 기초 포트폴리오 교재<br>GitHub Pages 배포용 · <code>index.html</code></footer>
+
+<script>
+// ═══════ REGRESSION ═══════
+const rC=document.getElementById('rC'),rc=rC.getContext('2d'),rW=document.getElementById('rW');
+let pts=[],om=false,dpr=devicePixelRatio||1;
+function rsR(){const r=rW.getBoundingClientRect();rC.width=r.width*dpr;rC.height=r.height*dpr;rc.setTransform(dpr,0,0,dpr,0,0);dR()}
+rC.addEventListener('click',e=>{const r=rC.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*10,y=(1-(e.clientY-r.top)/r.height)*10;pts.push({x,y:Math.max(.1,Math.min(9.9,y)),o:om});dR()});
+function aSD(){pts=[];for(let i=0;i<30;i++){const x=1+Math.random()*8,y=.8*x+1+(Math.random()-.5)*2;pts.push({x,y:Math.max(.2,Math.min(9.8,y)),o:false})}dR()}
+function aRO(){if(!pts.length)aSD();const s=Math.random();let x,y;if(s<.33){x=1+Math.random()*3;y=7+Math.random()*2.5}else if(s<.66){x=6+Math.random()*3;y=.5+Math.random()*2}else{x=4+Math.random()*2;y=Math.random()<.5?9+Math.random():Math.random()}pts.push({x:Math.max(.2,Math.min(9.8,x)),y:Math.max(.2,Math.min(9.8,y)),o:true});dR()}
+function tOM(){om=!om;const b=document.getElementById('oBtn');om?(b.classList.add('active'),b.textContent='⚡ 이상치 모드 ON',rW.style.borderColor='var(--red)'):(b.classList.remove('active'),b.textContent='⚡ 이상치 추가 모드',rW.style.borderColor='')}
+function rmO(){pts=pts.filter(p=>!p.o);dR()}
+function clR(){pts=[];om=false;const b=document.getElementById('oBtn');b.classList.remove('active');b.textContent='⚡ 이상치 추가 모드';rW.style.borderColor='';dR()}
+function lr(ps){const n=ps.length;if(n<2)return null;let sx=0,sy=0,sxx=0,sxy=0;for(const p of ps){sx+=p.x;sy+=p.y;sxx+=p.x*p.x;sxy+=p.x*p.y}const d=n*sxx-sx*sx;if(Math.abs(d)<1e-10)return null;const sl=(n*sxy-sx*sy)/d,ic=(sy-sl*sx)/n,ym=sy/n;let st=0,sr=0;for(const p of ps){st+=(p.y-ym)**2;sr+=(p.y-(sl*p.x+ic))**2}return{s:sl,i:ic,r:st===0?0:1-sr/st}}
+function dR(){const r=rW.getBoundingClientRect(),w=r.width,h=r.height,c=rc;c.clearRect(0,0,w,h);
+c.strokeStyle='rgba(45,58,82,.4)';c.lineWidth=.5;for(let i=0;i<=10;i++){const gx=i/10*w,gy=(1-i/10)*h;c.beginPath();c.moveTo(gx,0);c.lineTo(gx,h);c.stroke();c.beginPath();c.moveTo(0,gy);c.lineTo(w,gy);c.stroke()}
+c.font='10px "JetBrains Mono"';c.fillStyle='#4a5568';c.textAlign='left';c.textBaseline='top';for(let i=0;i<=10;i+=2){c.fillText(i,i/10*w+3,h-14);if(i>0)c.fillText(i,3,(1-i/10)*h+2)}
+const nm=pts.filter(p=>!p.o),oc=pts.length-nm.length,rA=lr(pts),rN=lr(nm);
+if(rN&&oc>0){c.save();c.setLineDash([8,6]);c.strokeStyle='rgba(52,211,153,.5)';c.lineWidth=2;c.beginPath();c.moveTo(0,(1-(rN.s*0+rN.i)/10)*h);c.lineTo(w,(1-(rN.s*10+rN.i)/10)*h);c.stroke();c.restore();c.font='11px "Noto Sans KR"';c.fillStyle='rgba(52,211,153,.7)';const ey=(1-(rN.s*10+rN.i)/10)*h;c.fillText('이상치 제외',w-100,ey<h/2?ey+16:ey-12)}
+if(rA){c.strokeStyle='rgba(56,189,248,.9)';c.lineWidth=2.5;c.setLineDash([]);c.beginPath();const y0=(1-(rA.s*0+rA.i)/10)*h;c.moveTo(0,y0);c.lineTo(w,(1-(rA.s*10+rA.i)/10)*h);c.stroke();c.font='11px "Noto Sans KR"';c.fillStyle='rgba(56,189,248,.8)';c.fillText('전체 회귀선',8,y0<h/2?y0+16:y0-12)}
+for(const p of pts){const px=p.x/10*w,py=(1-p.y/10)*h;if(p.o){c.beginPath();c.arc(px,py,7,0,Math.PI*2);c.fillStyle='rgba(248,113,113,.9)';c.fill();c.strokeStyle='#fff';c.lineWidth=2;c.stroke();c.beginPath();c.moveTo(px-3,py-3);c.lineTo(px+3,py+3);c.moveTo(px+3,py-3);c.lineTo(px-3,py+3);c.stroke()}else{c.beginPath();c.arc(px,py,5,0,Math.PI*2);c.fillStyle='rgba(56,189,248,.8)';c.fill();c.strokeStyle='rgba(56,189,248,.3)';c.lineWidth=4;c.stroke()}}
+if(om){c.fillStyle='rgba(248,113,113,.8)';c.font='bold 12px "Noto Sans KR"';c.textAlign='left';c.fillText('⚡ 이상치 모드 ON',8,20)}
+document.getElementById('sN').textContent=pts.length;document.getElementById('sO').textContent=oc;
+if(rA){document.getElementById('sS').textContent=rA.s.toFixed(3);const e=document.getElementById('sR2');e.textContent=rA.r.toFixed(4);document.getElementById('sR2c').className='sc'+(rA.r<.5?' bad':rA.r<.75?' warn':'')}else{document.getElementById('sS').textContent='-';document.getElementById('sR2').textContent='-'}}
+
+// ═══════ NEURAL NETWORK ═══════
+const nC=document.getElementById('nC'),nc=nC.getContext('2d'),nW=nC.parentElement;
+let wih=[],who=[],nv={i:[.7,.3,.5],h:[0,0,0,0],o:[.5,.5]};
+function iW(){wih=[[.6,.3,-.5,.2],[-.4,.7,.1,-.3],[.8,-.2,.4,.6]];who=[[.5,-.5],[-.3,.6],[.7,-.2],[-.4,.8]]}
+iW();
+function sig(x){return 1/(1+Math.exp(-x))}
+function smx(a){const m=Math.max(...a),e=a.map(v=>Math.exp(v-m)),s=e.reduce((a,b)=>a+b);return e.map(v=>v/s)}
+function fwd(){const inp=nv.i,w1=+document.getElementById('w1').value/100,w2=+document.getElementById('w2').value/100,w3=+document.getElementById('w3').value/100;
+wih[0][0]=w1;wih[1][1]=w2;wih[2][2]=w3;wih[0][1]=w1*.5;wih[1][2]=w2*.6;wih[2][3]=w3*.4;
+for(let j=0;j<4;j++){let s=0;for(let i=0;i<3;i++)s+=inp[i]*wih[i][j];nv.h[j]=sig(s)}
+let o=[0,0];for(let j=0;j<4;j++)for(let k=0;k<2;k++)o[k]+=nv.h[j]*who[j][k];nv.o=smx(o)}
+function rsN(){const r=nW.getBoundingClientRect();nC.width=r.width*dpr;nC.height=r.height*dpr;nc.setTransform(dpr,0,0,dpr,0,0);dN()}
+function uNN(){nv.i=[+document.getElementById('i1').value/100,+document.getElementById('i2').value/100,+document.getElementById('i3').value/100];
+document.getElementById('i1v').textContent=nv.i[0].toFixed(2);document.getElementById('i2v').textContent=nv.i[1].toFixed(2);document.getElementById('i3v').textContent=nv.i[2].toFixed(2);
+[['w1','w1v'],['w2','w2v'],['w3','w3v']].forEach(([id,vid])=>{document.getElementById(vid).textContent=(+document.getElementById(id).value/100).toFixed(2)});
+fwd();const a=nv.o[0]*100,b=nv.o[1]*100;
+document.getElementById('oA').textContent=a.toFixed(1)+'%';document.getElementById('oB').textContent=b.toFixed(1)+'%';
+document.getElementById('bA').style.width=a+'%';document.getElementById('bB').style.width=b+'%';dN()}
+function dN(){const r=nW.getBoundingClientRect(),w=r.width,h=r.height,c=nc;c.clearRect(0,0,w,h);
+const ls=[3,4,2],lx=[w*.15,w*.5,w*.85],ll=['입력층','은닉층','출력층'],ol=['🍎','🍌'],il=['색깔','크기','모양'];
+function ny(l,n){return h/2-((ls[l]-1)*60)/2+n*60}
+for(let i=0;i<3;i++)for(let j=0;j<4;j++){const wt=wih[i][j],sg=Math.abs(nv.i[i]*wt);c.beginPath();c.moveTo(lx[0]+20,ny(0,i));c.lineTo(lx[1]-20,ny(1,j));c.strokeStyle=wt>=0?`rgba(56,189,248,${.1+sg*.9})`:`rgba(248,113,113,${.1+sg*.9})`;c.lineWidth=1+Math.abs(wt)*4;c.stroke()}
+for(let j=0;j<4;j++)for(let k=0;k<2;k++){const wt=who[j][k],sg=Math.abs(nv.h[j]*wt);c.beginPath();c.moveTo(lx[1]+20,ny(1,j));c.lineTo(lx[2]-20,ny(2,k));c.strokeStyle=wt>=0?`rgba(52,211,153,${.1+sg*.9})`:`rgba(251,146,60,${.1+sg*.9})`;c.lineWidth=1+Math.abs(wt)*4;c.stroke()}
+for(let l=0;l<3;l++){for(let n=0;n<ls[l];n++){const x=lx[l],y=ny(l,n);let v=l===0?nv.i[n]:l===1?nv.h[n]:nv.o[n];
+const cols=l===0?'56,189,248':l===1?'167,139,250':n===0?'248,113,113':'251,191,36';
+const g=c.createRadialGradient(x,y,0,x,y,28);g.addColorStop(0,`rgba(${cols},${.1+v*.3})`);g.addColorStop(1,'transparent');c.fillStyle=g;c.beginPath();c.arc(x,y,28,0,Math.PI*2);c.fill();
+c.beginPath();c.arc(x,y,18,0,Math.PI*2);c.fillStyle=`rgba(${cols},${.3+v*.7})`;c.strokeStyle=`rgba(${cols},.6)`;c.lineWidth=2;c.fill();c.stroke();
+c.fillStyle='#fff';c.font='bold 11px "JetBrains Mono"';c.textAlign='center';c.textBaseline='middle';c.fillText(v.toFixed(2),x,y);
+if(l===0){c.font='10px "Noto Sans KR"';c.fillStyle='#94a3b8';c.fillText(il[n],x,y+30)}
+if(l===2){c.font='15px serif';c.fillText(ol[n],x,y+30)}}
+c.font='600 11px "Noto Sans KR"';c.fillStyle='#64748b';c.textAlign='center';c.fillText(ll[l],lx[l],20)}
+c.font='9px "Noto Sans KR"';c.textAlign='left';c.fillStyle='#4a5568';c.fillText('선 굵기=가중치 크기 | 파랑=양수 | 빨강=음수',8,h-10)}
+function rW(){document.getElementById('w1').value=Math.floor(Math.random()*200-100);document.getElementById('w2').value=Math.floor(Math.random()*200-100);document.getElementById('w3').value=Math.floor(Math.random()*200-100);for(let j=0;j<4;j++)for(let k=0;k<2;k++)who[j][k]=(Math.random()-.5)*2;uNN()}
+function rsW(){document.getElementById('w1').value=60;document.getElementById('w2').value=-40;document.getElementById('w3').value=80;document.getElementById('i1').value=70;document.getElementById('i2').value=30;document.getElementById('i3').value=50;iW();uNN()}
+window.addEventListener('resize',()=>{rsR();rsN()});rsR();rsN();uNN();
+const secs=document.querySelectorAll('section[id]'),ta=document.querySelectorAll('.toc-strip a');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-200)c=s.id});ta.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c))});
+</script>
+</body>
+</html>
