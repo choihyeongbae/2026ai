@@ -8,18 +8,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0a0e1a;--bg2:#111827;--bg3:#1a2235;--surface:#1e293b;--surface2:#243044;--border:#2d3a52;--border2:#374762;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--accent:#38bdf8;--accent2:#818cf8;--accent3:#a78bfa;--green:#34d399;--red:#f87171;--orange:#fb923c;--yellow:#fbbf24;--pink:#f472b6;--radius:16px;--radius-sm:10px;--shadow:0 4px 24px rgba(0,0,0,.3)}
+:root{--bg:#f8fafc;--bg2:#ffffff;--bg3:#f1f5f9;--surface:#ffffff;--surface2:#f1f5f9;--border:#e2e8f0;--border2:#cbd5e1;--text:#1e293b;--text2:#475569;--text3:#94a3b8;--accent:#2563eb;--accent2:#7c3aed;--accent3:#a855f7;--green:#059669;--red:#dc2626;--orange:#ea580c;--yellow:#d97706;--pink:#db2777;--radius:16px;--radius-sm:10px;--shadow:0 4px 24px rgba(0,0,0,.06)}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;padding:2rem}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(56,189,248,.08) 0%,transparent 70%),radial-gradient(ellipse 60% 50% at 20% 80%,rgba(129,140,248,.06) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 80% 20%,rgba(167,139,250,.05) 0%,transparent 60%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(37,99,235,.07) 0%,transparent 70%),radial-gradient(ellipse 60% 50% at 20% 80%,rgba(124,58,237,.05) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 80% 20%,rgba(168,85,247,.04) 0%,transparent 60%)}
 .hero-badge{display:inline-block;padding:6px 20px;border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text2);letter-spacing:.08em;margin-bottom:2rem;position:relative;backdrop-filter:blur(8px)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5.5rem);font-weight:900;line-height:1.1;position:relative;background:linear-gradient(135deg,#fff 0%,var(--accent) 50%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5.5rem);font-weight:900;line-height:1.1;position:relative;background:linear-gradient(135deg,#1e293b 0%,var(--accent) 50%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
 .hero .sub{font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--text2);position:relative;margin-bottom:1.5rem;font-weight:300}
 .hero p{font-size:1rem;color:var(--text3);max-width:600px;margin-bottom:3rem;position:relative}
 .scroll-ind{position:absolute;bottom:2rem;animation:bounce 2s infinite;color:var(--text3);font-size:1.5rem}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
-.toc-strip{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 1rem;display:flex;justify-content:center;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.toc-strip{position:sticky;top:0;z-index:100;background:rgba(248,250,252,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 1rem;display:flex;justify-content:center;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .toc-strip a{padding:14px 16px;text-decoration:none;font-size:.8rem;font-weight:500;color:var(--text3);transition:all .2s;white-space:nowrap;border-bottom:2px solid transparent}
 .toc-strip a:hover,.toc-strip a.active{color:var(--accent);border-bottom-color:var(--accent)}
 .container{max-width:960px;margin:0 auto;padding:0 1.5rem}
@@ -32,24 +32,24 @@ h4{font-size:1.05rem;font-weight:600;margin:2rem 0 .75rem;color:var(--text)}
 p{margin-bottom:1rem;color:var(--text2);line-height:1.85}
 p strong{color:var(--text);font-weight:600}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 1.5rem}
-.def-box{background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(129,140,248,.06));border:1px solid rgba(56,189,248,.15);border-radius:var(--radius);padding:1.5rem 1.75rem;margin:1.5rem 0}
+.def-box{background:linear-gradient(135deg,rgba(37,99,235,.06),rgba(124,58,237,.05));border:1px solid rgba(37,99,235,.15);border-radius:var(--radius);padding:1.5rem 1.75rem;margin:1.5rem 0}
 .def-box .tag{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:.5rem}
 .def-box p{color:var(--text);margin-bottom:.5rem}.def-box p:last-child{margin-bottom:0}
 .cb{border-radius:var(--radius);padding:1.5rem 1.75rem;margin:1.5rem 0;border:1px solid var(--border)}
-.cb.blue{background:rgba(56,189,248,.05);border-color:rgba(56,189,248,.15)}
-.cb.purple{background:rgba(167,139,250,.05);border-color:rgba(167,139,250,.15)}
-.cb.green{background:rgba(52,211,153,.05);border-color:rgba(52,211,153,.15)}
-.cb.orange{background:rgba(251,146,60,.05);border-color:rgba(251,146,60,.15)}
-.cb.red{background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15)}
+.cb.blue{background:rgba(37,99,235,.05);border-color:rgba(37,99,235,.18)}
+.cb.purple{background:rgba(124,58,237,.05);border-color:rgba(124,58,237,.18)}
+.cb.green{background:rgba(5,150,105,.05);border-color:rgba(5,150,105,.18)}
+.cb.orange{background:rgba(234,88,12,.05);border-color:rgba(234,88,12,.18)}
+.cb.red{background:rgba(220,38,38,.05);border-color:rgba(220,38,38,.18)}
 .cb h5{font-size:.95rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:8px}
 .cb p{color:var(--text2);font-size:.95rem;margin-bottom:.5rem}.cb p:last-child{margin-bottom:0}
 .cmp{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
 .cmp th{background:var(--surface2);color:var(--text);font-weight:600;padding:12px 16px;text-align:left;border-bottom:2px solid var(--border)}
 .cmp td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text2)}
-.cmp tr:hover td{background:rgba(56,189,248,.03)}
+.cmp tr:hover td{background:rgba(37,99,235,.04)}
 .cmp .lc{color:var(--text);font-weight:500;white-space:nowrap}
 .tl{margin:1rem 0 1.5rem}
-.ti{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(45,58,82,.5)}
+.ti{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(226,232,240,.8)}
 .ti:last-child{border-bottom:none}
 .tn{color:var(--accent);font-weight:600;min-width:140px;font-size:.9rem;flex-shrink:0}
 .td{color:var(--text2);font-size:.9rem}
@@ -60,13 +60,13 @@ p strong{color:var(--text);font-weight:600}
 .step p{font-size:.9rem;color:var(--text2);margin-bottom:0}
 .lg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
 .lk{display:block;text-decoration:none;padding:1.25rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);transition:all .25s}
-.lk:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.lk:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,.1)}
 .lk .lt{color:var(--text);font-weight:600;font-size:.95rem;margin-bottom:4px}
 .lk .ld{color:var(--text3);font-size:.8rem;line-height:1.6}
 .lk .lu{color:var(--accent);font-size:.72rem;font-family:'JetBrains Mono',monospace;margin-top:8px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lab{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin:2.5rem 0;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .lab::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3))}
-.lab-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
+.lab-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.18);font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
 .lab-t{font-size:1.15rem;font-weight:700;margin-bottom:.4rem}
 .lab-d{color:var(--text2);font-size:.9rem;margin-bottom:1.5rem}
 .cw{position:relative;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;cursor:crosshair}
@@ -80,13 +80,13 @@ p strong{color:var(--text);font-weight:600}
 .sg label{font-size:.78rem;color:var(--text2);font-weight:500}
 .sr{display:flex;align-items:center;gap:10px}
 input[type=range]{-webkit-appearance:none;height:5px;border-radius:3px;background:var(--border);outline:none;flex:1;min-width:80px}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 6px rgba(56,189,248,.4)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 6px rgba(37,99,235,.3)}
 .sv{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--accent);min-width:45px;text-align:right}
 .sr2{display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap}
 .sc{padding:6px 14px;border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:.78rem;border:1px solid var(--border);background:var(--bg2)}
 .sc .sl{color:var(--text3);margin-right:6px}.sc .sv2{color:var(--accent);font-weight:600}
 .sc.warn .sv2{color:var(--orange)}.sc.bad .sv2{color:var(--red)}
-.tip{background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(129,140,248,.06));border:1px solid rgba(56,189,248,.15);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin-top:1.25rem;font-size:.85rem;color:var(--text2);line-height:1.8}
+.tip{background:linear-gradient(135deg,rgba(37,99,235,.05),rgba(124,58,237,.04));border:1px solid rgba(37,99,235,.15);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin-top:1.25rem;font-size:.85rem;color:var(--text2);line-height:1.8}
 .tip strong{color:var(--accent)}
 .nnc{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
 .nncw{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:4/3}
@@ -103,6 +103,81 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 .obf{height:100%;border-radius:4px;transition:width .4s,background .4s}
 footer{text-align:center;padding:3rem 2rem;color:var(--text3);font-size:.82rem;border-top:1px solid var(--border)}
 footer a{color:var(--accent);text-decoration:none}
+/* DQ Quiz */
+.dq-quiz{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;margin-bottom:1.25rem}
+.dq-title{font-size:.95rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:6px;color:var(--text)}
+.dq-table{width:100%;border-collapse:collapse;font-size:.88rem;margin-bottom:1rem}
+.dq-table th{background:var(--surface2);color:var(--text);font-weight:600;padding:10px 14px;text-align:left;border-bottom:2px solid var(--border)}
+.dq-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text2)}
+.dq-cell.dq-missing{color:var(--red);font-weight:600;background:rgba(220,38,38,.06);font-style:italic}
+.dq-cell.dq-outlier{color:var(--orange);font-weight:700;background:rgba(234,88,12,.06)}
+.dq-cell.highlighted{animation:dqFlash .6s ease 2}
+@keyframes dqFlash{0%,100%{opacity:1}50%{opacity:.3}}
+.dq-btns{display:flex;gap:.5rem;margin-bottom:.75rem}
+.dq-result{font-size:.88rem;padding:10px 14px;border-radius:8px;display:none;line-height:1.7}
+.dq-result.correct{display:block;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);color:var(--green)}
+.dq-result.wrong{display:block;background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.15);color:var(--red)}
+.dq-result strong{font-weight:700}
+.dq-btn.selected-ok{background:rgba(5,150,105,.12);border-color:var(--green);color:var(--green);pointer-events:none}
+.dq-btn.selected-bad{background:rgba(234,88,12,.12);border-color:var(--orange);color:var(--orange);pointer-events:none}
+.dq-btn.disabled{opacity:.4;pointer-events:none}
+.dq-score-wrap{display:flex;align-items:center;gap:1rem;margin:1.5rem 0 .5rem;flex-wrap:wrap}
+.dq-score{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;color:var(--accent);padding:8px 20px;border:2px solid var(--accent);border-radius:100px}
+/* Drag-classify */
+.dc-pool{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem;min-height:44px;padding:10px;background:var(--bg3);border:1px dashed var(--border);border-radius:var(--radius-sm)}
+.dc-chip{display:inline-flex;align-items:center;padding:8px 16px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:.85rem;font-weight:500;color:var(--text);cursor:grab;user-select:none;transition:transform .15s,box-shadow .15s,border-color .15s;touch-action:none}
+.dc-chip:active{cursor:grabbing;transform:scale(1.05);box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.dc-chip.correct{border-color:var(--green);background:rgba(5,150,105,.08);color:var(--green)}
+.dc-chip.wrong{border-color:var(--red);background:rgba(220,38,38,.06);color:var(--red)}
+.dc-chip.dragging{opacity:.4}
+.dc-zones{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.25rem}
+@media(max-width:700px){.dc-zones{grid-template-columns:1fr}}
+.dc-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:0;min-height:140px;display:flex;flex-direction:column;transition:border-color .2s,background .2s}
+.dc-zone.drag-over{border-color:var(--accent);background:rgba(37,99,235,.04)}
+.dc-zone-label{padding:10px 14px;font-size:.85rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
+.dc-zone-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#fff;flex-shrink:0}
+.dc-zone-sub{font-size:.72rem;font-weight:400;color:var(--text3);margin-left:auto}
+.dc-drop{flex:1;padding:10px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start;min-height:80px}
+.dc-actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.dc-score{font-family:'JetBrains Mono',monospace;font-size:.9rem;font-weight:700;color:var(--accent)}
+.dc-feedback{margin-top:.75rem;font-size:.88rem;padding:10px 14px;border-radius:8px;display:none;line-height:1.7}
+.dc-feedback.show{display:block}
+.dc-feedback.perfect{background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);color:var(--green)}
+.dc-feedback.partial{background:rgba(234,88,12,.06);border:1px solid rgba(234,88,12,.15);color:var(--orange)}
+/* NN Mission */
+.nn-mission{margin-top:2rem;padding-top:1.5rem;border-top:2px dashed var(--border)}
+.nn-mission-title{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+.nn-mission-desc{font-size:.9rem;color:var(--text2);margin-bottom:1.25rem}
+.nn-test-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+@media(max-width:700px){.nn-test-cards{grid-template-columns:1fr}}
+.nn-test-card{background:var(--bg3);border:2px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem;transition:border-color .3s}
+.nn-test-card.active{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.nn-test-card.pass{border-color:var(--green);background:rgba(5,150,105,.04)}
+.nn-test-card.fail{border-color:var(--red);background:rgba(220,38,38,.03)}
+.nn-test-header{display:flex;align-items:center;gap:12px;margin-bottom:.75rem}
+.nn-test-emoji{font-size:2rem;line-height:1}
+.nn-test-label{font-size:.95rem;font-weight:700;color:var(--text)}
+.nn-test-sub{font-size:.75rem;color:var(--text3);margin-top:2px;font-family:'JetBrains Mono',monospace}
+.nn-test-goal{font-size:.85rem;color:var(--text2);margin-bottom:.75rem;padding:6px 12px;background:var(--surface);border-radius:8px;border:1px solid var(--border)}
+.nn-test-goal strong{color:var(--accent)}
+.nn-test-btns{display:flex;align-items:center;gap:.75rem}
+.nn-test-status{font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:700}
+.nn-test-status.pass{color:var(--green)}
+.nn-test-status.fail{color:var(--red)}
+.nn-test-status.pending{color:var(--text3)}
+.nn-challenge-wrap{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem}
+.nn-challenge-status{font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:600}
+.nn-challenge-result{font-size:.9rem;padding:12px 16px;border-radius:10px;display:none;line-height:1.7}
+.nn-challenge-result.show{display:block}
+.nn-challenge-result.success{background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);color:var(--green)}
+.nn-challenge-result.fail{background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.15);color:var(--red)}
+/* Weight interpret tags */
+.wi-tag{display:inline-block;font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:6px;vertical-align:middle;letter-spacing:-.01em}
+.wi-tag:not(.wi-w){background:rgba(37,99,235,.08);color:var(--accent);border:1px solid rgba(37,99,235,.15)}
+.wi-tag.wi-w{border:1px solid var(--border);background:var(--bg3);color:var(--text2)}
+.wi-tag.wi-apple{background:rgba(220,38,38,.07);color:var(--red);border-color:rgba(220,38,38,.18)}
+.wi-tag.wi-banana{background:rgba(217,119,6,.07);color:var(--yellow);border-color:rgba(217,119,6,.18)}
+.wi-tag.wi-ignore{background:var(--bg3);color:var(--text3);border-color:var(--border)}
 @media(max-width:900px){.nnc{grid-template-columns:1fr}}
 @media(max-width:768px){.container{padding:0 1rem}.chapter{padding:3.5rem 0 2rem}.cmp{font-size:.8rem}.toc-strip a{padding:12px 10px;font-size:.72rem}}
 </style>
@@ -178,6 +253,40 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">수치형 — 이산형</td><td>셀 수 있는 정수 값</td><td>학생 수(35명), 점수(85점)</td></tr>
 <tr><td class="lc">범주형</td><td>여러 범주 중 해당 값</td><td>혈액형(A/B/O/AB), 성별, 학년</td></tr>
 </tbody></table>
+
+<!-- LAB: 데이터 속성 분류 드래그 -->
+<div class="lab" id="lab-classify">
+<span class="lab-badge">▶ INTERACTIVE LAB</span>
+<div class="lab-t">실습: 데이터 속성 분류하기</div>
+<p class="lab-d">아래 데이터를 드래그하여 연속형, 이산형, 범주형 상자에 분류해 보세요. 모두 분류한 뒤 정답을 확인할 수 있습니다.</p>
+
+<div class="dc-pool" id="dcPool"></div>
+
+<div class="dc-zones">
+  <div class="dc-zone" id="zone-cont" data-zone="continuous">
+    <div class="dc-zone-label"><span class="dc-zone-icon" style="background:var(--accent)">📏</span> 연속형<span class="dc-zone-sub">연속적으로 변하는 수치</span></div>
+    <div class="dc-drop" data-zone="continuous"></div>
+  </div>
+  <div class="dc-zone" id="zone-disc" data-zone="discrete">
+    <div class="dc-zone-label"><span class="dc-zone-icon" style="background:var(--accent2)">🔢</span> 이산형<span class="dc-zone-sub">셀 수 있는 정수 값</span></div>
+    <div class="dc-drop" data-zone="discrete"></div>
+  </div>
+  <div class="dc-zone" id="zone-cat" data-zone="categorical">
+    <div class="dc-zone-label"><span class="dc-zone-icon" style="background:var(--green)">🏷️</span> 범주형<span class="dc-zone-sub">여러 범주 중 하나</span></div>
+    <div class="dc-drop" data-zone="categorical"></div>
+  </div>
+</div>
+
+<div class="dc-actions">
+  <button class="btn" onclick="dcCheckAnswer()">✅ 정답 확인</button>
+  <button class="btn" onclick="dcReset()">🔄 다시 하기</button>
+  <span class="dc-score" id="dcScoreText"></span>
+</div>
+<div class="dc-feedback" id="dcFeedback"></div>
+
+<div class="tip"><strong>💡 힌트:</strong> <strong>연속형</strong>은 소수점으로 측정 가능한 값(키, 체온, 몸무게), <strong>이산형</strong>은 1, 2, 3처럼 셀 수 있는 정수(학생 수, 점수), <strong>범주형</strong>은 숫자가 아닌 분류 값(혈액형, 성별, 색깔)입니다.</div>
+</div>
+
 <h3>2.3 데이터 전처리</h3>
 <div class="def-box"><div class="tag">핵심 정의</div><p><strong>데이터 전처리</strong>는 데이터 분석에 적합한 상태로 변환하는 과정입니다. 결측치, 이상치 등을 확인하고 처리 방법을 결정하며, 필요한 경우 정규화를 통해 속성값 간 분포를 조정합니다.</p></div>
 <div class="tl">
@@ -187,7 +296,99 @@ footer a{color:var(--accent);text-decoration:none}
 </div>
 <div class="cb orange"><h5>💡 생각해보기</h5><p>학교 급식 영양 데이터에서 칼로리가 '50,000 kcal'로 기록되어 있다면? 이것은 <strong>이상치</strong>일 가능성이 높습니다. 보통 한 끼 급식은 600~900 kcal 수준이기 때문입니다. 데이터를 그대로 사용하면 잘못된 분석 결과를 얻을 수 있어, 전처리가 꼭 필요합니다.</p></div>
 
-<!-- LAB 1 -->
+<!-- LAB: 데이터 품질 진단 -->
+<div class="lab" id="lab-dq">
+<span class="lab-badge">▶ INTERACTIVE LAB</span>
+<div class="lab-t">실습: 데이터 품질 진단하기</div>
+<p class="lab-d">아래 데이터를 살펴보고, 품질 문제가 있는지 찾아보세요. 각 데이터셋을 확인한 뒤 버튼을 눌러 정답을 확인하세요.</p>
+
+<!-- Quiz 1 -->
+<div class="dq-quiz" id="dq1">
+<h5 class="dq-title">📋 체중 측정 데이터</h5>
+<table class="dq-table">
+<thead><tr><th>이름</th><th>체중(kg)</th></tr></thead>
+<tbody>
+<tr><td>김철수</td><td>72</td></tr>
+<tr><td>이영희</td><td class="dq-cell dq-missing" data-q="1">비어 있음</td></tr>
+<tr><td>박민수</td><td>68</td></tr>
+<tr><td>최지은</td><td class="dq-cell dq-outlier" data-q="1">-5</td></tr>
+<tr><td>정수현</td><td>65</td></tr>
+</tbody>
+</table>
+<div class="dq-btns">
+<button class="btn dq-btn" onclick="dqCheck(1,'ok')">문제 없음 ✓</button>
+<button class="btn dq-btn" onclick="dqCheck(1,'bad')">문제 있음 ⚠️</button>
+</div>
+<div class="dq-result" id="dq1-result"></div>
+</div>
+
+<!-- Quiz 2 -->
+<div class="dq-quiz" id="dq2">
+<h5 class="dq-title">📋 학생 설문 응답</h5>
+<table class="dq-table">
+<thead><tr><th>학번</th><th>만족도</th><th>의견</th></tr></thead>
+<tbody>
+<tr><td>001</td><td>5</td><td>좋아요</td></tr>
+<tr><td>002</td><td>4</td><td>괜찮아요</td></tr>
+<tr><td>003</td><td>3</td><td>보통</td></tr>
+<tr><td>004</td><td>4</td><td>좋아요</td></tr>
+<tr><td>005</td><td>5</td><td>매우 좋아요</td></tr>
+</tbody>
+</table>
+<div class="dq-btns">
+<button class="btn dq-btn" onclick="dqCheck(2,'ok')">문제 없음 ✓</button>
+<button class="btn dq-btn" onclick="dqCheck(2,'bad')">문제 있음 ⚠️</button>
+</div>
+<div class="dq-result" id="dq2-result"></div>
+</div>
+
+<!-- Quiz 3 -->
+<div class="dq-quiz" id="dq3">
+<h5 class="dq-title">📋 기온 기록 데이터</h5>
+<table class="dq-table">
+<thead><tr><th>날짜</th><th>기온(°C)</th></tr></thead>
+<tbody>
+<tr><td>2026-01-01</td><td>-3</td></tr>
+<tr><td>2026-01-02</td><td>-1</td></tr>
+<tr><td>2026-01-03</td><td class="dq-cell dq-missing" data-q="3">비어 있음</td></tr>
+<tr><td>2026-01-04</td><td>2</td></tr>
+<tr><td>2026-01-05</td><td>0</td></tr>
+</tbody>
+</table>
+<div class="dq-btns">
+<button class="btn dq-btn" onclick="dqCheck(3,'ok')">문제 없음 ✓</button>
+<button class="btn dq-btn" onclick="dqCheck(3,'bad')">문제 있음 ⚠️</button>
+</div>
+<div class="dq-result" id="dq3-result"></div>
+</div>
+
+<!-- Quiz 4 -->
+<div class="dq-quiz" id="dq4">
+<h5 class="dq-title">📋 시험 성적 데이터</h5>
+<table class="dq-table">
+<thead><tr><th>이름</th><th>국어</th><th>수학</th><th>영어</th></tr></thead>
+<tbody>
+<tr><td>호날두</td><td>85</td><td>92</td><td>78</td></tr>
+<tr><td>굴리트</td><td>90</td><td class="dq-cell dq-outlier" data-q="4">350</td><td>88</td></tr>
+<tr><td>메시</td><td>76</td><td>81</td><td class="dq-cell dq-missing" data-q="4">비어 있음</td></tr>
+<tr><td>해리 케인</td><td>88</td><td>75</td><td>91</td></tr>
+<tr><td>홀란드</td><td>95</td><td>89</td><td>84</td></tr>
+</tbody>
+</table>
+<div class="dq-btns">
+<button class="btn dq-btn" onclick="dqCheck(4,'ok')">문제 없음 ✓</button>
+<button class="btn dq-btn" onclick="dqCheck(4,'bad')">문제 있음 ⚠️</button>
+</div>
+<div class="dq-result" id="dq4-result"></div>
+</div>
+
+<div class="dq-score-wrap">
+  <div class="dq-score" id="dqScore">0 / 4 정답</div>
+  <button class="btn" onclick="dqReset()">🔄 전체 다시 풀기</button>
+</div>
+
+<div class="tip"><strong>💡 포인트:</strong> 데이터 분석 전에는 항상 결측치(빈 값)와 이상치(비정상적 값)를 확인해야 합니다. 결측치는 평균값이나 중앙값으로 대체하거나 제거할 수 있고, 이상치는 입력 오류인지 실제 관측값인지 판단한 후 처리합니다.</div>
+</div>
 <div class="lab" id="lab-reg">
 <span class="lab-badge">▶ INTERACTIVE LAB</span>
 <div class="lab-t">이상치가 선형 회귀에 미치는 영향</div>
@@ -287,14 +488,16 @@ footer a{color:var(--accent);text-decoration:none}
 <div class="nncw"><canvas id="nC"></canvas></div>
 <div class="nnp">
 <div class="nig"><h5>📥 입력값 (Input Layer)</h5>
-<div class="sg"><label>입력 1 — 색깔</label><div class="sr"><input type="range" min="0" max="100" value="70" id="i1" oninput="uNN()"><span class="sv" id="i1v">0.70</span></div></div>
-<div class="sg" style="margin-top:8px"><label>입력 2 — 크기</label><div class="sr"><input type="range" min="0" max="100" value="30" id="i2" oninput="uNN()"><span class="sv" id="i2v">0.30</span></div></div>
-<div class="sg" style="margin-top:8px"><label>입력 3 — 모양</label><div class="sr"><input type="range" min="0" max="100" value="50" id="i3" oninput="uNN()"><span class="sv" id="i3v">0.50</span></div></div>
+<p style="font-size:.8rem;color:var(--text3);margin:0 0 10px">0에 가까울수록 노랑/작음/길쭉, 1에 가까울수록 빨강/큼/둥근</p>
+<div class="sg"><label>입력 1 — 색깔 <span class="wi-tag" id="i1tag">🔴 빨간편</span></label><div class="sr"><input type="range" min="0" max="100" value="70" id="i1" oninput="uNN()"><span class="sv" id="i1v">0.70</span></div></div>
+<div class="sg" style="margin-top:8px"><label>입력 2 — 크기 <span class="wi-tag" id="i2tag">📏 중간</span></label><div class="sr"><input type="range" min="0" max="100" value="30" id="i2" oninput="uNN()"><span class="sv" id="i2v">0.30</span></div></div>
+<div class="sg" style="margin-top:8px"><label>입력 3 — 모양 <span class="wi-tag" id="i3tag">⭕ 중간</span></label><div class="sr"><input type="range" min="0" max="100" value="50" id="i3" oninput="uNN()"><span class="sv" id="i3v">0.50</span></div></div>
 </div>
-<div class="nig"><h5>⚙️ 가중치 (Weights)</h5>
-<div class="sg"><label>W1 (색깔→은닉층)</label><div class="sr"><input type="range" min="-100" max="100" value="60" id="w1" oninput="uNN()"><span class="sv" id="w1v">0.60</span></div></div>
-<div class="sg" style="margin-top:8px"><label>W2 (크기→은닉층)</label><div class="sr"><input type="range" min="-100" max="100" value="-40" id="w2" oninput="uNN()"><span class="sv" id="w2v">-0.40</span></div></div>
-<div class="sg" style="margin-top:8px"><label>W3 (모양→은닉층)</label><div class="sr"><input type="range" min="-100" max="100" value="80" id="w3" oninput="uNN()"><span class="sv" id="w3v">0.80</span></div></div>
+<div class="nig"><h5>⚙️ 가중치 — "이 특징을 얼마나 중요하게 볼까?"</h5>
+<p style="font-size:.8rem;color:var(--text3);margin:0 0 10px">(+) 양수 = 이 특징이 클수록 🍎사과 쪽 · (−) 음수 = 이 특징이 클수록 🍌바나나 쪽 · 0 = 무시</p>
+<div class="sg"><label>W1 — 색깔의 중요도 <span class="wi-tag wi-w" id="w1tag">🍎 사과 쪽 +0.60</span></label><div class="sr"><input type="range" min="-100" max="100" value="60" id="w1" oninput="uNN()"><span class="sv" id="w1v">0.60</span></div></div>
+<div class="sg" style="margin-top:8px"><label>W2 — 크기의 중요도 <span class="wi-tag wi-w" id="w2tag">🍌 바나나 쪽 −0.40</span></label><div class="sr"><input type="range" min="-100" max="100" value="-40" id="w2" oninput="uNN()"><span class="sv" id="w2v">-0.40</span></div></div>
+<div class="sg" style="margin-top:8px"><label>W3 — 모양의 중요도 <span class="wi-tag wi-w" id="w3tag">🍎 사과 쪽 +0.80</span></label><div class="sr"><input type="range" min="-100" max="100" value="80" id="w3" oninput="uNN()"><span class="sv" id="w3v">0.80</span></div></div>
 <div style="margin-top:10px"><button class="btn" onclick="rW()">🎲 랜덤</button> <button class="btn" onclick="rsW()">↩️ 초기화</button></div>
 </div>
 <div class="no"><h5>📤 출력 (Output)</h5>
@@ -304,6 +507,51 @@ footer a{color:var(--accent);text-decoration:none}
 </div>
 </div>
 <div class="tip"><strong>💡 실습 방법:</strong> 입력값은 과일의 특징, <strong>가중치(W)</strong>는 각 특징이 결과에 미치는 영향력입니다. 양수 가중치 → 사과 확률↑, 음수 가중치 → 바나나 확률↑. 연결선 <strong>굵기</strong>=가중치 크기, <strong>색상</strong>=양수(파랑)/음수(빨강). <strong>이것이 딥러닝의 핵심 원리입니다!</strong></div>
+
+<!-- NN Test Mission -->
+<div class="nn-mission" id="nnMission">
+<h5 class="nn-mission-title">🎯 미션: 테스트 데이터로 과일 맞추기</h5>
+<p class="nn-mission-desc">아래 테스트 과일의 특징이 자동으로 입력됩니다. <strong>가중치(W1, W2, W3)만 조절</strong>하여 신경망이 정답을 맞추도록 만들어 보세요!</p>
+
+<div class="nn-test-cards">
+  <div class="nn-test-card" id="nnTest1">
+    <div class="nn-test-header">
+      <span class="nn-test-emoji">🍎</span>
+      <div>
+        <div class="nn-test-label">테스트 1: 빨간 사과</div>
+        <div class="nn-test-sub">색깔: 0.90 (빨강) · 크기: 0.60 (중간) · 모양: 0.70 (둥근)</div>
+      </div>
+    </div>
+    <div class="nn-test-goal">목표: 사과 확률 <strong>70% 이상</strong>으로 만들기</div>
+    <div class="nn-test-btns">
+      <button class="btn" onclick="nnLoadTest(1)">📥 데이터 불러오기</button>
+      <span class="nn-test-status" id="nnTest1Status"></span>
+    </div>
+  </div>
+
+  <div class="nn-test-card" id="nnTest2">
+    <div class="nn-test-header">
+      <span class="nn-test-emoji">🍌</span>
+      <div>
+        <div class="nn-test-label">테스트 2: 노란 바나나</div>
+        <div class="nn-test-sub">색깔: 0.15 (노랑) · 크기: 0.40 (작음) · 모양: 0.20 (길쭉)</div>
+      </div>
+    </div>
+    <div class="nn-test-goal">목표: 바나나 확률 <strong>70% 이상</strong>으로 만들기</div>
+    <div class="nn-test-btns">
+      <button class="btn" onclick="nnLoadTest(2)">📥 데이터 불러오기</button>
+      <span class="nn-test-status" id="nnTest2Status"></span>
+    </div>
+  </div>
+</div>
+
+<div class="nn-challenge-wrap">
+  <div class="nn-challenge-status" id="nnChallengeStatus"></div>
+  <button class="btn" onclick="nnCheckBoth()">🏆 두 과일 동시 판별 도전!</button>
+</div>
+<div class="nn-challenge-result" id="nnChallengeResult"></div>
+
+<div class="tip" style="margin-top:1rem"><strong>💡 도전 과제:</strong> 진짜 어려운 건 <strong>같은 가중치</strong>로 사과와 바나나를 <strong>모두</strong> 맞추는 것입니다! "두 과일 동시 판별 도전" 버튼을 눌러 현재 가중치가 두 과일 모두를 정확히 분류하는지 확인해 보세요. 이것이 바로 신경망이 <strong>학습</strong>을 통해 달성하려는 목표입니다!</div>
 </div>
 
 <h3>4.3 CNN (Convolutional Neural Network)</h3>
@@ -535,13 +783,13 @@ function drawReg(){
   var w = r.width, h = r.height, c = regCtx;
   c.clearRect(0,0,w,h);
   // grid
-  c.strokeStyle = 'rgba(45,58,82,.4)'; c.lineWidth = 0.5;
+  c.strokeStyle = 'rgba(148,163,184,.3)'; c.lineWidth = 0.5;
   for(var i=0;i<=10;i++){
     var gx=i/10*w, gy=(1-i/10)*h;
     c.beginPath(); c.moveTo(gx,0); c.lineTo(gx,h); c.stroke();
     c.beginPath(); c.moveTo(0,gy); c.lineTo(w,gy); c.stroke();
   }
-  c.font='10px "JetBrains Mono"'; c.fillStyle='#4a5568'; c.textAlign='left'; c.textBaseline='top';
+  c.font='10px "JetBrains Mono"'; c.fillStyle='#94a3b8'; c.textAlign='left'; c.textBaseline='top';
   for(var i=0;i<=10;i+=2){ c.fillText(i, i/10*w+3, h-14); if(i>0) c.fillText(i, 3, (1-i/10)*h+2); }
 
   var norm = pts.filter(function(p){return !p.o;});
@@ -550,23 +798,23 @@ function drawReg(){
 
   // normal-only line
   if(rNorm && oc > 0){
-    c.save(); c.setLineDash([8,6]); c.strokeStyle='rgba(52,211,153,.5)'; c.lineWidth=2;
+    c.save(); c.setLineDash([8,6]); c.strokeStyle='rgba(5,150,105,.6)'; c.lineWidth=2;
     c.beginPath();
     c.moveTo(0, (1-(rNorm.s*0+rNorm.i)/10)*h);
     c.lineTo(w, (1-(rNorm.s*10+rNorm.i)/10)*h);
     c.stroke(); c.restore();
-    c.font='11px "Noto Sans KR"'; c.fillStyle='rgba(52,211,153,.7)';
+    c.font='11px "Noto Sans KR"'; c.fillStyle='rgba(5,150,105,.8)';
     var ey = (1-(rNorm.s*10+rNorm.i)/10)*h;
     c.fillText('이상치 제외', w-100, ey<h/2 ? ey+16 : ey-12);
   }
   // all data line
   if(rAll){
-    c.strokeStyle='rgba(56,189,248,.9)'; c.lineWidth=2.5; c.setLineDash([]);
+    c.strokeStyle='rgba(37,99,235,.85)'; c.lineWidth=2.5; c.setLineDash([]);
     c.beginPath();
     var y0 = (1-(rAll.s*0+rAll.i)/10)*h;
     c.moveTo(0, y0); c.lineTo(w, (1-(rAll.s*10+rAll.i)/10)*h);
     c.stroke();
-    c.font='11px "Noto Sans KR"'; c.fillStyle='rgba(56,189,248,.8)';
+    c.font='11px "Noto Sans KR"'; c.fillStyle='rgba(37,99,235,.8)';
     c.fillText('전체 회귀선', 8, y0<h/2 ? y0+16 : y0-12);
   }
   // points
@@ -574,18 +822,18 @@ function drawReg(){
     var p=pts[k], px=p.x/10*w, py=(1-p.y/10)*h;
     if(p.o){
       c.beginPath(); c.arc(px,py,7,0,Math.PI*2);
-      c.fillStyle='rgba(248,113,113,.9)'; c.fill();
+      c.fillStyle='rgba(220,38,38,.85)'; c.fill();
       c.strokeStyle='#fff'; c.lineWidth=2; c.stroke();
       c.beginPath(); c.moveTo(px-3,py-3); c.lineTo(px+3,py+3);
       c.moveTo(px+3,py-3); c.lineTo(px-3,py+3); c.stroke();
     } else {
       c.beginPath(); c.arc(px,py,5,0,Math.PI*2);
-      c.fillStyle='rgba(56,189,248,.8)'; c.fill();
-      c.strokeStyle='rgba(56,189,248,.3)'; c.lineWidth=4; c.stroke();
+      c.fillStyle='rgba(37,99,235,.75)'; c.fill();
+      c.strokeStyle='rgba(37,99,235,.2)'; c.lineWidth=4; c.stroke();
     }
   }
   if(outlierMode){
-    c.fillStyle='rgba(248,113,113,.8)'; c.font='bold 12px "Noto Sans KR"';
+    c.fillStyle='rgba(220,38,38,.8)'; c.font='bold 12px "Noto Sans KR"';
     c.textAlign='left'; c.fillText('⚡ 이상치 모드 ON', 8, 20);
   }
   // stats
@@ -668,6 +916,31 @@ window.uNN = function(){
   document.getElementById('bA').style.width = a+'%';
   document.getElementById('bB').style.width = b+'%';
   drawNN();
+  // Update input interpretation tags
+  var v1=nv.i[0], v2=nv.i[1], v3=nv.i[2];
+  document.getElementById('i1tag').textContent = v1>0.7?'🔴 빨간편':v1>0.4?'🟠 중간':'🟡 노란편';
+  document.getElementById('i2tag').textContent = v2>0.7?'📏 큰편':v2>0.4?'📏 중간':'📏 작은편';
+  document.getElementById('i3tag').textContent = v3>0.7?'⭕ 둥근편':v3>0.4?'⭕ 중간':'🥒 길쭉한편';
+  // Update weight interpretation tags
+  var wIds = ['w1','w2','w3'];
+  var wLabels = ['색깔','크기','모양'];
+  var wTagIds = ['w1tag','w2tag','w3tag'];
+  for(var wi=0;wi<3;wi++){
+    var wVal = +document.getElementById(wIds[wi]).value/100;
+    var tag = document.getElementById(wTagIds[wi]);
+    var abs = Math.abs(wVal);
+    var strength = abs>0.6?'강하게':abs>0.3?'보통':'약하게';
+    if(wVal > 0.05){
+      tag.textContent = '🍎 '+strength+' 사과 쪽 +'+wVal.toFixed(2);
+      tag.className = 'wi-tag wi-w wi-apple';
+    } else if(wVal < -0.05){
+      tag.textContent = '🍌 '+strength+' 바나나 쪽 '+wVal.toFixed(2);
+      tag.className = 'wi-tag wi-w wi-banana';
+    } else {
+      tag.textContent = '🚫 거의 무시';
+      tag.className = 'wi-tag wi-w wi-ignore';
+    }
+  }
 };
 
 function drawNN(){
@@ -682,14 +955,14 @@ function drawNN(){
   for(var i=0;i<3;i++) for(var j=0;j<4;j++){
     var wt=wih[i][j], sg=Math.abs(nv.i[i]*wt);
     c.beginPath(); c.moveTo(lx[0]+20, ny(0,i)); c.lineTo(lx[1]-20, ny(1,j));
-    c.strokeStyle = wt>=0 ? 'rgba(56,189,248,'+(0.1+sg*0.9)+')' : 'rgba(248,113,113,'+(0.1+sg*0.9)+')';
+    c.strokeStyle = wt>=0 ? 'rgba(37,99,235,'+(0.15+sg*0.85)+')' : 'rgba(220,38,38,'+(0.15+sg*0.85)+')';
     c.lineWidth = 1+Math.abs(wt)*4; c.stroke();
   }
   // hidden->output connections
   for(var j=0;j<4;j++) for(var k=0;k<2;k++){
     var wt=who[j][k], sg=Math.abs(nv.h[j]*wt);
     c.beginPath(); c.moveTo(lx[1]+20, ny(1,j)); c.lineTo(lx[2]-20, ny(2,k));
-    c.strokeStyle = wt>=0 ? 'rgba(52,211,153,'+(0.1+sg*0.9)+')' : 'rgba(251,146,60,'+(0.1+sg*0.9)+')';
+    c.strokeStyle = wt>=0 ? 'rgba(5,150,105,'+(0.15+sg*0.85)+')' : 'rgba(234,88,12,'+(0.15+sg*0.85)+')';
     c.lineWidth = 1+Math.abs(wt)*4; c.stroke();
   }
   // nodes
@@ -697,7 +970,7 @@ function drawNN(){
     for(var n=0;n<ls[l];n++){
       var x=lx[l], y=ny(l,n);
       var v = l===0?nv.i[n] : l===1?nv.h[n] : nv.o[n];
-      var cols = l===0?'56,189,248' : l===1?'167,139,250' : n===0?'248,113,113':'251,191,36';
+      var cols = l===0?'37,99,235' : l===1?'124,58,237' : n===0?'220,38,38':'217,119,6';
       var g = c.createRadialGradient(x,y,0,x,y,28);
       g.addColorStop(0, 'rgba('+cols+','+(0.1+v*0.3)+')');
       g.addColorStop(1, 'transparent');
@@ -709,13 +982,13 @@ function drawNN(){
       c.fillStyle='#fff'; c.font='bold 11px "JetBrains Mono"';
       c.textAlign='center'; c.textBaseline='middle';
       c.fillText(v.toFixed(2), x, y);
-      if(l===0){ c.font='10px "Noto Sans KR"'; c.fillStyle='#94a3b8'; c.fillText(il[n],x,y+30); }
+      if(l===0){ c.font='10px "Noto Sans KR"'; c.fillStyle='#64748b'; c.fillText(il[n],x,y+30); }
       if(l===2){ c.font='15px serif'; c.fillText(ol[n],x,y+30); }
     }
     c.font='600 11px "Noto Sans KR"'; c.fillStyle='#64748b'; c.textAlign='center';
     c.fillText(ll[l], lx[l], 20);
   }
-  c.font='9px "Noto Sans KR"'; c.textAlign='left'; c.fillStyle='#4a5568';
+  c.font='9px "Noto Sans KR"'; c.textAlign='left'; c.fillStyle='#94a3b8';
   c.fillText('선 굵기=가중치 크기 | 파랑=양수 | 빨강=음수', 8, h-10);
 }
 
@@ -752,6 +1025,387 @@ window.addEventListener('scroll', function(){
   secs.forEach(function(s){ if(window.scrollY >= s.offsetTop - 200) cur = s.id; });
   tocLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+cur); });
 });
+
+// ═══════ DATA QUALITY QUIZ ═══════
+var dqAnswers = {1:'bad', 2:'ok', 3:'bad', 4:'bad'};
+var dqExplain = {
+  1: {bad:'<strong>정답!</strong> 이영희의 체중이 <strong>비어 있음(결측치)</strong>이고, 최지은의 체중이 <strong>-5kg(이상치)</strong>입니다. 체중은 음수가 될 수 없으므로 입력 오류입니다.', ok:'<strong>아쉬워요!</strong> 이영희의 체중이 비어 있고(결측치), 최지은의 체중 -5kg은 이상치입니다. 체중은 음수가 될 수 없어요.'},
+  2: {ok:'<strong>정답!</strong> 이 데이터는 모든 값이 정상 범위(1~5점) 안에 있고, 빈 값도 없습니다. 깨끗한 데이터입니다!', bad:'<strong>아쉬워요!</strong> 이 데이터는 모든 값이 1~5점 범위 안에 있고, 빈 칸도 없는 정상 데이터입니다.'},
+  3: {bad:'<strong>정답!</strong> 2026-01-03의 기온이 <strong>비어 있음(결측치)</strong>입니다. 기온 분석 전에 이 값을 전후 날짜 평균(0.5°C) 등으로 대체하거나 제거해야 합니다.', ok:'<strong>아쉬워요!</strong> 1월 3일의 기온이 비어 있는 결측치입니다. 분석 전에 처리가 필요해요.'},
+  4: {bad:'<strong>정답!</strong> 굴리트의 수학 점수 <strong>350점(이상치)</strong>은 100점 만점 시험에서 불가능한 값이고, 메시의 영어 점수가 <strong>비어 있음(결측치)</strong>입니다. 두 가지 문제가 모두 있습니다!', ok:'<strong>아쉬워요!</strong> 수학 350점은 100점 만점에서 불가능한 이상치이고, 메시의 영어 점수는 결측치입니다.'}
+};
+var dqAnswered = {};
+
+window.dqCheck = function(n, choice) {
+  if(dqAnswered[n]) return;
+  dqAnswered[n] = choice;
+  var correct = (choice === dqAnswers[n]);
+  var el = document.getElementById('dq'+n+'-result');
+  el.innerHTML = dqExplain[n][choice];
+  el.className = 'dq-result ' + (correct ? 'correct' : 'wrong');
+  // highlight problem cells
+  var cells = document.querySelectorAll('.dq-cell[data-q="'+n+'"]');
+  for(var i=0;i<cells.length;i++) cells[i].classList.add('highlighted');
+  // disable buttons
+  var btns = document.querySelectorAll('#dq'+n+' .dq-btn');
+  for(var i=0;i<btns.length;i++){
+    if((choice==='ok' && btns[i].textContent.indexOf('없음')!==-1) || (choice==='bad' && btns[i].textContent.indexOf('있음')!==-1)){
+      btns[i].classList.add(choice==='ok'?'selected-ok':'selected-bad');
+    } else {
+      btns[i].classList.add('disabled');
+    }
+  }
+  updateDqScore();
+};
+
+function updateDqScore(){
+  var total=0;
+  for(var k in dqAnswered){ if(dqAnswered[k]===dqAnswers[k]) total++; }
+  document.getElementById('dqScore').textContent = total + ' / 4 정답';
+}
+
+window.dqReset = function(){
+  dqAnswered = {};
+  for(var n=1;n<=4;n++){
+    document.getElementById('dq'+n+'-result').className = 'dq-result';
+    document.getElementById('dq'+n+'-result').innerHTML = '';
+    var btns = document.querySelectorAll('#dq'+n+' .dq-btn');
+    for(var i=0;i<btns.length;i++){
+      btns[i].className = 'btn dq-btn';
+    }
+    var cells = document.querySelectorAll('.dq-cell[data-q="'+n+'"]');
+    for(var i=0;i<cells.length;i++) cells[i].classList.remove('highlighted');
+  }
+  document.getElementById('dqScore').textContent = '0 / 4 정답';
+};
+
+// ═══════ DRAG-CLASSIFY ═══════
+var dcItems = [
+  {text:'키 (172cm)', answer:'continuous'},
+  {text:'혈액형 (A형)', answer:'categorical'},
+  {text:'기온 (25.3°C)', answer:'continuous'},
+  {text:'성별 (남/여)', answer:'categorical'},
+  {text:'시험 점수 (87점)', answer:'discrete'},
+  {text:'좋아하는 색깔 (파랑)', answer:'categorical'},
+  {text:'학년 (2학년)', answer:'categorical'},
+  {text:'몸무게 (65kg)', answer:'continuous'},
+  {text:'만족도 (매우 좋음)', answer:'categorical'},
+  {text:'거주 지역 (서울)', answer:'categorical'},
+  {text:'학생 수 (35명)', answer:'discrete'},
+  {text:'일일 걸음 수 (8420보)', answer:'discrete'},
+];
+
+var dcDragItem = null;
+var dcShuffled = [];
+
+function dcInit(){
+  dcShuffled = dcItems.slice().sort(function(){return Math.random()-0.5;});
+  var pool = document.getElementById('dcPool');
+  pool.innerHTML = '';
+  dcShuffled.forEach(function(item, idx){
+    var chip = document.createElement('div');
+    chip.className = 'dc-chip';
+    chip.textContent = item.text;
+    chip.setAttribute('data-idx', idx);
+    chip.setAttribute('draggable', 'true');
+    chip.addEventListener('dragstart', dcDragStart);
+    chip.addEventListener('dragend', dcDragEnd);
+    // Touch support
+    chip.addEventListener('touchstart', dcTouchStart, {passive:false});
+    chip.addEventListener('touchmove', dcTouchMove, {passive:false});
+    chip.addEventListener('touchend', dcTouchEnd);
+    pool.appendChild(chip);
+  });
+  // Setup drop zones
+  var drops = document.querySelectorAll('.dc-drop');
+  for(var i=0;i<drops.length;i++){
+    drops[i].addEventListener('dragover', dcDragOver);
+    drops[i].addEventListener('dragleave', dcDragLeave);
+    drops[i].addEventListener('drop', dcDrop);
+    drops[i].innerHTML = '';
+  }
+  // Pool also a drop target (to move back)
+  pool.addEventListener('dragover', dcDragOver);
+  pool.addEventListener('dragleave', dcDragLeave);
+  pool.addEventListener('drop', dcDropPool);
+  document.getElementById('dcFeedback').className = 'dc-feedback';
+  document.getElementById('dcFeedback').innerHTML = '';
+  document.getElementById('dcScoreText').textContent = '';
+  // Remove correct/wrong classes
+  var chips = document.querySelectorAll('.dc-chip');
+  for(var i=0;i<chips.length;i++){chips[i].classList.remove('correct','wrong');}
+}
+
+function dcDragStart(e){
+  dcDragItem = this;
+  this.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', this.getAttribute('data-idx'));
+}
+function dcDragEnd(e){ this.classList.remove('dragging'); dcDragItem=null; }
+function dcDragOver(e){ e.preventDefault(); e.dataTransfer.dropEffect='move'; this.closest('.dc-zone,.dc-pool')&&this.closest('.dc-zone,.dc-pool').classList.add('drag-over'); if(this.classList.contains('dc-pool'))this.classList.add('drag-over');}
+function dcDragLeave(e){ var z=this.closest('.dc-zone'); if(z)z.classList.remove('drag-over'); if(this.classList.contains('dc-pool'))this.classList.remove('drag-over');}
+function dcDrop(e){
+  e.preventDefault();
+  var zone = this.closest('.dc-zone');
+  if(zone) zone.classList.remove('drag-over');
+  if(dcDragItem){ this.appendChild(dcDragItem); dcDragItem.classList.remove('dragging'); dcDragItem=null; }
+}
+function dcDropPool(e){
+  e.preventDefault();
+  this.classList.remove('drag-over');
+  if(dcDragItem){ this.appendChild(dcDragItem); dcDragItem.classList.remove('dragging'); dcDragItem=null; }
+}
+
+// Touch drag support
+var dcTouchClone = null;
+var dcTouchSource = null;
+function dcTouchStart(e){
+  e.preventDefault();
+  dcTouchSource = this;
+  dcTouchClone = this.cloneNode(true);
+  dcTouchClone.style.position = 'fixed';
+  dcTouchClone.style.zIndex = '9999';
+  dcTouchClone.style.pointerEvents = 'none';
+  dcTouchClone.style.opacity = '0.85';
+  dcTouchClone.style.transform = 'scale(1.08)';
+  dcTouchClone.style.boxShadow = '0 4px 16px rgba(0,0,0,.15)';
+  document.body.appendChild(dcTouchClone);
+  var t = e.touches[0];
+  dcTouchClone.style.left = (t.clientX - 60) + 'px';
+  dcTouchClone.style.top = (t.clientY - 20) + 'px';
+  dcTouchSource.classList.add('dragging');
+}
+function dcTouchMove(e){
+  e.preventDefault();
+  if(!dcTouchClone) return;
+  var t = e.touches[0];
+  dcTouchClone.style.left = (t.clientX - 60) + 'px';
+  dcTouchClone.style.top = (t.clientY - 20) + 'px';
+  // highlight zone under finger
+  var zones = document.querySelectorAll('.dc-zone');
+  for(var i=0;i<zones.length;i++) zones[i].classList.remove('drag-over');
+  document.getElementById('dcPool').classList.remove('drag-over');
+  var el = document.elementFromPoint(t.clientX, t.clientY);
+  if(el){
+    var z = el.closest('.dc-zone');
+    if(z) z.classList.add('drag-over');
+    if(el.closest('.dc-pool')) el.closest('.dc-pool').classList.add('drag-over');
+  }
+}
+function dcTouchEnd(e){
+  if(!dcTouchClone || !dcTouchSource) return;
+  var t = e.changedTouches[0];
+  document.body.removeChild(dcTouchClone);
+  dcTouchClone = null;
+  dcTouchSource.classList.remove('dragging');
+  var el = document.elementFromPoint(t.clientX, t.clientY);
+  if(el){
+    var drop = el.closest('.dc-drop');
+    var pool = el.closest('.dc-pool');
+    if(drop) drop.appendChild(dcTouchSource);
+    else if(pool) pool.appendChild(dcTouchSource);
+  }
+  var zones = document.querySelectorAll('.dc-zone');
+  for(var i=0;i<zones.length;i++) zones[i].classList.remove('drag-over');
+  document.getElementById('dcPool').classList.remove('drag-over');
+  dcTouchSource = null;
+}
+
+window.dcCheckAnswer = function(){
+  var total = dcShuffled.length, correct = 0;
+  var zones = document.querySelectorAll('.dc-drop');
+  for(var z=0;z<zones.length;z++){
+    var zoneName = zones[z].getAttribute('data-zone');
+    var chips = zones[z].querySelectorAll('.dc-chip');
+    for(var c=0;c<chips.length;c++){
+      var idx = parseInt(chips[c].getAttribute('data-idx'));
+      if(dcShuffled[idx].answer === zoneName){
+        chips[c].classList.remove('wrong');
+        chips[c].classList.add('correct');
+        correct++;
+      } else {
+        chips[c].classList.remove('correct');
+        chips[c].classList.add('wrong');
+      }
+    }
+  }
+  // Items still in pool
+  var poolChips = document.getElementById('dcPool').querySelectorAll('.dc-chip');
+  for(var i=0;i<poolChips.length;i++){poolChips[i].classList.add('wrong');}
+
+  document.getElementById('dcScoreText').textContent = correct + ' / ' + total + ' 정답';
+  var fb = document.getElementById('dcFeedback');
+  if(correct === total){
+    fb.className = 'dc-feedback show perfect';
+    fb.innerHTML = '<strong>🎉 완벽합니다!</strong> 모든 데이터를 정확하게 분류했습니다!';
+  } else {
+    fb.className = 'dc-feedback show partial';
+    fb.innerHTML = '<strong>⚠️ ' + (total-correct) + '개가 틀렸습니다.</strong> 초록색 테두리가 정답, 빨간색 테두리가 오답입니다. 다시 시도해 보세요!';
+  }
+};
+
+window.dcReset = function(){
+  dcInit();
+};
+
+// ═══════ NN TEST MISSIONS ═══════
+var nnTests = {
+  1: {i1:90, i2:60, i3:70, target:'apple', label:'🍎 사과', threshold:0.70},
+  2: {i1:15, i2:40, i3:20, target:'banana', label:'🍌 바나나', threshold:0.70}
+};
+var nnActiveTest = 0;
+
+window.nnLoadTest = function(n){
+  var t = nnTests[n];
+  document.getElementById('i1').value = t.i1;
+  document.getElementById('i2').value = t.i2;
+  document.getElementById('i3').value = t.i3;
+  // Disable input sliders (only weights adjustable)
+  document.getElementById('i1').disabled = true;
+  document.getElementById('i2').disabled = true;
+  document.getElementById('i3').disabled = true;
+  nnActiveTest = n;
+  // Highlight active card
+  document.getElementById('nnTest1').classList.remove('active');
+  document.getElementById('nnTest2').classList.remove('active');
+  document.getElementById('nnTest'+n).classList.add('active');
+  window.uNN();
+  nnEvalCurrent();
+};
+
+function nnEvalCurrent(){
+  if(!nnActiveTest) return;
+  var t = nnTests[nnActiveTest];
+  var appleProb = nv.o[0];
+  var bananaProb = nv.o[1];
+  var statusEl = document.getElementById('nnTest'+nnActiveTest+'Status');
+  var cardEl = document.getElementById('nnTest'+nnActiveTest);
+
+  if(t.target === 'apple'){
+    if(appleProb >= t.threshold){
+      statusEl.textContent = '✅ 성공! 사과 ' + (appleProb*100).toFixed(1) + '%';
+      statusEl.className = 'nn-test-status pass';
+      cardEl.classList.add('pass'); cardEl.classList.remove('fail');
+    } else {
+      statusEl.textContent = '❌ 사과 ' + (appleProb*100).toFixed(1) + '% (70% 필요)';
+      statusEl.className = 'nn-test-status fail';
+      cardEl.classList.add('fail'); cardEl.classList.remove('pass');
+    }
+  } else {
+    if(bananaProb >= t.threshold){
+      statusEl.textContent = '✅ 성공! 바나나 ' + (bananaProb*100).toFixed(1) + '%';
+      statusEl.className = 'nn-test-status pass';
+      cardEl.classList.add('pass'); cardEl.classList.remove('fail');
+    } else {
+      statusEl.textContent = '❌ 바나나 ' + (bananaProb*100).toFixed(1) + '% (70% 필요)';
+      statusEl.className = 'nn-test-status fail';
+      cardEl.classList.add('fail'); cardEl.classList.remove('pass');
+    }
+  }
+}
+
+// Override uNN to also eval mission
+var _origUNN = window.uNN;
+window.uNN = function(){
+  _origUNN();
+  if(nnActiveTest) nnEvalCurrent();
+};
+
+window.nnCheckBoth = function(){
+  // Save current weights
+  var savedW1 = document.getElementById('w1').value;
+  var savedW2 = document.getElementById('w2').value;
+  var savedW3 = document.getElementById('w3').value;
+  // Save current input state
+  var savedI1 = document.getElementById('i1').value;
+  var savedI2 = document.getElementById('i2').value;
+  var savedI3 = document.getElementById('i3').value;
+  var savedDisabled1 = document.getElementById('i1').disabled;
+  var savedDisabled2 = document.getElementById('i2').disabled;
+  var savedDisabled3 = document.getElementById('i3').disabled;
+
+  var results = [];
+  for(var n=1; n<=2; n++){
+    var t = nnTests[n];
+    // Set test inputs
+    document.getElementById('i1').value = t.i1;
+    document.getElementById('i2').value = t.i2;
+    document.getElementById('i3').value = t.i3;
+    // Recalculate
+    nv.i = [t.i1/100, t.i2/100, t.i3/100];
+    forward();
+
+    var prob = t.target === 'apple' ? nv.o[0] : nv.o[1];
+    var pass = prob >= t.threshold;
+    results.push({n:n, pass:pass, prob:prob, target:t.target, label:t.label});
+
+    // Update status
+    var statusEl = document.getElementById('nnTest'+n+'Status');
+    var cardEl = document.getElementById('nnTest'+n);
+    if(pass){
+      statusEl.textContent = '✅ 성공! ' + (t.target==='apple'?'사과':'바나나') + ' ' + (prob*100).toFixed(1) + '%';
+      statusEl.className = 'nn-test-status pass';
+      cardEl.classList.add('pass'); cardEl.classList.remove('fail');
+    } else {
+      statusEl.textContent = '❌ ' + (t.target==='apple'?'사과':'바나나') + ' ' + (prob*100).toFixed(1) + '%';
+      statusEl.className = 'nn-test-status fail';
+      cardEl.classList.add('fail'); cardEl.classList.remove('pass');
+    }
+  }
+
+  // Restore inputs
+  document.getElementById('i1').value = savedI1;
+  document.getElementById('i2').value = savedI2;
+  document.getElementById('i3').value = savedI3;
+  document.getElementById('i1').disabled = savedDisabled1;
+  document.getElementById('i2').disabled = savedDisabled2;
+  document.getElementById('i3').disabled = savedDisabled3;
+  nv.i = [savedI1/100, savedI2/100, savedI3/100];
+  forward();
+  drawNN();
+  // Update display values
+  document.getElementById('i1v').textContent = (savedI1/100).toFixed(2);
+  document.getElementById('i2v').textContent = (savedI2/100).toFixed(2);
+  document.getElementById('i3v').textContent = (savedI3/100).toFixed(2);
+  var a = nv.o[0]*100, b = nv.o[1]*100;
+  document.getElementById('oA').textContent = a.toFixed(1)+'%';
+  document.getElementById('oB').textContent = b.toFixed(1)+'%';
+  document.getElementById('bA').style.width = a+'%';
+  document.getElementById('bB').style.width = b+'%';
+
+  var allPass = results[0].pass && results[1].pass;
+  var resEl = document.getElementById('nnChallengeResult');
+  if(allPass){
+    resEl.className = 'nn-challenge-result show success';
+    resEl.innerHTML = '<strong>🎉 축하합니다!</strong> 현재 가중치로 사과(' + (results[0].prob*100).toFixed(1) + '%)와 바나나(' + (results[1].prob*100).toFixed(1) + '%)를 모두 정확하게 분류했습니다! 이것이 바로 신경망이 학습을 통해 달성하는 목표입니다. 하나의 가중치 세트로 여러 데이터를 올바르게 판별하는 것이죠!';
+  } else {
+    var failList = [];
+    if(!results[0].pass) failList.push('사과(' + (results[0].prob*100).toFixed(1) + '%)');
+    if(!results[1].pass) failList.push('바나나(' + (results[1].prob*100).toFixed(1) + '%)');
+    resEl.className = 'nn-challenge-result show fail';
+    resEl.innerHTML = '<strong>⚠️ 아직이에요!</strong> ' + failList.join(', ') + '의 확률이 70%에 못 미칩니다. 가중치를 더 조절해 보세요! 힌트: 사과는 색깔(빨강)과 모양(둥근)이 특징이고, 바나나는 색깔(노랑)과 모양(길쭉)이 특징입니다.';
+  }
+};
+
+// Also update rsW to re-enable inputs
+var _origRsW = window.rsW;
+window.rsW = function(){
+  document.getElementById('i1').disabled = false;
+  document.getElementById('i2').disabled = false;
+  document.getElementById('i3').disabled = false;
+  nnActiveTest = 0;
+  document.getElementById('nnTest1').classList.remove('active','pass','fail');
+  document.getElementById('nnTest2').classList.remove('active','pass','fail');
+  document.getElementById('nnTest1Status').textContent = '';
+  document.getElementById('nnTest1Status').className = 'nn-test-status';
+  document.getElementById('nnTest2Status').textContent = '';
+  document.getElementById('nnTest2Status').className = 'nn-test-status';
+  document.getElementById('nnChallengeResult').className = 'nn-challenge-result';
+  _origRsW();
+};
+
+dcInit();
 
 })();
 </script>
