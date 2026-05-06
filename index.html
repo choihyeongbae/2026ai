@@ -88,21 +88,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 .sc.warn .sv2{color:var(--orange)}.sc.bad .sv2{color:var(--red)}
 .tip{background:linear-gradient(135deg,rgba(37,99,235,.05),rgba(124,58,237,.04));border:1px solid rgba(37,99,235,.15);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin-top:1.25rem;font-size:.85rem;color:var(--text2);line-height:1.8}
 .tip strong{color:var(--accent)}
-.nnc{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
-.nncw{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:4/3}
-.nncw canvas{width:100%;height:100%;display:block}
-.nnp{display:flex;flex-direction:column;gap:.75rem}
-.nig{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem}
-.nig h5{font-size:.85rem;font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:6px}
-.no{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem}
-.no h5{font-size:.85rem;font-weight:600;margin-bottom:.75rem}
-.obw{margin-bottom:.6rem}
-.obl{display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:3px}
-.obl .on{color:var(--text2)}.obl .ov{font-family:'JetBrains Mono',monospace;color:var(--accent)}
-.ob{height:7px;background:var(--border);border-radius:4px;overflow:hidden}
-.obf{height:100%;border-radius:4px;transition:width .4s,background .4s}
-footer{text-align:center;padding:3rem 2rem;color:var(--text3);font-size:.82rem;border-top:1px solid var(--border)}
-footer a{color:var(--accent);text-decoration:none}
 /* DQ Quiz */
 .dq-quiz{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;margin-bottom:1.25rem}
 .dq-title{font-size:.95rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:6px;color:var(--text)}
@@ -144,46 +129,10 @@ footer a{color:var(--accent);text-decoration:none}
 .dc-feedback.show{display:block}
 .dc-feedback.perfect{background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);color:var(--green)}
 .dc-feedback.partial{background:rgba(234,88,12,.06);border:1px solid rgba(234,88,12,.15);color:var(--orange)}
-/* NN Mission */
-.nn-mission{margin-top:2rem;padding-top:1.5rem;border-top:2px dashed var(--border)}
-.nn-mission-title{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
-.nn-mission-desc{font-size:.9rem;color:var(--text2);margin-bottom:1.25rem}
-.nn-test-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
-@media(max-width:700px){.nn-test-cards{grid-template-columns:1fr}}
-.nn-test-card{background:var(--bg3);border:2px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem;transition:border-color .3s}
-.nn-test-card.active{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
-.nn-test-card.pass{border-color:var(--green);background:rgba(5,150,105,.04)}
-.nn-test-card.fail{border-color:var(--red);background:rgba(220,38,38,.03)}
-.nn-test-header{display:flex;align-items:center;gap:12px;margin-bottom:.75rem}
-.nn-test-emoji{font-size:2rem;line-height:1}
-.nn-test-label{font-size:.95rem;font-weight:700;color:var(--text)}
-.nn-test-sub{font-size:.75rem;color:var(--text3);margin-top:2px;font-family:'JetBrains Mono',monospace}
-.nn-test-goal{font-size:.85rem;color:var(--text2);margin-bottom:.75rem;padding:6px 12px;background:var(--surface);border-radius:8px;border:1px solid var(--border)}
-.nn-test-goal strong{color:var(--accent)}
-.nn-test-btns{display:flex;align-items:center;gap:.75rem}
-.nn-test-status{font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:700}
-.nn-test-status.pass{color:var(--green)}
-.nn-test-status.fail{color:var(--red)}
-.nn-test-status.pending{color:var(--text3)}
-.nn-challenge-wrap{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem}
-.nn-challenge-status{font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:600}
-.nn-challenge-result{font-size:.9rem;padding:12px 16px;border-radius:10px;display:none;line-height:1.7}
-.nn-challenge-result.show{display:block}
-.nn-challenge-result.success{background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);color:var(--green)}
-.nn-challenge-result.fail{background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.15);color:var(--red)}
-/* Weight interpret tags */
-.wi-tag{display:inline-block;font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:6px;vertical-align:middle;letter-spacing:-.01em}
-.wi-tag:not(.wi-w){background:rgba(37,99,235,.08);color:var(--accent);border:1px solid rgba(37,99,235,.15)}
-.wi-tag.wi-w{border:1px solid var(--border);background:var(--bg3);color:var(--text2)}
-.wi-tag.wi-apple{background:rgba(220,38,38,.07);color:var(--red);border-color:rgba(220,38,38,.18)}
-.wi-tag.wi-banana{background:rgba(217,119,6,.07);color:var(--yellow);border-color:rgba(217,119,6,.18)}
-.wi-tag.wi-ignore{background:var(--bg3);color:var(--text3);border-color:var(--border)}
-@media(max-width:900px){.nnc{grid-template-columns:1fr}}
 @media(max-width:768px){.container{padding:0 1rem}.chapter{padding:3.5rem 0 2rem}.cmp{font-size:.8rem}.toc-strip a{padding:12px 10px;font-size:.72rem}}
 </style>
 </head>
 <body>
-
 <div class="hero">
   <span class="hero-badge">포항여자고등학교 · 인공지능 기초</span>
   <h1>AI Fundamentals</h1>
@@ -191,7 +140,6 @@ footer a{color:var(--accent);text-decoration:none}
   <p>인공지능의 핵심 개념부터 기계학습, 딥러닝, 그리고 AI 윤리까지.<br>이론을 읽고, 중간중간 인터랙티브 실습으로 직접 체험해 보세요.</p>
   <div class="scroll-ind">↓</div>
 </div>
-
 <nav class="toc-strip" id="toc">
   <a href="#ch1">1. AI의 이해</a>
   <a href="#ch2">2. 데이터</a>
@@ -201,7 +149,6 @@ footer a{color:var(--accent);text-decoration:none}
   <a href="#ch6">6. AI 윤리</a>
   <a href="#gl">용어</a>
 </nav>
-
 <!-- CH1 -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="ch1">
@@ -220,7 +167,7 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">에너지</td><td>에너지 소모 적고 범용적 지능 보유</td><td>특정 영역에서 인간 초월 성능 발휘 가능</td></tr>
 </tbody></table>
 <h3>1.3 튜링 테스트</h3>
-<div class="cb blue"><h5>🧪 튜링 테스트(Turing Test)란?</h5><p>1950년 영국의 수학자 <strong>앨런 튜링(Alan Turing)</strong>이 제안한 테스트로, 컴퓨터가 인간과 구별할 수 없을 정도로 대화할 수 있는지를 평가하는 방법입니다.</p><p>사람이 컴퓨터와 대화를 나누면서 상대방이 사람인지 컴퓨터인지 구분하지 못한다면, 해당 컴퓨터는 <strong>'지능이 있다'</strong>고 판단합니다.</p></div>
+<div class="cb blue"><h5>🧪 튜링 테스트(Turing Test)란?</h5><p>1950년 영국의 수학자 <strong>앨런 튜링(Alan Turing)</strong>이 제안한 테스트로, 컴퓨터가 인간과 구별할 수 없을 정도로 대화할 수 있는지를 평가하는 방법입니다.</p><p>사람이 컴퓨터와 대화를 나누면서 상대방이 사람인지 컴퓨터인지 구분하지 못한다면, 해당 컴퓨터는 <strong>'지능이 있다'</strong>고 판단합니다.</div>
 <p>튜링 테스트는 인공지능 연구의 출발점이 된 중요한 개념입니다. 오늘날의 ChatGPT, Claude와 같은 대화형 AI가 등장하면서 이 질문은 더욱 현실적인 의미를 갖게 되었습니다.</p>
 <h3>1.4 인공지능의 활용 사례</h3>
 <p>인공지능은 우리 일상의 다양한 분야에서 활용되고 있습니다.</p>
@@ -232,7 +179,6 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">생성형 AI</td><td>ChatGPT, Claude 등이 텍스트·이미지·음악 등을 새롭게 생성</td></tr>
 </tbody></table>
 </section></div>
-
 <!-- CH2 -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="ch2">
@@ -253,15 +199,11 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">수치형 — 이산형</td><td>셀 수 있는 정수 값</td><td>학생 수(35명), 점수(85점)</td></tr>
 <tr><td class="lc">범주형</td><td>여러 범주 중 해당 값</td><td>혈액형(A/B/O/AB), 성별, 학년</td></tr>
 </tbody></table>
-
-<!-- LAB: 데이터 속성 분류 드래그 -->
 <div class="lab" id="lab-classify">
 <span class="lab-badge">▶ INTERACTIVE LAB</span>
 <div class="lab-t">실습: 데이터 속성 분류하기</div>
 <p class="lab-d">아래 데이터를 드래그하여 연속형, 이산형, 범주형 상자에 분류해 보세요. 모두 분류한 뒤 정답을 확인할 수 있습니다.</p>
-
 <div class="dc-pool" id="dcPool"></div>
-
 <div class="dc-zones">
   <div class="dc-zone" id="zone-cont" data-zone="continuous">
     <div class="dc-zone-label"><span class="dc-zone-icon" style="background:var(--accent)">📏</span> 연속형<span class="dc-zone-sub">연속적으로 변하는 수치</span></div>
@@ -276,17 +218,14 @@ footer a{color:var(--accent);text-decoration:none}
     <div class="dc-drop" data-zone="categorical"></div>
   </div>
 </div>
-
 <div class="dc-actions">
   <button class="btn" onclick="dcCheckAnswer()">✅ 정답 확인</button>
   <button class="btn" onclick="dcReset()">🔄 다시 하기</button>
   <span class="dc-score" id="dcScoreText"></span>
 </div>
 <div class="dc-feedback" id="dcFeedback"></div>
-
 <div class="tip"><strong>💡 힌트:</strong> <strong>연속형</strong>은 소수점으로 측정 가능한 값(키, 체온, 몸무게), <strong>이산형</strong>은 1, 2, 3처럼 셀 수 있는 정수(학생 수, 점수), <strong>범주형</strong>은 숫자가 아닌 분류 값(혈액형, 성별, 색깔)입니다.</div>
 </div>
-
 <h3>2.3 데이터 전처리</h3>
 <div class="def-box"><div class="tag">핵심 정의</div><p><strong>데이터 전처리</strong>는 데이터 분석에 적합한 상태로 변환하는 과정입니다. 결측치, 이상치 등을 확인하고 처리 방법을 결정하며, 필요한 경우 정규화를 통해 속성값 간 분포를 조정합니다.</p></div>
 <div class="tl">
@@ -294,99 +233,63 @@ footer a{color:var(--accent);text-decoration:none}
 <div class="ti"><span class="tn">이상치 (Outlier)</span><span class="td">잘못 입력되었거나 정상 범위에서 많이 벗어난 데이터를 말합니다.</span></div>
 <div class="ti"><span class="tn">정규화 (Normalization)</span><span class="td">서로 다른 범위의 데이터를 일정한 범위(예: 0~1)로 변환하여 비교 가능하게 만드는 과정입니다.</span></div>
 </div>
-<div class="cb orange"><h5>💡 생각해보기</h5><p>학교 급식 영양 데이터에서 칼로리가 '50,000 kcal'로 기록되어 있다면? 이것은 <strong>이상치</strong>일 가능성이 높습니다. 보통 한 끼 급식은 600~900 kcal 수준이기 때문입니다. 데이터를 그대로 사용하면 잘못된 분석 결과를 얻을 수 있어, 전처리가 꼭 필요합니다.</p></div>
-
-<!-- LAB: 데이터 품질 진단 -->
+<div class="cb orange"><h5>💡 생각해보기</h5><p>학교 급식 영양 데이터에서 칼로리가 '50,000 kcal'로 기록되어 있다면? 이것은 <strong>이상치</strong>일 가능성이 높습니다. 보통 한 끼 급식은 600~900 kcal 수준이기 때문입니다. 데이터를 그대로 사용하면 잘못된 분석 결과를 얻을 수 있어, 전처리가 꼭 필요합니다.</div>
 <div class="lab" id="lab-dq">
 <span class="lab-badge">▶ INTERACTIVE LAB</span>
 <div class="lab-t">실습: 데이터 품질 진단하기</div>
 <p class="lab-d">아래 데이터를 살펴보고, 품질 문제가 있는지 찾아보세요. 각 데이터셋을 확인한 뒤 버튼을 눌러 정답을 확인하세요.</p>
-
-<!-- Quiz 1 -->
 <div class="dq-quiz" id="dq1">
 <h5 class="dq-title">📋 체중 측정 데이터</h5>
-<table class="dq-table">
-<thead><tr><th>이름</th><th>체중(kg)</th></tr></thead>
-<tbody>
+<table class="dq-table"><thead><tr><th>이름</th><th>체중(kg)</th></tr></thead><tbody>
 <tr><td>김철수</td><td>72</td></tr>
 <tr><td>이영희</td><td class="dq-cell dq-missing" data-q="1">비어 있음</td></tr>
 <tr><td>박민수</td><td>68</td></tr>
 <tr><td>최지은</td><td class="dq-cell dq-outlier" data-q="1">-5</td></tr>
 <tr><td>정수현</td><td>65</td></tr>
-</tbody>
-</table>
-<div class="dq-btns">
-<button class="btn dq-btn" onclick="dqCheck(1,'ok')">문제 없음 ✓</button>
-<button class="btn dq-btn" onclick="dqCheck(1,'bad')">문제 있음 ⚠️</button>
-</div>
+</tbody></table>
+<div class="dq-btns"><button class="btn dq-btn" onclick="dqCheck(1,'ok')">문제 없음 ✓</button><button class="btn dq-btn" onclick="dqCheck(1,'bad')">문제 있음 ⚠️</button></div>
 <div class="dq-result" id="dq1-result"></div>
 </div>
-
-<!-- Quiz 2 -->
 <div class="dq-quiz" id="dq2">
 <h5 class="dq-title">📋 학생 설문 응답</h5>
-<table class="dq-table">
-<thead><tr><th>학번</th><th>만족도</th><th>의견</th></tr></thead>
-<tbody>
+<table class="dq-table"><thead><tr><th>학번</th><th>만족도</th><th>의견</th></tr></thead><tbody>
 <tr><td>001</td><td>5</td><td>좋아요</td></tr>
 <tr><td>002</td><td>4</td><td>괜찮아요</td></tr>
 <tr><td>003</td><td>3</td><td>보통</td></tr>
 <tr><td>004</td><td>4</td><td>좋아요</td></tr>
 <tr><td>005</td><td>5</td><td>매우 좋아요</td></tr>
-</tbody>
-</table>
-<div class="dq-btns">
-<button class="btn dq-btn" onclick="dqCheck(2,'ok')">문제 없음 ✓</button>
-<button class="btn dq-btn" onclick="dqCheck(2,'bad')">문제 있음 ⚠️</button>
-</div>
+</tbody></table>
+<div class="dq-btns"><button class="btn dq-btn" onclick="dqCheck(2,'ok')">문제 없음 ✓</button><button class="btn dq-btn" onclick="dqCheck(2,'bad')">문제 있음 ⚠️</button></div>
 <div class="dq-result" id="dq2-result"></div>
 </div>
-
-<!-- Quiz 3 -->
 <div class="dq-quiz" id="dq3">
 <h5 class="dq-title">📋 기온 기록 데이터</h5>
-<table class="dq-table">
-<thead><tr><th>날짜</th><th>기온(°C)</th></tr></thead>
-<tbody>
+<table class="dq-table"><thead><tr><th>날짜</th><th>기온(°C)</th></tr></thead><tbody>
 <tr><td>2026-01-01</td><td>-3</td></tr>
 <tr><td>2026-01-02</td><td>-1</td></tr>
 <tr><td>2026-01-03</td><td class="dq-cell dq-missing" data-q="3">비어 있음</td></tr>
 <tr><td>2026-01-04</td><td>2</td></tr>
 <tr><td>2026-01-05</td><td>0</td></tr>
-</tbody>
-</table>
-<div class="dq-btns">
-<button class="btn dq-btn" onclick="dqCheck(3,'ok')">문제 없음 ✓</button>
-<button class="btn dq-btn" onclick="dqCheck(3,'bad')">문제 있음 ⚠️</button>
-</div>
+</tbody></table>
+<div class="dq-btns"><button class="btn dq-btn" onclick="dqCheck(3,'ok')">문제 없음 ✓</button><button class="btn dq-btn" onclick="dqCheck(3,'bad')">문제 있음 ⚠️</button></div>
 <div class="dq-result" id="dq3-result"></div>
 </div>
-
-<!-- Quiz 4 -->
 <div class="dq-quiz" id="dq4">
 <h5 class="dq-title">📋 시험 성적 데이터</h5>
-<table class="dq-table">
-<thead><tr><th>이름</th><th>국어</th><th>수학</th><th>영어</th></tr></thead>
-<tbody>
+<table class="dq-table"><thead><tr><th>이름</th><th>국어</th><th>수학</th><th>영어</th></tr></thead><tbody>
 <tr><td>호날두</td><td>85</td><td>92</td><td>78</td></tr>
 <tr><td>굴리트</td><td>90</td><td class="dq-cell dq-outlier" data-q="4">350</td><td>88</td></tr>
 <tr><td>메시</td><td>76</td><td>81</td><td class="dq-cell dq-missing" data-q="4">비어 있음</td></tr>
 <tr><td>해리 케인</td><td>88</td><td>75</td><td>91</td></tr>
 <tr><td>홀란드</td><td>95</td><td>89</td><td>84</td></tr>
-</tbody>
-</table>
-<div class="dq-btns">
-<button class="btn dq-btn" onclick="dqCheck(4,'ok')">문제 없음 ✓</button>
-<button class="btn dq-btn" onclick="dqCheck(4,'bad')">문제 있음 ⚠️</button>
-</div>
+</tbody></table>
+<div class="dq-btns"><button class="btn dq-btn" onclick="dqCheck(4,'ok')">문제 없음 ✓</button><button class="btn dq-btn" onclick="dqCheck(4,'bad')">문제 있음 ⚠️</button></div>
 <div class="dq-result" id="dq4-result"></div>
 </div>
-
 <div class="dq-score-wrap">
   <div class="dq-score" id="dqScore">0 / 4 정답</div>
   <button class="btn" onclick="dqReset()">🔄 전체 다시 풀기</button>
 </div>
-
 <div class="tip"><strong>💡 포인트:</strong> 데이터 분석 전에는 항상 결측치(빈 값)와 이상치(비정상적 값)를 확인해야 합니다. 결측치는 평균값이나 중앙값으로 대체하거나 제거할 수 있고, 이상치는 입력 오류인지 실제 관측값인지 판단한 후 처리합니다.</div>
 </div>
 <div class="lab" id="lab-reg">
@@ -410,14 +313,13 @@ footer a{color:var(--accent);text-decoration:none}
 <div class="tip"><strong>💡 실습 방법:</strong> ① "샘플 데이터"로 기본 데이터를 만들고 R² 값 확인 → ② "랜덤 이상치"를 여러 번 눌러 회귀선과 R² 변화 관찰 → ③ "이상치 추가 모드" ON 후 원하는 위치에 직접 이상치 배치 → ④ "이상치 제거" 후 회귀선이 원래로 돌아오는지 비교<br><strong>파란 실선</strong> = 전체 데이터 회귀선 | <strong>초록 점선</strong> = 이상치 제외 회귀선</div>
 </div>
 </section></div>
-
 <!-- CH3 -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="ch3">
 <div class="chapter-num">Chapter 03</div>
 <h2 class="chapter-title">기계학습의 원리</h2>
 <p class="chapter-desc">기계학습(Machine Learning)은 데이터를 기반으로 알고리즘이 패턴을 학습하고, 이를 통해 예측하거나 결정을 내리는 기술입니다.</p>
-<div class="cb purple"><h5>🔍 인공지능 > 기계학습 > 딥러닝</h5><p><strong>인공지능(AI)</strong>: 인간의 지능을 모방하는 컴퓨터과학의 가장 넓은 분야</p><p><strong>기계학습(ML)</strong>: 인공지능의 하위 분야로, 데이터를 기반으로 패턴을 학습하는 기술</p><p><strong>딥러닝(DL)</strong>: 기계학습의 하위 분야로, 인공신경망을 활용하는 기술</p></div>
+<div class="cb purple"><h5>🔍 인공지능 > 기계학습 > 딥러닝</h5><p><strong>인공지능(AI)</strong>: 인간의 지능을 모방하는 컴퓨터과학의 가장 넓은 분야</p><p><strong>기계학습(ML)</strong>: 인공지능의 하위 분야로, 데이터를 기반으로 패턴을 학습하는 기술</p><p><strong>딥러닝(DL)</strong>: 기계학습의 하위 분야로, 인공신경망을 활용하는 기술</div>
 <p>기계학습은 <strong>지도학습</strong>, <strong>비지도학습</strong>, <strong>강화학습</strong>으로 나뉘며, 각각의 방식은 학습 데이터와 목표에 따라 다르게 적용됩니다.</p>
 <h3>3.1 지도학습 (Supervised Learning)</h3>
 <p>지도학습은 인공지능에게 <strong>문제와 정답을 모두 제공</strong>하고 학습시키는 방식입니다. 주어진 데이터(입력값)와 그에 대응하는 정답(레이블)을 기반으로 알고리즘이 패턴을 학습합니다. 새로운 데이터가 주어졌을 때 학습된 패턴으로 예측하거나 분류합니다.</p>
@@ -427,7 +329,7 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">예시</td><td>이메일 → '스팸'/'정상', 이미지 → '고양이'/'개'</td><td>주택 가격, 주식 변동, 내일 기온 예측</td></tr>
 <tr><td class="lc">결과</td><td>범주(카테고리)</td><td>연속적인 숫자</td></tr>
 </tbody></table>
-<div class="cb blue"><h5>📌 핵심 포인트</h5><p>지도학습의 성능은 <strong>훈련 데이터의 품질과 양</strong>에 크게 영향을 받습니다. 정확한 레이블(정답)이 포함된 데이터셋이 반드시 필요합니다.</p></div>
+<div class="cb blue"><h5>📌 핵심 포인트</h5><p>지도학습의 성능은 <strong>훈련 데이터의 품질과 양</strong>에 크게 영향을 받습니다. 정확한 레이블(정답)이 포함된 데이터셋이 반드시 필요합니다.</div>
 <h3>3.2 비지도학습 (Unsupervised Learning)</h3>
 <p>비지도학습은 인공지능에게 <strong>정답을 주지 않고</strong>, 데이터만 제공해서 스스로 숨겨진 패턴이나 구조를 찾도록 하는 학습 방식입니다.</p>
 <h4>군집화 (Clustering)</h4>
@@ -452,109 +354,122 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">활용</td><td>스팸 필터, 이미지 인식</td><td>고객 세분화, 추천</td><td>게임 AI, 자율주행</td></tr>
 </tbody></table>
 </section></div>
-
 <!-- CH4 -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="ch4">
 <div class="chapter-num">Chapter 04</div>
 <h2 class="chapter-title">딥러닝의 원리</h2>
-<p class="chapter-desc">딥러닝은 기계학습의 하위 분야로, 인공신경망을 활용하여 데이터를 처리하고 복잡한 문제를 해결합니다.</p>
+<p class="chapter-desc">딥러닝은 기계학습의 하위 분야로, 수많은 예시를 보고 판단 기준을 스스로 조정해 가는 인공지능 학습 방법입니다.</p>
+
+<div class="cb blue"><h5>🙋 수업 도입 질문</h5>
+<p>여러분은 처음 보는 동물이 고양이인지 강아지인지 어떻게 구별하나요?</p>
+<p>귀 모양, 눈 모양, 털, 몸집, 얼굴 생김새… 사람도 여러 특징을 보고 판단하듯이, 딥러닝도 데이터 안에서 특징을 찾아 판단합니다. 다만 사람은 경험으로 배우고, 딥러닝은 숫자와 계산으로 배웁니다.</div>
+
 <h3>4.1 딥러닝이란?</h3>
-<p><strong>딥러닝(Deep Learning)</strong>은 인간의 뇌 신경망 구조를 본떠 만든 '인공신경망'을 이용하는 기술입니다. 다층 구조를 가진 신경망을 통해 이미지, 음성, 텍스트 등에서 높은 수준의 특징을 자동으로 추출합니다.</p>
-<p>사람이 사과와 바나나를 구별할 때 빨간색이면 사과, 노란색이면 바나나라고 판단하듯이, 딥러닝도 수많은 사진을 보고 색깔과 모양 같은 특징을 스스로 찾아 구별하는 규칙을 배웁니다.</p>
-<h4>인공신경망의 기본 구조</h4>
+<div class="def-box"><div class="tag">한 문장 정의</div>
+<p><strong>딥러닝은 컴퓨터가 많은 데이터를 보고, 정답과 비교하면서 판단 기준을 스스로 조정해 가는 인공지능 학습 방법입니다.</strong></p>
+<p>사람이 하나하나 규칙을 알려주지 않아도, 컴퓨터가 예시를 많이 보면서 "아, 이런 특징이 있으면 고양이구나"처럼 판단 기준을 배워 갑니다.</div>
+
+<div class="cb orange"><h5>⚠️ 흔한 오해</h5>
+<p>"인간 뇌를 완벽히 따라 만든 기술"이라고 하면 오해가 생깁니다. 딥러닝은 뇌의 구조에서 힌트를 얻었지만, 실제로는 <strong>숫자와 계산으로 패턴을 찾는 프로그램</strong>입니다.</div>
+
+<h3>4.2 가장 쉬운 비유: 고양이와 강아지 구별</h3>
+<p>예전 프로그래밍 방식은 사람이 규칙을 직접 정해 주었습니다. 그런데 실제 사진은 너무 다양해서 규칙만으로는 한계가 있습니다.</p>
+<table class="cmp"><thead><tr><th>방식</th><th>내용</th><th>문제점</th></tr></thead><tbody>
+<tr><td class="lc">규칙 기반</td><td>귀가 뾰족하면 고양이, 주둥이가 길면 강아지</td><td>고양이도 귀가 안 보일 수 있고, 강아지도 귀가 뾰족할 수 있음</td></tr>
+<tr><td class="lc">딥러닝</td><td>고양이·강아지 사진 수만 장을 보여주고 스스로 학습</td><td>처음에는 틀리지만 반복할수록 점점 정확해짐</td></tr>
+</tbody></table>
+
+<div class="cb green"><h5>🤖 딥러닝이 배우는 방식</h5>
+<p><strong>컴퓨터:</strong> 이건 강아지!</p>
+<p><strong>정답:</strong> 고양이야.</p>
+<p><strong>컴퓨터:</strong> 아, 내가 귀 모양을 너무 중요하게 봤구나. 기준을 조금 바꿔야겠다.</p>
+<p>→ 이 과정을 수만 번 반복하면서 점점 잘 맞히게 됩니다.</div>
+
+<div style="margin:2rem 0;padding:1.5rem 1.75rem;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius)">
+<div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:1.25rem">딥러닝 학습 한 사이클</div>
+<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+  <div style="flex:1;min-width:90px;text-align:center;padding:.85rem .5rem;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.22);border-radius:12px">
+    <div style="font-size:1.5rem;margin-bottom:.25rem">📷</div>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.15rem">입력</div>
+    <div style="font-size:.68rem;color:var(--text3)">고양이 사진</div>
+  </div>
+  <div style="color:var(--accent);font-size:1.2rem">→</div>
+  <div style="flex:1;min-width:90px;text-align:center;padding:.85rem .5rem;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.22);border-radius:12px">
+    <div style="font-size:1.5rem;margin-bottom:.25rem">🧠</div>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.15rem">신경망</div>
+    <div style="font-size:.68rem;color:var(--text3)">특징 분석</div>
+  </div>
+  <div style="color:var(--accent);font-size:1.2rem">→</div>
+  <div style="flex:1;min-width:90px;text-align:center;padding:.85rem .5rem;background:rgba(234,88,12,.08);border:1px solid rgba(234,88,12,.22);border-radius:12px">
+    <div style="font-size:1.5rem;margin-bottom:.25rem">🔮</div>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.15rem">예측</div>
+    <div style="font-size:.68rem;color:var(--text3)">"강아지?"</div>
+  </div>
+  <div style="color:var(--accent);font-size:1.2rem">→</div>
+  <div style="flex:1;min-width:90px;text-align:center;padding:.85rem .5rem;background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.22);border-radius:12px">
+    <div style="font-size:1.5rem;margin-bottom:.25rem">❌</div>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.15rem">오차 계산</div>
+    <div style="font-size:.68rem;color:var(--text3)">정답: 고양이</div>
+  </div>
+  <div style="color:var(--accent);font-size:1.2rem">→</div>
+  <div style="flex:1;min-width:90px;text-align:center;padding:.85rem .5rem;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.22);border-radius:12px">
+    <div style="font-size:1.5rem;margin-bottom:.25rem">🔧</div>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.15rem">가중치 수정</div>
+    <div style="font-size:.68rem;color:var(--text3)">기준 조정</div>
+  </div>
+</div>
+<div style="text-align:center;margin-top:.85rem;font-size:.8rem;color:var(--text3)">↻ 이 과정을 수만 번 반복 → 점점 정확해짐</div>
+</div>
+
+<h3>4.3 핵심 개념 4가지</h3>
+
+<h4>① 입력값 — 컴퓨터가 보고 판단할 재료</h4>
+<p>컴퓨터가 판단할 때 받는 정보입니다. 사진이라면 색깔·밝기·선·모양·질감 등 픽셀 정보 전체가 입력값이 됩니다.</p>
+<div class="cb blue"><h5>💡 정리</h5><p>입력값은 컴퓨터가 보고 판단할 재료입니다.</div>
+
+<h4>② 가중치 — 각 특징을 얼마나 중요하게 볼 것인가</h4>
+<p>각 정보가 판단에 얼마나 중요한지를 나타내는 숫자입니다. 이 중요도를 수치로 표현한 것이 가중치입니다.</p>
+<table class="cmp"><thead><tr><th>특징</th><th>판단 방향</th></tr></thead><tbody>
+<tr><td class="lc">노란색</td><td>→ 바나나 판단에 높은 가중치</td></tr>
+<tr><td class="lc">길쭉한 모양</td><td>→ 바나나 판단에 높은 가중치</td></tr>
+<tr><td class="lc">둥근 모양</td><td>→ 사과 판단에 높은 가중치</td></tr>
+</tbody></table>
+<div class="cb purple"><h5>💡 정리</h5><p>가중치는 "이 특징을 얼마나 중요하게 볼 것인가"를 나타내는 숫자입니다.</div>
+
+<h4>③ 학습 — 틀린 이유를 반영해서 숫자를 조금씩 고치는 과정</h4>
+<div class="steps">
+<div class="step"><div><h5>예측</h5><p>현재 가중치로 판단합니다.</p></div></div>
+<div class="step"><div><h5>정답 확인</h5><p>정답과 비교하여 틀린 정도를 수치로 계산합니다.</p></div></div>
+<div class="step"><div><h5>가중치 수정</h5><p>틀린 이유를 반영해 가중치를 조금 조정합니다.</p></div></div>
+<div class="step"><div><h5>반복</h5><p>위 과정을 수만 번 반복하면 점점 더 정확하게 판별하게 됩니다.</p></div></div>
+</div>
+<div class="cb green"><h5>💡 정리</h5><p>딥러닝의 학습은 정답을 맞히는 마법이 아니라, 틀린 이유를 반영해서 숫자를 조금씩 고치는 과정입니다.</div>
+
+<h4>④ 층이 깊다 — '딥(Deep)'의 의미</h4>
+<p>딥러닝의 '딥'은 층(Layer)이 많다는 뜻입니다. 층이 깊어질수록 더 복잡한 특징까지 찾아냅니다. 그래서 사진, 음성, 번역, 챗봇 같은 복잡한 문제에 강합니다.</p>
+<table class="cmp"><thead><tr><th>층</th><th>찾는 특징</th></tr></thead><tbody>
+<tr><td class="lc">1층</td><td>선, 색깔, 밝기</td></tr>
+<tr><td class="lc">2층</td><td>모서리, 곡선, 무늬</td></tr>
+<tr><td class="lc">3층</td><td>눈, 귀, 코 같은 부분 형태</td></tr>
+<tr><td class="lc">4층 이상</td><td>전체적인 고양이 얼굴, 맥락 이해</td></tr>
+</tbody></table>
+
+<h3>4.4 인공신경망의 기본 구조</h3>
 <div class="tl">
 <div class="ti"><span class="tn">입력층 (Input Layer)</span><span class="td">데이터의 특징을 입력받는 층. 예: 과일의 색깔, 크기, 모양</span></div>
-<div class="ti"><span class="tn">은닉층 (Hidden Layer)</span><span class="td">입력 정보를 분석하여 규칙과 패턴을 찾는 과정. 층이 많을수록 복잡한 패턴 학습 가능</span></div>
+<div class="ti"><span class="tn">은닉층 (Hidden Layer)</span><span class="td">입력 정보를 분석하여 규칙과 패턴을 찾는 곳. 층이 많을수록 복잡한 패턴 학습 가능</span></div>
 <div class="ti"><span class="tn">출력층 (Output Layer)</span><span class="td">최종 판단 결과를 도출. 예: 사과인지 바나나인지 판별</span></div>
 </div>
-<h3>4.2 인공신경망의 학습 과정</h3>
-<p>사과와 바나나를 구별하는 예시를 통해 학습 과정을 살펴봅시다.</p>
-<div class="steps">
-<div class="step"><div><h5>초기 상태</h5><p>무작위 가중치로 시작. 초록색 바나나를 사과로 착각하는 등 잘못된 예측 가능</p></div></div>
-<div class="step"><div><h5>순전파 (Forward Propagation)</h5><p>입력층에 특징을 넣으면, 은닉층을 거쳐 출력층까지 전달. 현재 가중치 기반으로 예측</p></div></div>
-<div class="step"><div><h5>오차 계산</h5><p>예측과 정답을 비교하여 오차 계산. 예: '바나나'인데 '사과'로 예측 → 오차 발생</p></div></div>
-<div class="step"><div><h5>역전파 (Backpropagation)</h5><p>오차를 기반으로 가중치 조정. 연쇄 법칙(chain rule)으로 각 가중치의 영향도 계산</p></div></div>
-<div class="step"><div><h5>가중치 업데이트</h5><p>조정된 값으로 가중치 업데이트. 다음 번에 더 정확한 예측 가능</p></div></div>
-<div class="step"><div><h5>반복 학습</h5><p>위 과정 반복 → 점점 더 정확하게 판별 가능</p></div></div>
-</div>
 
-<!-- LAB 2 -->
-<div class="lab" id="lab-nn">
-<span class="lab-badge">▶ INTERACTIVE LAB</span>
-<div class="lab-t">인공신경망 인터랙티브 시뮬레이터</div>
-<p class="lab-d">입력값(과일 특징)과 가중치(파라미터)를 직접 조절하며, 값이 신경망을 통과해 출력에 어떤 영향을 주는지 실시간으로 관찰해 보세요.</p>
-<div class="nnc">
-<div class="nncw"><canvas id="nC"></canvas></div>
-<div class="nnp">
-<div class="nig"><h5>📥 입력값 (Input Layer)</h5>
-<p style="font-size:.8rem;color:var(--text3);margin:0 0 10px">0에 가까울수록 노랑/작음/길쭉, 1에 가까울수록 빨강/큼/둥근</p>
-<div class="sg"><label>입력 1 — 색깔 <span class="wi-tag" id="i1tag">🔴 빨간편</span></label><div class="sr"><input type="range" min="0" max="100" value="70" id="i1" oninput="uNN()"><span class="sv" id="i1v">0.70</span></div></div>
-<div class="sg" style="margin-top:8px"><label>입력 2 — 크기 <span class="wi-tag" id="i2tag">📏 중간</span></label><div class="sr"><input type="range" min="0" max="100" value="30" id="i2" oninput="uNN()"><span class="sv" id="i2v">0.30</span></div></div>
-<div class="sg" style="margin-top:8px"><label>입력 3 — 모양 <span class="wi-tag" id="i3tag">⭕ 중간</span></label><div class="sr"><input type="range" min="0" max="100" value="50" id="i3" oninput="uNN()"><span class="sv" id="i3v">0.50</span></div></div>
-</div>
-<div class="nig"><h5>⚙️ 가중치 — "이 특징을 얼마나 중요하게 볼까?"</h5>
-<p style="font-size:.8rem;color:var(--text3);margin:0 0 10px">(+) 양수 = 이 특징이 클수록 🍎사과 쪽 · (−) 음수 = 이 특징이 클수록 🍌바나나 쪽 · 0 = 무시</p>
-<div class="sg"><label>W1 — 색깔의 중요도 <span class="wi-tag wi-w" id="w1tag">🍎 사과 쪽 +0.60</span></label><div class="sr"><input type="range" min="-100" max="100" value="60" id="w1" oninput="uNN()"><span class="sv" id="w1v">0.60</span></div></div>
-<div class="sg" style="margin-top:8px"><label>W2 — 크기의 중요도 <span class="wi-tag wi-w" id="w2tag">🍌 바나나 쪽 −0.40</span></label><div class="sr"><input type="range" min="-100" max="100" value="-40" id="w2" oninput="uNN()"><span class="sv" id="w2v">-0.40</span></div></div>
-<div class="sg" style="margin-top:8px"><label>W3 — 모양의 중요도 <span class="wi-tag wi-w" id="w3tag">🍎 사과 쪽 +0.80</span></label><div class="sr"><input type="range" min="-100" max="100" value="80" id="w3" oninput="uNN()"><span class="sv" id="w3v">0.80</span></div></div>
-<div style="margin-top:10px"><button class="btn" onclick="rW()">🎲 랜덤</button> <button class="btn" onclick="rsW()">↩️ 초기화</button></div>
-</div>
-<div class="no"><h5>📤 출력 (Output)</h5>
-<div class="obw"><div class="obl"><span class="on">🍎 사과</span><span class="ov" id="oA">50%</span></div><div class="ob"><div class="obf" id="bA" style="width:50%;background:linear-gradient(90deg,var(--red),var(--orange))"></div></div></div>
-<div class="obw"><div class="obl"><span class="on">🍌 바나나</span><span class="ov" id="oB">50%</span></div><div class="ob"><div class="obf" id="bB" style="width:50%;background:linear-gradient(90deg,var(--yellow),var(--green))"></div></div></div>
-</div>
-</div>
-</div>
-<div class="tip"><strong>💡 실습 방법:</strong> 입력값은 과일의 특징, <strong>가중치(W)</strong>는 각 특징이 결과에 미치는 영향력입니다. 양수 가중치 → 사과 확률↑, 음수 가중치 → 바나나 확률↑. 연결선 <strong>굵기</strong>=가중치 크기, <strong>색상</strong>=양수(파랑)/음수(빨강). <strong>이것이 딥러닝의 핵심 원리입니다!</strong></div>
+<div class="def-box" style="margin-top:2rem"><div class="tag">꼭 기억할 핵심 문장</div>
+<p><strong>딥러닝은 컴퓨터가 생각하는 것이 아니라, 수많은 예시를 바탕으로 정답에 가까워지도록 숫자를 조정하는 과정입니다.</strong></p>
+<p>이렇게 이해하면 "AI가 사람처럼 이해한다"는 오해를 줄일 수 있습니다.</div>
 
-<!-- NN Test Mission -->
-<div class="nn-mission" id="nnMission">
-<h5 class="nn-mission-title">🎯 미션: 테스트 데이터로 과일 맞추기</h5>
-<p class="nn-mission-desc">아래 테스트 과일의 특징이 자동으로 입력됩니다. <strong>가중치(W1, W2, W3)만 조절</strong>하여 신경망이 정답을 맞추도록 만들어 보세요!</p>
+<div class="cb orange"><h5>🏆 한 줄 비유</h5>
+<p>딥러닝은 <strong>"많이 풀어 보고, 틀린 문제를 고치면서 실력이 느는 학생"</strong>과 비슷합니다.</div>
 
-<div class="nn-test-cards">
-  <div class="nn-test-card" id="nnTest1">
-    <div class="nn-test-header">
-      <span class="nn-test-emoji">🍎</span>
-      <div>
-        <div class="nn-test-label">테스트 1: 빨간 사과</div>
-        <div class="nn-test-sub">색깔: 0.90 (빨강) · 크기: 0.60 (중간) · 모양: 0.70 (둥근)</div>
-      </div>
-    </div>
-    <div class="nn-test-goal">목표: 사과 확률 <strong>70% 이상</strong>으로 만들기</div>
-    <div class="nn-test-btns">
-      <button class="btn" onclick="nnLoadTest(1)">📥 데이터 불러오기</button>
-      <span class="nn-test-status" id="nnTest1Status"></span>
-    </div>
-  </div>
-
-  <div class="nn-test-card" id="nnTest2">
-    <div class="nn-test-header">
-      <span class="nn-test-emoji">🍌</span>
-      <div>
-        <div class="nn-test-label">테스트 2: 노란 바나나</div>
-        <div class="nn-test-sub">색깔: 0.15 (노랑) · 크기: 0.40 (작음) · 모양: 0.20 (길쭉)</div>
-      </div>
-    </div>
-    <div class="nn-test-goal">목표: 바나나 확률 <strong>70% 이상</strong>으로 만들기</div>
-    <div class="nn-test-btns">
-      <button class="btn" onclick="nnLoadTest(2)">📥 데이터 불러오기</button>
-      <span class="nn-test-status" id="nnTest2Status"></span>
-    </div>
-  </div>
-</div>
-
-<div class="nn-challenge-wrap">
-  <div class="nn-challenge-status" id="nnChallengeStatus"></div>
-  <button class="btn" onclick="nnCheckBoth()">🏆 두 과일 동시 판별 도전!</button>
-</div>
-<div class="nn-challenge-result" id="nnChallengeResult"></div>
-
-<div class="tip" style="margin-top:1rem"><strong>💡 도전 과제:</strong> 진짜 어려운 건 <strong>같은 가중치</strong>로 사과와 바나나를 <strong>모두</strong> 맞추는 것입니다! "두 과일 동시 판별 도전" 버튼을 눌러 현재 가중치가 두 과일 모두를 정확히 분류하는지 확인해 보세요. 이것이 바로 신경망이 <strong>학습</strong>을 통해 달성하려는 목표입니다!</div>
-</div>
-
-<h3>4.3 CNN (Convolutional Neural Network)</h3>
+<h3>4.5 CNN (Convolutional Neural Network)</h3>
 <div class="def-box"><div class="tag">핵심 정의</div><p><strong>CNN</strong>은 사진(이미지)을 보고 분석하는 데 특화된 딥러닝 알고리즘입니다. 사람이 얼굴을 볼 때 눈→코→입 같은 특징을 차례로 보고 판단하듯이, CNN도 이미지의 부분적인 특징부터 전체를 이해합니다.</p></div>
 <h4>CNN의 핵심 아이디어</h4>
 <p>이미지를 한 번에 통째로 보는 것이 아니라, <strong>작은 필터(창문)</strong>를 사용해서 부분적으로 살펴봅니다. 필터가 이미지 위를 움직이며 중요한 특징을 찾습니다.</p>
@@ -565,18 +480,20 @@ footer a{color:var(--accent);text-decoration:none}
 <div class="step"><div><h5>풀링층 (Pooling Layer)</h5><p>중요한 정보만 추려 데이터 크기 축소</p></div></div>
 <div class="step"><div><h5>완전연결층 (Fully Connected Layer)</h5><p>추출된 특징을 종합하여 최종 분류</p></div></div>
 </div>
-<h3>4.4 GAN (Generative Adversarial Network)</h3>
+
+<h3>4.6 GAN (Generative Adversarial Network)</h3>
 <div class="def-box"><div class="tag">핵심 정의</div><p><strong>GAN</strong>은 이미지를 생성하는 데 특화된 딥러닝 알고리즘입니다. 두 개의 인공신경망(<strong>생성자</strong>와 <strong>판별자</strong>)이 경쟁하면서 함께 발전합니다.</p></div>
 <div class="tl">
 <div class="ti"><span class="tn">생성자 (Generator)</span><span class="td">랜덤한 숫자에서 이미지를 만들어냄. 점점 더 정교하게 생성</span></div>
 <div class="ti"><span class="tn">판별자 (Discriminator)</span><span class="td">진짜와 가짜를 구별. 점점 더 정확하게 구분</span></div>
 </div>
-<div class="cb green"><h5>🎭 GAN 학습 과정</h5><p>① 생성자가 얼굴 사진 생성 → ② 판별자가 진짜 여부 판단 → ③ 처음에는 어색하지만 판별자가 지적 → ④ 생성자가 더 자연스럽게 수정 → ⑤ 반복 끝에 실제 같은 얼굴 생성 성공</p></div>
-<h3>4.5 Transformer</h3>
+<div class="cb green"><h5>🎭 GAN 학습 과정</h5><p>① 생성자가 얼굴 사진 생성 → ② 판별자가 진짜 여부 판단 → ③ 처음에는 어색하지만 판별자가 지적 → ④ 생성자가 더 자연스럽게 수정 → ⑤ 반복 끝에 실제 같은 얼굴 생성 성공</div>
+
+<h3>4.7 Transformer</h3>
 <div class="def-box"><div class="tag">핵심 정의</div><p><strong>Transformer</strong>는 문장처럼 순서가 있는 정보(텍스트)를 처리하는 데 특화된 딥러닝 모델입니다. 번역, 요약, 챗봇, 작문, 음악 생성 등에 활용됩니다.</p></div>
 <h4>핵심 원리: Attention (주의 메커니즘)</h4>
 <p>문장 안에서 어떤 단어가 서로 관련 있는지 스스로 판단해서 집중합니다.</p>
-<div class="cb blue"><h5>💬 예시</h5><p>"길동이는 <strong>비가 오는 날</strong>이면 항상 <strong>우산을 챙긴다</strong>."<br>AI는 '비가 오는 날'이라는 조건과 '우산을 챙긴다'는 행동 사이의 연결을 파악합니다.</p></div>
+<div class="cb blue"><h5>💬 예시</h5><p>"길동이는 <strong>비가 오는 날</strong>이면 항상 <strong>우산을 챙긴다</strong>."<br>AI는 '비가 오는 날'이라는 조건과 '우산을 챙긴다'는 행동 사이의 연결을 파악합니다.</div>
 <h4>GPT (Generative Pre-trained Transformer)</h4>
 <table class="cmp"><thead><tr><th>약어</th><th>의미</th><th>설명</th></tr></thead><tbody>
 <tr><td class="lc">Generative</td><td>생성형</td><td>글을 직접 만드는 능력. 질문 대답, 이야기 생성, 요약 등</td></tr>
@@ -591,7 +508,6 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">대표</td><td>구글 포토 검색</td><td>스타일 변환</td><td>GPT, Claude, Gemini</td></tr>
 </tbody></table>
 </section></div>
-
 <!-- CH5 -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="ch5">
@@ -616,7 +532,6 @@ footer a{color:var(--accent);text-decoration:none}
 <a href="https://gamma.app/ko" target="_blank" class="lk"><div class="lt">Gamma</div><div class="ld">AI가 프레젠테이션·문서·웹페이지 자동 생성</div><span class="lu">gamma.app</span></a>
 </div>
 </section></div>
-
 <!-- CH6 -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="ch6">
@@ -654,7 +569,6 @@ footer a{color:var(--accent);text-decoration:none}
 <p><strong>제조업:</strong> 왜 이 제품을 '불량'으로 판정했는지 이유 제공</p></div>
 <div class="cb orange" style="margin-top:2rem"><h5>📌 핵심 정리</h5><p>"데이터 편향성은 AI의 가장 중요한 윤리 문제. <strong>좋은 데이터 + 공정한 설계 + 비판적 수용</strong>이 모두 필요합니다."</p></div>
 </section></div>
-
 <!-- GLOSSARY -->
 <div class="divider"></div>
 <div class="container"><section class="chapter" id="gl">
@@ -670,6 +584,8 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">분류</td><td>데이터를 특정 카테고리로 구분하는 작업</td></tr>
 <tr><td class="lc">회귀</td><td>연속적인 수치 값을 예측하는 작업</td></tr>
 <tr><td class="lc">군집화</td><td>비슷한 데이터를 같은 그룹으로 나누는 작업</td></tr>
+<tr><td class="lc">입력값</td><td>컴퓨터가 판단할 때 받는 정보 (재료)</td></tr>
+<tr><td class="lc">가중치</td><td>각 특징이 판단에 얼마나 중요한지를 나타내는 숫자</td></tr>
 <tr><td class="lc">CNN</td><td>이미지 분석에 특화된 합성곱 신경망</td></tr>
 <tr><td class="lc">GAN</td><td>생성자와 판별자가 경쟁하며 이미지를 생성하는 신경망</td></tr>
 <tr><td class="lc">Transformer</td><td>Attention 메커니즘으로 텍스트를 처리하는 모델</td></tr>
@@ -686,22 +602,18 @@ footer a{color:var(--accent);text-decoration:none}
 <tr><td class="lc">튜링 테스트</td><td>컴퓨터가 인간과 구별 불가능한지 평가하는 테스트</td></tr>
 </tbody></table>
 </section></div>
-
 <div class="divider"></div>
 <footer>포항여자고등학교 · 인공지능 기초 포트폴리오 교재<br>GitHub Pages 배포용 · <code>index.html</code></footer>
-
 <script>
 (function(){
 "use strict";
 var dpr = window.devicePixelRatio || 1;
-
 // ═══════ REGRESSION ═══════
 var regCanvas = document.getElementById('rC');
 var regCtx = regCanvas.getContext('2d');
 var regWrap = document.getElementById('regWrap');
 var pts = [];
 var outlierMode = false;
-
 function resizeReg(){
   var r = regWrap.getBoundingClientRect();
   regCanvas.width = r.width * dpr;
@@ -709,7 +621,6 @@ function resizeReg(){
   regCtx.setTransform(dpr,0,0,dpr,0,0);
   drawReg();
 }
-
 regCanvas.addEventListener('click', function(e){
   var r = regCanvas.getBoundingClientRect();
   var x = (e.clientX - r.left) / r.width * 10;
@@ -717,7 +628,6 @@ regCanvas.addEventListener('click', function(e){
   pts.push({x:x, y:Math.max(0.1, Math.min(9.9, y)), o:outlierMode});
   drawReg();
 });
-
 window.aSD = function(){
   pts = [];
   for(var i=0; i<30; i++){
@@ -727,7 +637,6 @@ window.aSD = function(){
   }
   drawReg();
 };
-
 window.aRO = function(){
   if(!pts.length) window.aSD();
   var s = Math.random(), x, y;
@@ -737,32 +646,24 @@ window.aRO = function(){
   pts.push({x:Math.max(0.2,Math.min(9.8,x)), y:Math.max(0.2,Math.min(9.8,y)), o:true});
   drawReg();
 };
-
 window.tOM = function(){
   outlierMode = !outlierMode;
   var b = document.getElementById('oBtn');
   if(outlierMode){
-    b.classList.add('active');
-    b.textContent = '⚡ 이상치 모드 ON';
+    b.classList.add('active'); b.textContent = '⚡ 이상치 모드 ON';
     regWrap.style.borderColor = 'var(--red)';
   } else {
-    b.classList.remove('active');
-    b.textContent = '⚡ 이상치 추가 모드';
+    b.classList.remove('active'); b.textContent = '⚡ 이상치 추가 모드';
     regWrap.style.borderColor = '';
   }
 };
-
 window.rmO = function(){ pts = pts.filter(function(p){return !p.o;}); drawReg(); };
-
 window.clR = function(){
   pts = []; outlierMode = false;
   var b = document.getElementById('oBtn');
-  b.classList.remove('active');
-  b.textContent = '⚡ 이상치 추가 모드';
-  regWrap.style.borderColor = '';
-  drawReg();
+  b.classList.remove('active'); b.textContent = '⚡ 이상치 추가 모드';
+  regWrap.style.borderColor = ''; drawReg();
 };
-
 function linReg(ps){
   var n = ps.length;
   if(n < 2) return null;
@@ -772,17 +673,14 @@ function linReg(ps){
   if(Math.abs(d) < 1e-10) return null;
   var slope = (n*sxy - sx*sy)/d;
   var intercept = (sy - slope*sx)/n;
-  var ym = sy/n;
-  var st=0, sr=0;
+  var ym = sy/n, st=0, sr=0;
   for(var k=0;k<n;k++){ var p=ps[k]; st+=(p.y-ym)*(p.y-ym); sr+=(p.y-(slope*p.x+intercept))*(p.y-(slope*p.x+intercept)); }
   return {s:slope, i:intercept, r:st===0?0:1-sr/st};
 }
-
 function drawReg(){
   var r = regWrap.getBoundingClientRect();
   var w = r.width, h = r.height, c = regCtx;
   c.clearRect(0,0,w,h);
-  // grid
   c.strokeStyle = 'rgba(148,163,184,.3)'; c.lineWidth = 0.5;
   for(var i=0;i<=10;i++){
     var gx=i/10*w, gy=(1-i/10)*h;
@@ -791,232 +689,48 @@ function drawReg(){
   }
   c.font='10px "JetBrains Mono"'; c.fillStyle='#94a3b8'; c.textAlign='left'; c.textBaseline='top';
   for(var i=0;i<=10;i+=2){ c.fillText(i, i/10*w+3, h-14); if(i>0) c.fillText(i, 3, (1-i/10)*h+2); }
-
-  var norm = pts.filter(function(p){return !p.o;});
-  var oc = pts.length - norm.length;
+  var norm = pts.filter(function(p){return !p.o;}), oc = pts.length - norm.length;
   var rAll = linReg(pts), rNorm = linReg(norm);
-
-  // normal-only line
   if(rNorm && oc > 0){
     c.save(); c.setLineDash([8,6]); c.strokeStyle='rgba(5,150,105,.6)'; c.lineWidth=2;
-    c.beginPath();
-    c.moveTo(0, (1-(rNorm.s*0+rNorm.i)/10)*h);
-    c.lineTo(w, (1-(rNorm.s*10+rNorm.i)/10)*h);
+    c.beginPath(); c.moveTo(0,(1-(rNorm.s*0+rNorm.i)/10)*h); c.lineTo(w,(1-(rNorm.s*10+rNorm.i)/10)*h);
     c.stroke(); c.restore();
     c.font='11px "Noto Sans KR"'; c.fillStyle='rgba(5,150,105,.8)';
-    var ey = (1-(rNorm.s*10+rNorm.i)/10)*h;
-    c.fillText('이상치 제외', w-100, ey<h/2 ? ey+16 : ey-12);
+    var ey=(1-(rNorm.s*10+rNorm.i)/10)*h;
+    c.fillText('이상치 제외', w-100, ey<h/2?ey+16:ey-12);
   }
-  // all data line
   if(rAll){
     c.strokeStyle='rgba(37,99,235,.85)'; c.lineWidth=2.5; c.setLineDash([]);
-    c.beginPath();
-    var y0 = (1-(rAll.s*0+rAll.i)/10)*h;
-    c.moveTo(0, y0); c.lineTo(w, (1-(rAll.s*10+rAll.i)/10)*h);
-    c.stroke();
+    c.beginPath(); var y0=(1-(rAll.s*0+rAll.i)/10)*h;
+    c.moveTo(0,y0); c.lineTo(w,(1-(rAll.s*10+rAll.i)/10)*h); c.stroke();
     c.font='11px "Noto Sans KR"'; c.fillStyle='rgba(37,99,235,.8)';
-    c.fillText('전체 회귀선', 8, y0<h/2 ? y0+16 : y0-12);
+    c.fillText('전체 회귀선', 8, y0<h/2?y0+16:y0-12);
   }
-  // points
   for(var k=0;k<pts.length;k++){
     var p=pts[k], px=p.x/10*w, py=(1-p.y/10)*h;
     if(p.o){
       c.beginPath(); c.arc(px,py,7,0,Math.PI*2);
       c.fillStyle='rgba(220,38,38,.85)'; c.fill();
       c.strokeStyle='#fff'; c.lineWidth=2; c.stroke();
-      c.beginPath(); c.moveTo(px-3,py-3); c.lineTo(px+3,py+3);
-      c.moveTo(px+3,py-3); c.lineTo(px-3,py+3); c.stroke();
+      c.beginPath(); c.moveTo(px-3,py-3); c.lineTo(px+3,py+3); c.moveTo(px+3,py-3); c.lineTo(px-3,py+3); c.stroke();
     } else {
       c.beginPath(); c.arc(px,py,5,0,Math.PI*2);
       c.fillStyle='rgba(37,99,235,.75)'; c.fill();
       c.strokeStyle='rgba(37,99,235,.2)'; c.lineWidth=4; c.stroke();
     }
   }
-  if(outlierMode){
-    c.fillStyle='rgba(220,38,38,.8)'; c.font='bold 12px "Noto Sans KR"';
-    c.textAlign='left'; c.fillText('⚡ 이상치 모드 ON', 8, 20);
-  }
-  // stats
+  if(outlierMode){ c.fillStyle='rgba(220,38,38,.8)'; c.font='bold 12px "Noto Sans KR"'; c.textAlign='left'; c.fillText('⚡ 이상치 모드 ON', 8, 20); }
   document.getElementById('sN').textContent = pts.length;
   document.getElementById('sO').textContent = oc;
   if(rAll){
     document.getElementById('sS').textContent = rAll.s.toFixed(3);
-    var el = document.getElementById('sR2');
-    el.textContent = rAll.r.toFixed(4);
-    document.getElementById('sR2c').className = 'sc' + (rAll.r<0.5?' bad':rAll.r<0.75?' warn':'');
-  } else {
-    document.getElementById('sS').textContent = '-';
-    document.getElementById('sR2').textContent = '-';
-  }
+    var el = document.getElementById('sR2'); el.textContent = rAll.r.toFixed(4);
+    document.getElementById('sR2c').className = 'sc'+(rAll.r<0.5?' bad':rAll.r<0.75?' warn':'');
+  } else { document.getElementById('sS').textContent='-'; document.getElementById('sR2').textContent='-'; }
 }
-
-// ═══════ NEURAL NETWORK ═══════
-var nnCanvas = document.getElementById('nC');
-var nnCtx = nnCanvas.getContext('2d');
-var nnWrap = nnCanvas.parentElement;
-var wih = [], who = [];
-var nv = {i:[0.7,0.3,0.5], h:[0,0,0,0], o:[0.5,0.5]};
-
-function initWeights(){
-  wih = [[.6,.3,-.5,.2],[-.4,.7,.1,-.3],[.8,-.2,.4,.6]];
-  who = [[.5,-.5],[-.3,.6],[.7,-.2],[-.4,.8]];
-}
-initWeights();
-
-function sigmoid(x){ return 1/(1+Math.exp(-x)); }
-function softmax(a){
-  var m=Math.max.apply(null,a);
-  var e=a.map(function(v){return Math.exp(v-m);});
-  var s=e.reduce(function(a,b){return a+b;},0);
-  return e.map(function(v){return v/s;});
-}
-
-function forward(){
-  var inp = nv.i;
-  var v1=+document.getElementById('w1').value/100;
-  var v2=+document.getElementById('w2').value/100;
-  var v3=+document.getElementById('w3').value/100;
-  wih[0][0]=v1; wih[1][1]=v2; wih[2][2]=v3;
-  wih[0][1]=v1*0.5; wih[1][2]=v2*0.6; wih[2][3]=v3*0.4;
-  for(var j=0;j<4;j++){
-    var s=0;
-    for(var i=0;i<3;i++) s += inp[i]*wih[i][j];
-    nv.h[j] = sigmoid(s);
-  }
-  var out=[0,0];
-  for(var j=0;j<4;j++) for(var k=0;k<2;k++) out[k] += nv.h[j]*who[j][k];
-  nv.o = softmax(out);
-}
-
-function resizeNN(){
-  var r = nnWrap.getBoundingClientRect();
-  nnCanvas.width = r.width * dpr;
-  nnCanvas.height = r.height * dpr;
-  nnCtx.setTransform(dpr,0,0,dpr,0,0);
-  drawNN();
-}
-
-window.uNN = function(){
-  nv.i = [
-    +document.getElementById('i1').value/100,
-    +document.getElementById('i2').value/100,
-    +document.getElementById('i3').value/100
-  ];
-  document.getElementById('i1v').textContent = nv.i[0].toFixed(2);
-  document.getElementById('i2v').textContent = nv.i[1].toFixed(2);
-  document.getElementById('i3v').textContent = nv.i[2].toFixed(2);
-  var pairs = [['w1','w1v'],['w2','w2v'],['w3','w3v']];
-  for(var p=0;p<pairs.length;p++){
-    document.getElementById(pairs[p][1]).textContent = (+document.getElementById(pairs[p][0]).value/100).toFixed(2);
-  }
-  forward();
-  var a = nv.o[0]*100, b = nv.o[1]*100;
-  document.getElementById('oA').textContent = a.toFixed(1)+'%';
-  document.getElementById('oB').textContent = b.toFixed(1)+'%';
-  document.getElementById('bA').style.width = a+'%';
-  document.getElementById('bB').style.width = b+'%';
-  drawNN();
-  // Update input interpretation tags
-  var v1=nv.i[0], v2=nv.i[1], v3=nv.i[2];
-  document.getElementById('i1tag').textContent = v1>0.7?'🔴 빨간편':v1>0.4?'🟠 중간':'🟡 노란편';
-  document.getElementById('i2tag').textContent = v2>0.7?'📏 큰편':v2>0.4?'📏 중간':'📏 작은편';
-  document.getElementById('i3tag').textContent = v3>0.7?'⭕ 둥근편':v3>0.4?'⭕ 중간':'🥒 길쭉한편';
-  // Update weight interpretation tags
-  var wIds = ['w1','w2','w3'];
-  var wLabels = ['색깔','크기','모양'];
-  var wTagIds = ['w1tag','w2tag','w3tag'];
-  for(var wi=0;wi<3;wi++){
-    var wVal = +document.getElementById(wIds[wi]).value/100;
-    var tag = document.getElementById(wTagIds[wi]);
-    var abs = Math.abs(wVal);
-    var strength = abs>0.6?'강하게':abs>0.3?'보통':'약하게';
-    if(wVal > 0.05){
-      tag.textContent = '🍎 '+strength+' 사과 쪽 +'+wVal.toFixed(2);
-      tag.className = 'wi-tag wi-w wi-apple';
-    } else if(wVal < -0.05){
-      tag.textContent = '🍌 '+strength+' 바나나 쪽 '+wVal.toFixed(2);
-      tag.className = 'wi-tag wi-w wi-banana';
-    } else {
-      tag.textContent = '🚫 거의 무시';
-      tag.className = 'wi-tag wi-w wi-ignore';
-    }
-  }
-};
-
-function drawNN(){
-  var r = nnWrap.getBoundingClientRect();
-  var w = r.width, h = r.height, c = nnCtx;
-  c.clearRect(0,0,w,h);
-  var ls=[3,4,2], lx=[w*0.15, w*0.5, w*0.85];
-  var ll=['입력층','은닉층','출력층'], ol=['🍎','🍌'], il=['색깔','크기','모양'];
-  function ny(l,n){ return h/2 - ((ls[l]-1)*60)/2 + n*60; }
-
-  // input->hidden connections
-  for(var i=0;i<3;i++) for(var j=0;j<4;j++){
-    var wt=wih[i][j], sg=Math.abs(nv.i[i]*wt);
-    c.beginPath(); c.moveTo(lx[0]+20, ny(0,i)); c.lineTo(lx[1]-20, ny(1,j));
-    c.strokeStyle = wt>=0 ? 'rgba(37,99,235,'+(0.15+sg*0.85)+')' : 'rgba(220,38,38,'+(0.15+sg*0.85)+')';
-    c.lineWidth = 1+Math.abs(wt)*4; c.stroke();
-  }
-  // hidden->output connections
-  for(var j=0;j<4;j++) for(var k=0;k<2;k++){
-    var wt=who[j][k], sg=Math.abs(nv.h[j]*wt);
-    c.beginPath(); c.moveTo(lx[1]+20, ny(1,j)); c.lineTo(lx[2]-20, ny(2,k));
-    c.strokeStyle = wt>=0 ? 'rgba(5,150,105,'+(0.15+sg*0.85)+')' : 'rgba(234,88,12,'+(0.15+sg*0.85)+')';
-    c.lineWidth = 1+Math.abs(wt)*4; c.stroke();
-  }
-  // nodes
-  for(var l=0;l<3;l++){
-    for(var n=0;n<ls[l];n++){
-      var x=lx[l], y=ny(l,n);
-      var v = l===0?nv.i[n] : l===1?nv.h[n] : nv.o[n];
-      var cols = l===0?'37,99,235' : l===1?'124,58,237' : n===0?'220,38,38':'217,119,6';
-      var g = c.createRadialGradient(x,y,0,x,y,28);
-      g.addColorStop(0, 'rgba('+cols+','+(0.1+v*0.3)+')');
-      g.addColorStop(1, 'transparent');
-      c.fillStyle = g; c.beginPath(); c.arc(x,y,28,0,Math.PI*2); c.fill();
-      c.beginPath(); c.arc(x,y,18,0,Math.PI*2);
-      c.fillStyle = 'rgba('+cols+','+(0.3+v*0.7)+')';
-      c.strokeStyle = 'rgba('+cols+',0.6)';
-      c.lineWidth = 2; c.fill(); c.stroke();
-      c.fillStyle='#fff'; c.font='bold 11px "JetBrains Mono"';
-      c.textAlign='center'; c.textBaseline='middle';
-      c.fillText(v.toFixed(2), x, y);
-      if(l===0){ c.font='10px "Noto Sans KR"'; c.fillStyle='#64748b'; c.fillText(il[n],x,y+30); }
-      if(l===2){ c.font='15px serif'; c.fillText(ol[n],x,y+30); }
-    }
-    c.font='600 11px "Noto Sans KR"'; c.fillStyle='#64748b'; c.textAlign='center';
-    c.fillText(ll[l], lx[l], 20);
-  }
-  c.font='9px "Noto Sans KR"'; c.textAlign='left'; c.fillStyle='#94a3b8';
-  c.fillText('선 굵기=가중치 크기 | 파랑=양수 | 빨강=음수', 8, h-10);
-}
-
-window.rW = function(){
-  document.getElementById('w1').value = Math.floor(Math.random()*200-100);
-  document.getElementById('w2').value = Math.floor(Math.random()*200-100);
-  document.getElementById('w3').value = Math.floor(Math.random()*200-100);
-  for(var j=0;j<4;j++) for(var k=0;k<2;k++) who[j][k]=(Math.random()-0.5)*2;
-  window.uNN();
-};
-
-window.rsW = function(){
-  document.getElementById('w1').value=60;
-  document.getElementById('w2').value=-40;
-  document.getElementById('w3').value=80;
-  document.getElementById('i1').value=70;
-  document.getElementById('i2').value=30;
-  document.getElementById('i3').value=50;
-  initWeights();
-  window.uNN();
-};
-
 // ═══════ INIT ═══════
-window.addEventListener('resize', function(){ resizeReg(); resizeNN(); });
+window.addEventListener('resize', function(){ resizeReg(); });
 resizeReg();
-resizeNN();
-window.uNN();
-
 // ═══════ SCROLL SPY ═══════
 var secs = document.querySelectorAll('section[id]');
 var tocLinks = document.querySelectorAll('.toc-strip a');
@@ -1025,388 +739,90 @@ window.addEventListener('scroll', function(){
   secs.forEach(function(s){ if(window.scrollY >= s.offsetTop - 200) cur = s.id; });
   tocLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+cur); });
 });
-
 // ═══════ DATA QUALITY QUIZ ═══════
 var dqAnswers = {1:'bad', 2:'ok', 3:'bad', 4:'bad'};
 var dqExplain = {
-  1: {bad:'<strong>정답!</strong> 이영희의 체중이 <strong>비어 있음(결측치)</strong>이고, 최지은의 체중이 <strong>-5kg(이상치)</strong>입니다. 체중은 음수가 될 수 없으므로 입력 오류입니다.', ok:'<strong>아쉬워요!</strong> 이영희의 체중이 비어 있고(결측치), 최지은의 체중 -5kg은 이상치입니다. 체중은 음수가 될 수 없어요.'},
-  2: {ok:'<strong>정답!</strong> 이 데이터는 모든 값이 정상 범위(1~5점) 안에 있고, 빈 값도 없습니다. 깨끗한 데이터입니다!', bad:'<strong>아쉬워요!</strong> 이 데이터는 모든 값이 1~5점 범위 안에 있고, 빈 칸도 없는 정상 데이터입니다.'},
-  3: {bad:'<strong>정답!</strong> 2026-01-03의 기온이 <strong>비어 있음(결측치)</strong>입니다. 기온 분석 전에 이 값을 전후 날짜 평균(0.5°C) 등으로 대체하거나 제거해야 합니다.', ok:'<strong>아쉬워요!</strong> 1월 3일의 기온이 비어 있는 결측치입니다. 분석 전에 처리가 필요해요.'},
-  4: {bad:'<strong>정답!</strong> 굴리트의 수학 점수 <strong>350점(이상치)</strong>은 100점 만점 시험에서 불가능한 값이고, 메시의 영어 점수가 <strong>비어 있음(결측치)</strong>입니다. 두 가지 문제가 모두 있습니다!', ok:'<strong>아쉬워요!</strong> 수학 350점은 100점 만점에서 불가능한 이상치이고, 메시의 영어 점수는 결측치입니다.'}
+  1:{bad:'<strong>정답!</strong> 이영희의 체중이 <strong>비어 있음(결측치)</strong>이고, 최지은의 체중이 <strong>-5kg(이상치)</strong>입니다.',ok:'<strong>아쉬워요!</strong> 이영희의 체중이 비어 있고(결측치), 최지은의 체중 -5kg은 이상치입니다.'},
+  2:{ok:'<strong>정답!</strong> 이 데이터는 모든 값이 정상 범위(1~5점) 안에 있고, 빈 값도 없습니다!',bad:'<strong>아쉬워요!</strong> 이 데이터는 모든 값이 1~5점 범위 안에 있고, 빈 칸도 없는 정상 데이터입니다.'},
+  3:{bad:'<strong>정답!</strong> 2026-01-03의 기온이 <strong>비어 있음(결측치)</strong>입니다.',ok:'<strong>아쉬워요!</strong> 1월 3일의 기온이 비어 있는 결측치입니다.'},
+  4:{bad:'<strong>정답!</strong> 굴리트의 수학 점수 <strong>350점(이상치)</strong>과 메시의 영어 점수 <strong>비어 있음(결측치)</strong> 두 가지 문제가 있습니다!',ok:'<strong>아쉬워요!</strong> 수학 350점은 이상치이고, 메시의 영어 점수는 결측치입니다.'}
 };
 var dqAnswered = {};
-
-window.dqCheck = function(n, choice) {
+window.dqCheck = function(n, choice){
   if(dqAnswered[n]) return;
   dqAnswered[n] = choice;
   var correct = (choice === dqAnswers[n]);
   var el = document.getElementById('dq'+n+'-result');
   el.innerHTML = dqExplain[n][choice];
-  el.className = 'dq-result ' + (correct ? 'correct' : 'wrong');
-  // highlight problem cells
+  el.className = 'dq-result '+(correct?'correct':'wrong');
   var cells = document.querySelectorAll('.dq-cell[data-q="'+n+'"]');
   for(var i=0;i<cells.length;i++) cells[i].classList.add('highlighted');
-  // disable buttons
   var btns = document.querySelectorAll('#dq'+n+' .dq-btn');
   for(var i=0;i<btns.length;i++){
-    if((choice==='ok' && btns[i].textContent.indexOf('없음')!==-1) || (choice==='bad' && btns[i].textContent.indexOf('있음')!==-1)){
+    if((choice==='ok'&&btns[i].textContent.indexOf('없음')!==-1)||(choice==='bad'&&btns[i].textContent.indexOf('있음')!==-1)){
       btns[i].classList.add(choice==='ok'?'selected-ok':'selected-bad');
-    } else {
-      btns[i].classList.add('disabled');
-    }
+    } else { btns[i].classList.add('disabled'); }
   }
-  updateDqScore();
+  var total=0; for(var k in dqAnswered){ if(dqAnswered[k]===dqAnswers[k]) total++; }
+  document.getElementById('dqScore').textContent = total+' / 4 정답';
 };
-
-function updateDqScore(){
-  var total=0;
-  for(var k in dqAnswered){ if(dqAnswered[k]===dqAnswers[k]) total++; }
-  document.getElementById('dqScore').textContent = total + ' / 4 정답';
-}
-
 window.dqReset = function(){
   dqAnswered = {};
   for(var n=1;n<=4;n++){
-    document.getElementById('dq'+n+'-result').className = 'dq-result';
-    document.getElementById('dq'+n+'-result').innerHTML = '';
-    var btns = document.querySelectorAll('#dq'+n+' .dq-btn');
-    for(var i=0;i<btns.length;i++){
-      btns[i].className = 'btn dq-btn';
-    }
-    var cells = document.querySelectorAll('.dq-cell[data-q="'+n+'"]');
+    document.getElementById('dq'+n+'-result').className='dq-result';
+    document.getElementById('dq'+n+'-result').innerHTML='';
+    var btns=document.querySelectorAll('#dq'+n+' .dq-btn');
+    for(var i=0;i<btns.length;i++) btns[i].className='btn dq-btn';
+    var cells=document.querySelectorAll('.dq-cell[data-q="'+n+'"]');
     for(var i=0;i<cells.length;i++) cells[i].classList.remove('highlighted');
   }
-  document.getElementById('dqScore').textContent = '0 / 4 정답';
+  document.getElementById('dqScore').textContent='0 / 4 정답';
 };
-
 // ═══════ DRAG-CLASSIFY ═══════
-var dcItems = [
-  {text:'키 (172cm)', answer:'continuous'},
-  {text:'혈액형 (A형)', answer:'categorical'},
-  {text:'기온 (25.3°C)', answer:'continuous'},
-  {text:'성별 (남/여)', answer:'categorical'},
-  {text:'시험 점수 (87점)', answer:'discrete'},
-  {text:'좋아하는 색깔 (파랑)', answer:'categorical'},
-  {text:'학년 (2학년)', answer:'categorical'},
-  {text:'몸무게 (65kg)', answer:'continuous'},
-  {text:'만족도 (매우 좋음)', answer:'categorical'},
-  {text:'거주 지역 (서울)', answer:'categorical'},
-  {text:'학생 수 (35명)', answer:'discrete'},
-  {text:'일일 걸음 수 (8420보)', answer:'discrete'},
+var dcItems=[
+  {text:'키 (172cm)',answer:'continuous'},{text:'혈액형 (A형)',answer:'categorical'},
+  {text:'기온 (25.3°C)',answer:'continuous'},{text:'성별 (남/여)',answer:'categorical'},
+  {text:'시험 점수 (87점)',answer:'discrete'},{text:'좋아하는 색깔 (파랑)',answer:'categorical'},
+  {text:'학년 (2학년)',answer:'categorical'},{text:'몸무게 (65kg)',answer:'continuous'},
+  {text:'만족도 (매우 좋음)',answer:'categorical'},{text:'거주 지역 (서울)',answer:'categorical'},
+  {text:'학생 수 (35명)',answer:'discrete'},{text:'일일 걸음 수 (8420보)',answer:'discrete'},
 ];
-
-var dcDragItem = null;
-var dcShuffled = [];
-
+var dcDragItem=null, dcShuffled=[];
 function dcInit(){
-  dcShuffled = dcItems.slice().sort(function(){return Math.random()-0.5;});
-  var pool = document.getElementById('dcPool');
-  pool.innerHTML = '';
-  dcShuffled.forEach(function(item, idx){
-    var chip = document.createElement('div');
-    chip.className = 'dc-chip';
-    chip.textContent = item.text;
-    chip.setAttribute('data-idx', idx);
-    chip.setAttribute('draggable', 'true');
-    chip.addEventListener('dragstart', dcDragStart);
-    chip.addEventListener('dragend', dcDragEnd);
-    // Touch support
-    chip.addEventListener('touchstart', dcTouchStart, {passive:false});
-    chip.addEventListener('touchmove', dcTouchMove, {passive:false});
-    chip.addEventListener('touchend', dcTouchEnd);
+  dcShuffled=dcItems.slice().sort(function(){return Math.random()-0.5;});
+  var pool=document.getElementById('dcPool'); pool.innerHTML='';
+  dcShuffled.forEach(function(item,idx){
+    var chip=document.createElement('div'); chip.className='dc-chip';
+    chip.textContent=item.text; chip.setAttribute('data-idx',idx); chip.setAttribute('draggable','true');
+    chip.addEventListener('dragstart',dcDragStart); chip.addEventListener('dragend',dcDragEnd);
+    chip.addEventListener('touchstart',dcTouchStart,{passive:false});
+    chip.addEventListener('touchmove',dcTouchMove,{passive:false});
+    chip.addEventListener('touchend',dcTouchEnd);
     pool.appendChild(chip);
   });
-  // Setup drop zones
-  var drops = document.querySelectorAll('.dc-drop');
+  var drops=document.querySelectorAll('.dc-drop');
   for(var i=0;i<drops.length;i++){
-    drops[i].addEventListener('dragover', dcDragOver);
-    drops[i].addEventListener('dragleave', dcDragLeave);
-    drops[i].addEventListener('drop', dcDrop);
-    drops[i].innerHTML = '';
+    drops[i].addEventListener('dragover',dcDragOver); drops[i].addEventListener('dragleave',dcDragLeave);
+    drops[i].addEventListener('drop',dcDrop); drops[i].innerHTML='';
   }
-  // Pool also a drop target (to move back)
-  pool.addEventListener('dragover', dcDragOver);
-  pool.addEventListener('dragleave', dcDragLeave);
-  pool.addEventListener('drop', dcDropPool);
-  document.getElementById('dcFeedback').className = 'dc-feedback';
-  document.getElementById('dcFeedback').innerHTML = '';
-  document.getElementById('dcScoreText').textContent = '';
-  // Remove correct/wrong classes
-  var chips = document.querySelectorAll('.dc-chip');
-  for(var i=0;i<chips.length;i++){chips[i].classList.remove('correct','wrong');}
+  pool.addEventListener('dragover',dcDragOver); pool.addEventListener('dragleave',dcDragLeave); pool.addEventListener('drop',dcDropPool);
+  document.getElementById('dcFeedback').className='dc-feedback'; document.getElementById('dcFeedback').innerHTML='';
+  document.getElementById('dcScoreText').textContent='';
+  var chips=document.querySelectorAll('.dc-chip'); for(var i=0;i<chips.length;i++) chips[i].classList.remove('correct','wrong');
 }
-
-function dcDragStart(e){
-  dcDragItem = this;
-  this.classList.add('dragging');
-  e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/plain', this.getAttribute('data-idx'));
-}
-function dcDragEnd(e){ this.classList.remove('dragging'); dcDragItem=null; }
-function dcDragOver(e){ e.preventDefault(); e.dataTransfer.dropEffect='move'; this.closest('.dc-zone,.dc-pool')&&this.closest('.dc-zone,.dc-pool').classList.add('drag-over'); if(this.classList.contains('dc-pool'))this.classList.add('drag-over');}
-function dcDragLeave(e){ var z=this.closest('.dc-zone'); if(z)z.classList.remove('drag-over'); if(this.classList.contains('dc-pool'))this.classList.remove('drag-over');}
-function dcDrop(e){
-  e.preventDefault();
-  var zone = this.closest('.dc-zone');
-  if(zone) zone.classList.remove('drag-over');
-  if(dcDragItem){ this.appendChild(dcDragItem); dcDragItem.classList.remove('dragging'); dcDragItem=null; }
-}
-function dcDropPool(e){
-  e.preventDefault();
-  this.classList.remove('drag-over');
-  if(dcDragItem){ this.appendChild(dcDragItem); dcDragItem.classList.remove('dragging'); dcDragItem=null; }
-}
-
-// Touch drag support
-var dcTouchClone = null;
-var dcTouchSource = null;
-function dcTouchStart(e){
-  e.preventDefault();
-  dcTouchSource = this;
-  dcTouchClone = this.cloneNode(true);
-  dcTouchClone.style.position = 'fixed';
-  dcTouchClone.style.zIndex = '9999';
-  dcTouchClone.style.pointerEvents = 'none';
-  dcTouchClone.style.opacity = '0.85';
-  dcTouchClone.style.transform = 'scale(1.08)';
-  dcTouchClone.style.boxShadow = '0 4px 16px rgba(0,0,0,.15)';
-  document.body.appendChild(dcTouchClone);
-  var t = e.touches[0];
-  dcTouchClone.style.left = (t.clientX - 60) + 'px';
-  dcTouchClone.style.top = (t.clientY - 20) + 'px';
-  dcTouchSource.classList.add('dragging');
-}
-function dcTouchMove(e){
-  e.preventDefault();
-  if(!dcTouchClone) return;
-  var t = e.touches[0];
-  dcTouchClone.style.left = (t.clientX - 60) + 'px';
-  dcTouchClone.style.top = (t.clientY - 20) + 'px';
-  // highlight zone under finger
-  var zones = document.querySelectorAll('.dc-zone');
-  for(var i=0;i<zones.length;i++) zones[i].classList.remove('drag-over');
-  document.getElementById('dcPool').classList.remove('drag-over');
-  var el = document.elementFromPoint(t.clientX, t.clientY);
-  if(el){
-    var z = el.closest('.dc-zone');
-    if(z) z.classList.add('drag-over');
-    if(el.closest('.dc-pool')) el.closest('.dc-pool').classList.add('drag-over');
-  }
-}
-function dcTouchEnd(e){
-  if(!dcTouchClone || !dcTouchSource) return;
-  var t = e.changedTouches[0];
-  document.body.removeChild(dcTouchClone);
-  dcTouchClone = null;
-  dcTouchSource.classList.remove('dragging');
-  var el = document.elementFromPoint(t.clientX, t.clientY);
-  if(el){
-    var drop = el.closest('.dc-drop');
-    var pool = el.closest('.dc-pool');
-    if(drop) drop.appendChild(dcTouchSource);
-    else if(pool) pool.appendChild(dcTouchSource);
-  }
-  var zones = document.querySelectorAll('.dc-zone');
-  for(var i=0;i<zones.length;i++) zones[i].classList.remove('drag-over');
-  document.getElementById('dcPool').classList.remove('drag-over');
-  dcTouchSource = null;
-}
-
-window.dcCheckAnswer = function(){
-  var total = dcShuffled.length, correct = 0;
-  var zones = document.querySelectorAll('.dc-drop');
-  for(var z=0;z<zones.length;z++){
-    var zoneName = zones[z].getAttribute('data-zone');
-    var chips = zones[z].querySelectorAll('.dc-chip');
-    for(var c=0;c<chips.length;c++){
-      var idx = parseInt(chips[c].getAttribute('data-idx'));
-      if(dcShuffled[idx].answer === zoneName){
-        chips[c].classList.remove('wrong');
-        chips[c].classList.add('correct');
-        correct++;
-      } else {
-        chips[c].classList.remove('correct');
-        chips[c].classList.add('wrong');
-      }
-    }
-  }
-  // Items still in pool
-  var poolChips = document.getElementById('dcPool').querySelectorAll('.dc-chip');
-  for(var i=0;i<poolChips.length;i++){poolChips[i].classList.add('wrong');}
-
-  document.getElementById('dcScoreText').textContent = correct + ' / ' + total + ' 정답';
-  var fb = document.getElementById('dcFeedback');
-  if(correct === total){
-    fb.className = 'dc-feedback show perfect';
-    fb.innerHTML = '<strong>🎉 완벽합니다!</strong> 모든 데이터를 정확하게 분류했습니다!';
-  } else {
-    fb.className = 'dc-feedback show partial';
-    fb.innerHTML = '<strong>⚠️ ' + (total-correct) + '개가 틀렸습니다.</strong> 초록색 테두리가 정답, 빨간색 테두리가 오답입니다. 다시 시도해 보세요!';
-  }
-};
-
-window.dcReset = function(){
-  dcInit();
-};
-
-// ═══════ NN TEST MISSIONS ═══════
-var nnTests = {
-  1: {i1:90, i2:60, i3:70, target:'apple', label:'🍎 사과', threshold:0.70},
-  2: {i1:15, i2:40, i3:20, target:'banana', label:'🍌 바나나', threshold:0.70}
-};
-var nnActiveTest = 0;
-
-window.nnLoadTest = function(n){
-  var t = nnTests[n];
-  document.getElementById('i1').value = t.i1;
-  document.getElementById('i2').value = t.i2;
-  document.getElementById('i3').value = t.i3;
-  // Disable input sliders (only weights adjustable)
-  document.getElementById('i1').disabled = true;
-  document.getElementById('i2').disabled = true;
-  document.getElementById('i3').disabled = true;
-  nnActiveTest = n;
-  // Highlight active card
-  document.getElementById('nnTest1').classList.remove('active');
-  document.getElementById('nnTest2').classList.remove('active');
-  document.getElementById('nnTest'+n).classList.add('active');
-  window.uNN();
-  nnEvalCurrent();
-};
-
-function nnEvalCurrent(){
-  if(!nnActiveTest) return;
-  var t = nnTests[nnActiveTest];
-  var appleProb = nv.o[0];
-  var bananaProb = nv.o[1];
-  var statusEl = document.getElementById('nnTest'+nnActiveTest+'Status');
-  var cardEl = document.getElementById('nnTest'+nnActiveTest);
-
-  if(t.target === 'apple'){
-    if(appleProb >= t.threshold){
-      statusEl.textContent = '✅ 성공! 사과 ' + (appleProb*100).toFixed(1) + '%';
-      statusEl.className = 'nn-test-status pass';
-      cardEl.classList.add('pass'); cardEl.classList.remove('fail');
-    } else {
-      statusEl.textContent = '❌ 사과 ' + (appleProb*100).toFixed(1) + '% (70% 필요)';
-      statusEl.className = 'nn-test-status fail';
-      cardEl.classList.add('fail'); cardEl.classList.remove('pass');
-    }
-  } else {
-    if(bananaProb >= t.threshold){
-      statusEl.textContent = '✅ 성공! 바나나 ' + (bananaProb*100).toFixed(1) + '%';
-      statusEl.className = 'nn-test-status pass';
-      cardEl.classList.add('pass'); cardEl.classList.remove('fail');
-    } else {
-      statusEl.textContent = '❌ 바나나 ' + (bananaProb*100).toFixed(1) + '% (70% 필요)';
-      statusEl.className = 'nn-test-status fail';
-      cardEl.classList.add('fail'); cardEl.classList.remove('pass');
-    }
-  }
-}
-
-// Override uNN to also eval mission
-var _origUNN = window.uNN;
-window.uNN = function(){
-  _origUNN();
-  if(nnActiveTest) nnEvalCurrent();
-};
-
-window.nnCheckBoth = function(){
-  // Save current weights
-  var savedW1 = document.getElementById('w1').value;
-  var savedW2 = document.getElementById('w2').value;
-  var savedW3 = document.getElementById('w3').value;
-  // Save current input state
-  var savedI1 = document.getElementById('i1').value;
-  var savedI2 = document.getElementById('i2').value;
-  var savedI3 = document.getElementById('i3').value;
-  var savedDisabled1 = document.getElementById('i1').disabled;
-  var savedDisabled2 = document.getElementById('i2').disabled;
-  var savedDisabled3 = document.getElementById('i3').disabled;
-
-  var results = [];
-  for(var n=1; n<=2; n++){
-    var t = nnTests[n];
-    // Set test inputs
-    document.getElementById('i1').value = t.i1;
-    document.getElementById('i2').value = t.i2;
-    document.getElementById('i3').value = t.i3;
-    // Recalculate
-    nv.i = [t.i1/100, t.i2/100, t.i3/100];
-    forward();
-
-    var prob = t.target === 'apple' ? nv.o[0] : nv.o[1];
-    var pass = prob >= t.threshold;
-    results.push({n:n, pass:pass, prob:prob, target:t.target, label:t.label});
-
-    // Update status
-    var statusEl = document.getElementById('nnTest'+n+'Status');
-    var cardEl = document.getElementById('nnTest'+n);
-    if(pass){
-      statusEl.textContent = '✅ 성공! ' + (t.target==='apple'?'사과':'바나나') + ' ' + (prob*100).toFixed(1) + '%';
-      statusEl.className = 'nn-test-status pass';
-      cardEl.classList.add('pass'); cardEl.classList.remove('fail');
-    } else {
-      statusEl.textContent = '❌ ' + (t.target==='apple'?'사과':'바나나') + ' ' + (prob*100).toFixed(1) + '%';
-      statusEl.className = 'nn-test-status fail';
-      cardEl.classList.add('fail'); cardEl.classList.remove('pass');
-    }
-  }
-
-  // Restore inputs
-  document.getElementById('i1').value = savedI1;
-  document.getElementById('i2').value = savedI2;
-  document.getElementById('i3').value = savedI3;
-  document.getElementById('i1').disabled = savedDisabled1;
-  document.getElementById('i2').disabled = savedDisabled2;
-  document.getElementById('i3').disabled = savedDisabled3;
-  nv.i = [savedI1/100, savedI2/100, savedI3/100];
-  forward();
-  drawNN();
-  // Update display values
-  document.getElementById('i1v').textContent = (savedI1/100).toFixed(2);
-  document.getElementById('i2v').textContent = (savedI2/100).toFixed(2);
-  document.getElementById('i3v').textContent = (savedI3/100).toFixed(2);
-  var a = nv.o[0]*100, b = nv.o[1]*100;
-  document.getElementById('oA').textContent = a.toFixed(1)+'%';
-  document.getElementById('oB').textContent = b.toFixed(1)+'%';
-  document.getElementById('bA').style.width = a+'%';
-  document.getElementById('bB').style.width = b+'%';
-
-  var allPass = results[0].pass && results[1].pass;
-  var resEl = document.getElementById('nnChallengeResult');
-  if(allPass){
-    resEl.className = 'nn-challenge-result show success';
-    resEl.innerHTML = '<strong>🎉 축하합니다!</strong> 현재 가중치로 사과(' + (results[0].prob*100).toFixed(1) + '%)와 바나나(' + (results[1].prob*100).toFixed(1) + '%)를 모두 정확하게 분류했습니다! 이것이 바로 신경망이 학습을 통해 달성하는 목표입니다. 하나의 가중치 세트로 여러 데이터를 올바르게 판별하는 것이죠!';
-  } else {
-    var failList = [];
-    if(!results[0].pass) failList.push('사과(' + (results[0].prob*100).toFixed(1) + '%)');
-    if(!results[1].pass) failList.push('바나나(' + (results[1].prob*100).toFixed(1) + '%)');
-    resEl.className = 'nn-challenge-result show fail';
-    resEl.innerHTML = '<strong>⚠️ 아직이에요!</strong> ' + failList.join(', ') + '의 확률이 70%에 못 미칩니다. 가중치를 더 조절해 보세요! 힌트: 사과는 색깔(빨강)과 모양(둥근)이 특징이고, 바나나는 색깔(노랑)과 모양(길쭉)이 특징입니다.';
-  }
-};
-
-// Also update rsW to re-enable inputs
-var _origRsW = window.rsW;
-window.rsW = function(){
-  document.getElementById('i1').disabled = false;
-  document.getElementById('i2').disabled = false;
-  document.getElementById('i3').disabled = false;
-  nnActiveTest = 0;
-  document.getElementById('nnTest1').classList.remove('active','pass','fail');
-  document.getElementById('nnTest2').classList.remove('active','pass','fail');
-  document.getElementById('nnTest1Status').textContent = '';
-  document.getElementById('nnTest1Status').className = 'nn-test-status';
-  document.getElementById('nnTest2Status').textContent = '';
-  document.getElementById('nnTest2Status').className = 'nn-test-status';
-  document.getElementById('nnChallengeResult').className = 'nn-challenge-result';
-  _origRsW();
-};
-
+function dcDragStart(e){ dcDragItem=this; this.classList.add('dragging'); e.dataTransfer.effectAllowed='move'; e.dataTransfer.setData('text/plain',this.getAttribute('data-idx')); }
+function dcDragEnd(){ this.classList.remove('dragging'); dcDragItem=null; }
+function dcDragOver(e){ e.preventDefault(); var z=this.closest('.dc-zone,.dc-pool'); if(z) z.classList.add('drag-over'); }
+function dcDragLeave(){ var z=this.closest('.dc-zone'); if(z) z.classList.remove('drag-over'); if(this.classList.contains('dc-pool')) this.classList.remove('drag-over'); }
+function dcDrop(e){ e.preventDefault(); var zone=this.closest('.dc-zone'); if(zone) zone.classList.remove('drag-over'); if(dcDragItem){ this.appendChild(dcDragItem); dcDragItem.classList.remove('dragging'); dcDragItem=null; } }
+function dcDropPool(e){ e.preventDefault(); this.classList.remove('drag-over'); if(dcDragItem){ this.appendChild(dcDragItem); dcDragItem.classList.remove('dragging'); dcDragItem=null; } }
+var dcTouchClone=null, dcTouchSource=null;
+function dcTouchStart(e){ e.preventDefault(); dcTouchSource=this; dcTouchClone=this.cloneNode(true); dcTouchClone.style.cssText='position:fixed;z-index:9999;pointer-events:none;opacity:.85;transform:scale(1.08);box-shadow:0 4px 16px rgba(0,0,0,.15)'; document.body.appendChild(dcTouchClone); var t=e.touches[0]; dcTouchClone.style.left=(t.clientX-60)+'px'; dcTouchClone.style.top=(t.clientY-20)+'px'; dcTouchSource.classList.add('dragging'); }
+function dcTouchMove(e){ e.preventDefault(); if(!dcTouchClone) return; var t=e.touches[0]; dcTouchClone.style.left=(t.clientX-60)+'px'; dcTouchClone.style.top=(t.clientY-20)+'px'; var zones=document.querySelectorAll('.dc-zone'); for(var i=0;i<zones.length;i++) zones[i].classList.remove('drag-over'); document.getElementById('dcPool').classList.remove('drag-over'); var el=document.elementFromPoint(t.clientX,t.clientY); if(el){ var z=el.closest('.dc-zone'); if(z) z.classList.add('drag-over'); if(el.closest('.dc-pool')) el.closest('.dc-pool').classList.add('drag-over'); } }
+function dcTouchEnd(e){ if(!dcTouchClone||!dcTouchSource) return; var t=e.changedTouches[0]; document.body.removeChild(dcTouchClone); dcTouchClone=null; dcTouchSource.classList.remove('dragging'); var el=document.elementFromPoint(t.clientX,t.clientY); if(el){ var drop=el.closest('.dc-drop'),pool=el.closest('.dc-pool'); if(drop) drop.appendChild(dcTouchSource); else if(pool) pool.appendChild(dcTouchSource); } var zones=document.querySelectorAll('.dc-zone'); for(var i=0;i<zones.length;i++) zones[i].classList.remove('drag-over'); document.getElementById('dcPool').classList.remove('drag-over'); dcTouchSource=null; }
+window.dcCheckAnswer=function(){ var total=dcShuffled.length,correct=0; var zones=document.querySelectorAll('.dc-drop'); for(var z=0;z<zones.length;z++){ var zoneName=zones[z].getAttribute('data-zone'); var chips=zones[z].querySelectorAll('.dc-chip'); for(var c=0;c<chips.length;c++){ var idx=parseInt(chips[c].getAttribute('data-idx')); if(dcShuffled[idx].answer===zoneName){ chips[c].classList.remove('wrong'); chips[c].classList.add('correct'); correct++; } else { chips[c].classList.remove('correct'); chips[c].classList.add('wrong'); } } } var poolChips=document.getElementById('dcPool').querySelectorAll('.dc-chip'); for(var i=0;i<poolChips.length;i++) poolChips[i].classList.add('wrong'); document.getElementById('dcScoreText').textContent=correct+' / '+total+' 정답'; var fb=document.getElementById('dcFeedback'); if(correct===total){ fb.className='dc-feedback show perfect'; fb.innerHTML='<strong>🎉 완벽합니다!</strong> 모든 데이터를 정확하게 분류했습니다!'; } else { fb.className='dc-feedback show partial'; fb.innerHTML='<strong>⚠️ '+(total-correct)+'개가 틀렸습니다.</strong> 초록색 테두리가 정답, 빨간색 테두리가 오답입니다.'; } };
+window.dcReset=function(){ dcInit(); };
 dcInit();
-
 })();
 </script>
 </body>
